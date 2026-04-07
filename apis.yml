@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Video Transcoding
-  - Media Processing
-  - VOD
-  - Broadcasting
   - AWS
+  - Broadcasting
+  - Media Processing
+  - Video Transcoding
+  - VOD
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -28,8 +28,8 @@ apis:
     humanURL: https://aws.amazon.com/mediaconvert/
     baseURL: https://mediaconvert.amazonaws.com
     tags:
-      - Video Transcoding
       - Media Processing
+      - Video Transcoding
       - VOD
     properties:
       - type: Documentation
