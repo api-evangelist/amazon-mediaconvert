@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-eac3-atmos-surround-ex-mode-structure.json",
+  "name": "Eac3AtmosSurroundExMode",
+  "type": "string",
+  "description": "Specify whether your input audio has an additional center rear surround channel matrix encoded into your left and right surround channels.",
+  "enum": [
+    "NOT_INDICATED",
+    "ENABLED",
+    "DISABLED"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-vp8-rate-control-mode-schema.json",
+  "title": "Vp8RateControlMode",
+  "description": "With the VP8 codec, you can use only the variable bitrate (VBR) rate control mode.",
+  "type": "string",
+  "enum": [
+    "VBR"
+  ]
+}

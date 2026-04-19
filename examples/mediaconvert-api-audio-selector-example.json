@@ -1,0 +1,14 @@
+{
+  "AudioDurationCorrection": "example-value",
+  "CustomLanguageCode": "example-value",
+  "DefaultSelection": "example-value",
+  "ExternalAudioFileInput": "example-value",
+  "HlsRenditionGroupSettings": "example-value",
+  "LanguageCode": "example-value",
+  "Offset": "example-value",
+  "Pids": "id-abc123",
+  "ProgramSelection": "example-value",
+  "RemixSettings": "example-value",
+  "SelectorType": "STANDARD",
+  "Tracks": "example-value"
+}

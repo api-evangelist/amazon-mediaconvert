@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-aiff-settings-schema.json",
+  "title": "AiffSettings",
+  "description": "Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AIFF.",
+  "type": "object",
+  "properties": {
+    "BitDepth": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin16Max24"
+        },
+        {
+          "xml": {
+            "name": "bitDepth"
+          },
+          "description": "Specify Bit depth (BitDepth), in bits per sample, to choose the encoding quality for this audio track."
+        }
+      ]
+    },
+    "Channels": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin1Max64"
+        },
+        {
+          "xml": {
+            "name": "channels"
+          },
+          "description": "Specify the number of channels in this output audio track. Valid values are 1 and even numbers up to 64. For example, 1, 2, 4, 6, and so on, up to 64."
+        }
+      ]
+    },
+    "SampleRate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin8000Max192000"
+        },
+        {
+          "xml": {
+            "name": "sampleRate"
+          },
+          "description": "Sample rate in hz."
+        }
+      ]
+    }
+  }
+}

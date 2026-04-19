@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-mpeg2-rate-control-mode-schema.json",
+  "title": "Mpeg2RateControlMode",
+  "description": "Use Rate control mode (Mpeg2RateControlMode) to specify whether the bitrate is variable (vbr) or constant (cbr).",
+  "type": "string",
+  "enum": [
+    "VBR",
+    "CBR"
+  ]
+}

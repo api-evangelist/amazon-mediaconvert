@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-cmaf-encryption-type-structure.json",
+  "name": "CmafEncryptionType",
+  "type": "string",
+  "description": "Specify the encryption scheme that you want the service to use when encrypting your CMAF segments. Choose AES-CBC subsample (SAMPLE-AES) or AES_CTR (AES-CTR).",
+  "enum": [
+    "SAMPLE_AES",
+    "AES_CTR"
+  ]
+}

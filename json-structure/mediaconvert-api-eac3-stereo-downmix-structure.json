@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-eac3-stereo-downmix-structure.json",
+  "name": "Eac3StereoDownmix",
+  "type": "string",
+  "description": "Choose how the service does stereo downmixing. This setting only applies if you keep the default value of 3/2 - L, R, C, Ls, Rs (CODING_MODE_3_2) for the setting Coding mode (Eac3CodingMode). If you choose a different value for Coding mode, the service ignores Stereo downmix (Eac3StereoDownmix).",
+  "enum": [
+    "NOT_INDICATED",
+    "LO_RO",
+    "LT_RT",
+    "DPL2"
+  ]
+}

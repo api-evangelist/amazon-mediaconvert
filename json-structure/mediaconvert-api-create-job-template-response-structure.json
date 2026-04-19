@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-create-job-template-response-structure.json",
+  "name": "CreateJobTemplateResponse",
+  "type": "object",
+  "description": "CreateJobTemplateResponse schema from Amazon MediaConvert API",
+  "properties": {
+    "JobTemplate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobTemplate"
+        },
+        {
+          "xml": {
+            "name": "jobTemplate"
+          },
+          "description": "A job template is a pre-made set of encoding instructions that you can use to quickly create a job."
+        }
+      ]
+    }
+  }
+}

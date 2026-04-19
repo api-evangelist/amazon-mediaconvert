@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-list-jobs-response-structure.json",
+  "name": "ListJobsResponse",
+  "type": "object",
+  "description": "ListJobsResponse schema from Amazon MediaConvert API",
+  "properties": {
+    "Jobs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfJob"
+        },
+        {
+          "xml": {
+            "name": "jobs"
+          },
+          "description": "List of jobs"
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "Use this string to request the next batch of jobs."
+        }
+      ]
+    }
+  }
+}

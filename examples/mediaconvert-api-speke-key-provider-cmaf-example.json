@@ -1,0 +1,7 @@
+{
+  "CertificateArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "DashSignaledSystemIds": "id-abc123",
+  "HlsSignaledSystemIds": "id-abc123",
+  "ResourceId": "id-abc123",
+  "Url": "example-value"
+}

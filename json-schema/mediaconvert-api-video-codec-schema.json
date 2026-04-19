@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-video-codec-schema.json",
+  "title": "VideoCodec",
+  "description": "Type of video codec",
+  "type": "string",
+  "enum": [
+    "AV1",
+    "AVC_INTRA",
+    "FRAME_CAPTURE",
+    "H_264",
+    "H_265",
+    "MPEG2",
+    "PRORES",
+    "VC3",
+    "VP8",
+    "VP9",
+    "XAVC"
+  ]
+}

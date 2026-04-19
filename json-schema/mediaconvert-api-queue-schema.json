@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-queue-schema.json",
+  "title": "Queue",
+  "description": "You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.",
+  "type": "object",
+  "properties": {
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "arn"
+          },
+          "description": "An identifier for this resource that is unique within all of AWS."
+        }
+      ]
+    },
+    "CreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__timestampUnix"
+        },
+        {
+          "xml": {
+            "name": "createdAt"
+          },
+          "description": "The timestamp in epoch seconds for when you created the queue."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "An optional description that you create for each queue."
+        }
+      ]
+    },
+    "LastUpdated": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__timestampUnix"
+        },
+        {
+          "xml": {
+            "name": "lastUpdated"
+          },
+          "description": "The timestamp in epoch seconds for when you most recently updated the queue."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "A name that you create for each queue. Each name must be unique within your account."
+        }
+      ]
+    },
+    "PricingPlan": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PricingPlan"
+        },
+        {
+          "xml": {
+            "name": "pricingPlan"
+          },
+          "description": "Specifies whether the pricing plan for the queue is on-demand or reserved. For on-demand, you pay per minute, billed in increments of .01 minute. For reserved, you pay for the transcoding capacity of the entire queue, regardless of how much or how little you use it. Reserved pricing requires a 12-month commitment."
+        }
+      ]
+    },
+    "ProgressingJobsCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integer"
+        },
+        {
+          "xml": {
+            "name": "progressingJobsCount"
+          },
+          "description": "The estimated number of jobs with a PROGRESSING status."
+        }
+      ]
+    },
+    "ReservationPlan": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ReservationPlan"
+        },
+        {
+          "xml": {
+            "name": "reservationPlan"
+          },
+          "description": "Details about the pricing plan for your reserved queue. Required for reserved queues and not applicable to on-demand queues."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueueStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "Queues can be ACTIVE or PAUSED. If you pause a queue, the service won't begin processing jobs in that queue. Jobs that are running when you pause the queue continue to run until they finish or result in an error."
+        }
+      ]
+    },
+    "SubmittedJobsCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integer"
+        },
+        {
+          "xml": {
+            "name": "submittedJobsCount"
+          },
+          "description": "The estimated number of jobs with a SUBMITTED status."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Type"
+        },
+        {
+          "xml": {
+            "name": "type"
+          },
+          "description": "Specifies whether this on-demand queue is system or custom. System queues are built in. You can't modify or delete system queues. You can create and modify custom queues."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Name"
+  ]
+}

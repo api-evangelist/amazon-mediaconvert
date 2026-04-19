@@ -1,0 +1,17 @@
+{
+  "AfdSignaling": "example-value",
+  "AntiAlias": "example-value",
+  "CodecSettings": "example-value",
+  "ColorMetadata": "example-value",
+  "Crop": "example-value",
+  "DropFrameTimecode": "example-value",
+  "FixedAfd": "example-value",
+  "Height": "example-value",
+  "Position": "example-value",
+  "RespondToAfd": "example-value",
+  "ScalingBehavior": "example-value",
+  "Sharpness": "example-value",
+  "TimecodeInsertion": "example-value",
+  "VideoPreprocessors": "id-abc123",
+  "Width": "id-abc123"
+}

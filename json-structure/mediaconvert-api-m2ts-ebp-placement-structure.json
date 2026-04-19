@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-m2ts-ebp-placement-structure.json",
+  "name": "M2tsEbpPlacement",
+  "type": "string",
+  "description": "Selects which PIDs to place EBP markers on. They can either be placed only on the video PID, or on both the video PID and all audio PIDs. Only applicable when EBP segmentation markers are is selected (segmentationMarkers is EBP or EBP_LEGACY).",
+  "enum": [
+    "VIDEO_AND_AUDIO_PIDS",
+    "VIDEO_PID"
+  ]
+}

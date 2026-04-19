@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-list-presets-response-schema.json",
+  "title": "ListPresetsResponse",
+  "description": "ListPresetsResponse schema from Amazon MediaConvert API",
+  "type": "object",
+  "properties": {
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "Use this string to request the next batch of presets."
+        }
+      ]
+    },
+    "Presets": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfPreset"
+        },
+        {
+          "xml": {
+            "name": "presets"
+          },
+          "description": "List of presets"
+        }
+      ]
+    }
+  }
+}

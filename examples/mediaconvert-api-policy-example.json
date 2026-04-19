@@ -1,0 +1,5 @@
+{
+  "HttpInputs": "example-value",
+  "HttpsInputs": "example-value",
+  "S3Inputs": "example-value"
+}

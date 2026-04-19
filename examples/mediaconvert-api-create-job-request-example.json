@@ -1,0 +1,15 @@
+{
+  "AccelerationSettings": "example-value",
+  "BillingTagsSource": "example-value",
+  "ClientRequestToken": "example-value",
+  "HopDestinations": "example-value",
+  "JobTemplate": "example-value",
+  "Priority": "example-value",
+  "Queue": "example-value",
+  "Role": "example-value",
+  "Settings": "example-value",
+  "SimulateReservedQueue": "example-value",
+  "StatusUpdateInterval": "ACTIVE",
+  "Tags": "example-value",
+  "UserMetadata": "example-value"
+}

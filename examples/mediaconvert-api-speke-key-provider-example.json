@@ -1,0 +1,6 @@
+{
+  "CertificateArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "ResourceId": "id-abc123",
+  "SystemIds": "id-abc123",
+  "Url": "example-value"
+}

@@ -1,0 +1,11 @@
+{
+  "AudioDescriptionBroadcasterMix": "example-value",
+  "Bitrate": "example-value",
+  "CodecProfile": "example-value",
+  "CodingMode": "example-value",
+  "RateControlMode": "example-value",
+  "RawFormat": "example-value",
+  "SampleRate": "example-value",
+  "Specification": "example-value",
+  "VbrQuality": "example-value"
+}

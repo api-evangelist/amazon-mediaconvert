@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-endpoint-schema.json",
+  "title": "Endpoint",
+  "description": "Describes an account-specific API endpoint.",
+  "type": "object",
+  "properties": {
+    "Url": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "url"
+          },
+          "description": "URL of endpoint"
+        }
+      ]
+    }
+  }
+}

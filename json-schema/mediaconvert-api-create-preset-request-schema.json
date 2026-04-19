@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-create-preset-request-schema.json",
+  "title": "CreatePresetRequest",
+  "description": "CreatePresetRequest schema from Amazon MediaConvert API",
+  "type": "object",
+  "properties": {
+    "Category": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "category"
+          },
+          "description": "Optional. A category for the preset you are creating."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "Optional. A description of the preset you are creating."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the preset you are creating."
+        }
+      ]
+    },
+    "Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PresetSettings"
+        },
+        {
+          "xml": {
+            "name": "settings"
+          },
+          "description": "Settings for preset"
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__mapOf__string"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The tags that you want to add to the resource. You can tag resources with a key-value pair or with only a key."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Settings",
+    "Name"
+  ]
+}

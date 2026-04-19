@@ -1,0 +1,8 @@
+{
+  "CmafGroupSettings": "example-value",
+  "DashIsoGroupSettings": "example-value",
+  "FileGroupSettings": "example-value",
+  "HlsGroupSettings": "example-value",
+  "MsSmoothGroupSettings": "example-value",
+  "Type": "STANDARD"
+}

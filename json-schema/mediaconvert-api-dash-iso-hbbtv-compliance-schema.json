@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-dash-iso-hbbtv-compliance-schema.json",
+  "title": "DashIsoHbbtvCompliance",
+  "description": "Supports HbbTV specification as indicated",
+  "type": "string",
+  "enum": [
+    "HBBTV_1_5",
+    "NONE"
+  ]
+}

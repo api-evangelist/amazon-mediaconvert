@@ -1,0 +1,13 @@
+{
+  "Arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "CreatedAt": "example-value",
+  "Description": "example-value",
+  "LastUpdated": "example-value",
+  "Name": "example-resource",
+  "PricingPlan": "example-value",
+  "ProgressingJobsCount": "example-value",
+  "ReservationPlan": "example-value",
+  "Status": "ACTIVE",
+  "SubmittedJobsCount": "example-value",
+  "Type": "STANDARD"
+}

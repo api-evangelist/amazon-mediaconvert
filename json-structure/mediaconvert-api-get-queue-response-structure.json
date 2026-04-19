@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-get-queue-response-structure.json",
+  "name": "GetQueueResponse",
+  "type": "object",
+  "description": "GetQueueResponse schema from Amazon MediaConvert API",
+  "properties": {
+    "Queue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Queue"
+        },
+        {
+          "xml": {
+            "name": "queue"
+          },
+          "description": "You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "AdditionalManifests": "example-value",
+  "AudioChannelConfigSchemeIdUri": "id-abc123",
+  "BaseUrl": "example-value",
+  "DashManifestStyle": "example-value",
+  "Destination": "example-value",
+  "DestinationSettings": "example-value",
+  "Encryption": "example-value",
+  "FragmentLength": "example-value",
+  "HbbtvCompliance": "example-value",
+  "ImageBasedTrickPlay": "example-value",
+  "ImageBasedTrickPlaySettings": "example-value",
+  "MinBufferTime": "example-value",
+  "MinFinalSegmentLength": "example-value",
+  "MpdManifestBandwidthType": "id-abc123",
+  "MpdProfile": "example-value",
+  "PtsOffsetHandlingForBFrames": "example-value",
+  "SegmentControl": "example-value",
+  "SegmentLength": "example-value",
+  "SegmentLengthControl": "example-value",
+  "VideoCompositionOffsets": "id-abc123",
+  "WriteSegmentTimelineInRepresentation": "example-value"
+}

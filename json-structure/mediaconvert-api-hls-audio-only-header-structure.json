@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-hls-audio-only-header-structure.json",
+  "name": "HlsAudioOnlyHeader",
+  "type": "string",
+  "description": "Ignore this setting unless you are using FairPlay DRM with Verimatrix and you encounter playback issues. Keep the default value, Include (INCLUDE), to output audio-only headers. Choose Exclude (EXCLUDE) to remove the audio-only headers from your audio segments.",
+  "enum": [
+    "INCLUDE",
+    "EXCLUDE"
+  ]
+}

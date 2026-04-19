@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-ttml-style-passthrough-schema.json",
+  "title": "TtmlStylePassthrough",
+  "description": "Pass through style and position information from a TTML-like input source (TTML, IMSC, SMPTE-TT) to the TTML output.",
+  "type": "string",
+  "enum": [
+    "ENABLED",
+    "DISABLED"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-imsc-destination-settings-structure.json",
+  "name": "ImscDestinationSettings",
+  "type": "object",
+  "description": "Settings related to IMSC captions. IMSC is a sidecar format that holds captions in a file that is separate from the video container. Set up sidecar captions in the same output group, but different output from your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/ttml-and-webvtt-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to IMSC.",
+  "properties": {
+    "Accessibility": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ImscAccessibilitySubs"
+        },
+        {
+          "xml": {
+            "name": "accessibility"
+          },
+          "description": "Set Accessibility subtitles to Enabled if the ISMC or WebVTT captions track is intended to provide accessibility for people who are deaf or hard of hearing. When you enable this feature, MediaConvert adds the following attributes under EXT-X-MEDIA in the HLS or CMAF manifest for this track: CHARACTERISTICS=\"public.accessibility.describes-spoken-dialog,public.accessibility.describes-music-and-sound\" and AUTOSELECT=\"YES\". Keep the default value, Disabled, if the captions track is not intended to provide such accessibility. MediaConvert will not add the above attributes."
+        }
+      ]
+    },
+    "StylePassthrough": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ImscStylePassthrough"
+        },
+        {
+          "xml": {
+            "name": "stylePassthrough"
+          },
+          "description": "Keep this setting enabled to have MediaConvert use the font style and position information from the captions source in the output. This option is available only when your input captions are IMSC, SMPTE-TT, or TTML. Disable this setting for simplified output captions."
+        }
+      ]
+    }
+  }
+}

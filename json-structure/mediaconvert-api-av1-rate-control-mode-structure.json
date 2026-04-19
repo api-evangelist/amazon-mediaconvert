@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-av1-rate-control-mode-structure.json",
+  "name": "Av1RateControlMode",
+  "type": "string",
+  "description": "'With AV1 outputs, for rate control mode, MediaConvert supports only quality-defined variable bitrate (QVBR). You can''t use CBR or VBR.'",
+  "enum": [
+    "QVBR"
+  ]
+}

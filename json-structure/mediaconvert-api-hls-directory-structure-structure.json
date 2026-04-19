@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-hls-directory-structure-structure.json",
+  "name": "HlsDirectoryStructure",
+  "type": "string",
+  "description": "Indicates whether segments should be placed in subdirectories.",
+  "enum": [
+    "SINGLE_DIRECTORY",
+    "SUBDIRECTORY_PER_STREAM"
+  ]
+}

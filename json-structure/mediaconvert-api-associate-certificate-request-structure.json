@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-associate-certificate-request-structure.json",
+  "name": "AssociateCertificateRequest",
+  "type": "object",
+  "description": "AssociateCertificateRequest schema from Amazon MediaConvert API",
+  "properties": {
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "arn"
+          },
+          "description": "The ARN of the ACM certificate that you want to associate with your MediaConvert resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Arn"
+  ]
+}

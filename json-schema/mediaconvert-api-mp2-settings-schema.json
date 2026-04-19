@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-mp2-settings-schema.json",
+  "title": "Mp2Settings",
+  "description": "Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value MP2.",
+  "type": "object",
+  "properties": {
+    "Bitrate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin32000Max384000"
+        },
+        {
+          "xml": {
+            "name": "bitrate"
+          },
+          "description": "Specify the average bitrate in bits per second."
+        }
+      ]
+    },
+    "Channels": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin1Max2"
+        },
+        {
+          "xml": {
+            "name": "channels"
+          },
+          "description": "Set Channels to specify the number of channels in this output audio track. Choosing Mono in the console will give you 1 output channel; choosing Stereo will give you 2. In the API, valid values are 1 and 2."
+        }
+      ]
+    },
+    "SampleRate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin32000Max48000"
+        },
+        {
+          "xml": {
+            "name": "sampleRate"
+          },
+          "description": "Sample rate in hz."
+        }
+      ]
+    }
+  }
+}

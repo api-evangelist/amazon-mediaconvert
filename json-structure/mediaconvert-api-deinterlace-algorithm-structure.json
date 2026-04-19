@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-deinterlace-algorithm-structure.json",
+  "name": "DeinterlaceAlgorithm",
+  "type": "string",
+  "description": "Only applies when you set Deinterlacer (DeinterlaceMode) to Deinterlace (DEINTERLACE) or Adaptive (ADAPTIVE). Motion adaptive interpolate (INTERPOLATE) produces sharper pictures, while blend (BLEND) produces smoother motion. Use (INTERPOLATE_TICKER) OR (BLEND_TICKER) if your source file includes a ticker, such as a scrolling headline at the bottom of the frame.",
+  "enum": [
+    "INTERPOLATE",
+    "INTERPOLATE_TICKER",
+    "BLEND",
+    "BLEND_TICKER"
+  ]
+}

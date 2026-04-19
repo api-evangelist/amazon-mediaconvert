@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-file-group-settings-schema.json",
+  "title": "FileGroupSettings",
+  "description": "Settings related to your File output group. MediaConvert uses this group of settings to generate a single standalone file, rather than a streaming package. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to FILE_GROUP_SETTINGS.",
+  "type": "object",
+  "properties": {
+    "Destination": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringPatternS3"
+        },
+        {
+          "xml": {
+            "name": "destination"
+          },
+          "description": "Use Destination (Destination) to specify the S3 output location and the output filename base. Destination accepts format identifiers. If you do not specify the base filename in the URI, the service will use the filename of the input file. If your job has multiple inputs, the service uses the filename of the first input file."
+        }
+      ]
+    },
+    "DestinationSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DestinationSettings"
+        },
+        {
+          "xml": {
+            "name": "destinationSettings"
+          },
+          "description": "Settings associated with the destination. Will vary based on the type of destination"
+        }
+      ]
+    }
+  }
+}

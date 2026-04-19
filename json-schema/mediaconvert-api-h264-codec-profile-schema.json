@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-h264-codec-profile-schema.json",
+  "title": "H264CodecProfile",
+  "description": "H.264 Profile. High 4:2:2 and 10-bit profiles are only available with the AVC-I License.",
+  "type": "string",
+  "enum": [
+    "BASELINE",
+    "HIGH",
+    "HIGH_10BIT",
+    "HIGH_422",
+    "HIGH_422_10BIT",
+    "MAIN"
+  ]
+}

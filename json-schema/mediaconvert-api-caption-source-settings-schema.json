@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-caption-source-settings-schema.json",
+  "title": "CaptionSourceSettings",
+  "description": "If your input captions are SCC, TTML, STL, SMI, SRT, or IMSC in an xml file, specify the URI of the input captions source file. If your input captions are IMSC in an IMF package, use TrackSourceSettings instead of FileSoureSettings.",
+  "type": "object",
+  "properties": {
+    "AncillarySourceSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AncillarySourceSettings"
+        },
+        {
+          "xml": {
+            "name": "ancillarySourceSettings"
+          },
+          "description": "Settings for ancillary captions source."
+        }
+      ]
+    },
+    "DvbSubSourceSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubSourceSettings"
+        },
+        {
+          "xml": {
+            "name": "dvbSubSourceSettings"
+          },
+          "description": "DVB Sub Source Settings"
+        }
+      ]
+    },
+    "EmbeddedSourceSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EmbeddedSourceSettings"
+        },
+        {
+          "xml": {
+            "name": "embeddedSourceSettings"
+          },
+          "description": "Settings for embedded captions Source"
+        }
+      ]
+    },
+    "FileSourceSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSourceSettings"
+        },
+        {
+          "xml": {
+            "name": "fileSourceSettings"
+          },
+          "description": "If your input captions are SCC, SMI, SRT, STL, TTML, WebVTT, or IMSC 1.1 in an xml file, specify the URI of the input caption source file. If your caption source is IMSC in an IMF package, use TrackSourceSettings instead of FileSoureSettings."
+        }
+      ]
+    },
+    "SourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CaptionSourceType"
+        },
+        {
+          "xml": {
+            "name": "sourceType"
+          },
+          "description": "Use Source (SourceType) to identify the format of your input captions. The service cannot auto-detect caption format."
+        }
+      ]
+    },
+    "TeletextSourceSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TeletextSourceSettings"
+        },
+        {
+          "xml": {
+            "name": "teletextSourceSettings"
+          },
+          "description": "Settings specific to Teletext caption sources, including Page number."
+        }
+      ]
+    },
+    "TrackSourceSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TrackSourceSettings"
+        },
+        {
+          "xml": {
+            "name": "trackSourceSettings"
+          },
+          "description": "Settings specific to caption sources that are specified by track number. Currently, this is only IMSC captions in an IMF package. If your caption source is IMSC 1.1 in a separate xml file, use FileSourceSettings instead of TrackSourceSettings."
+        }
+      ]
+    },
+    "WebvttHlsSourceSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WebvttHlsSourceSettings"
+        },
+        {
+          "xml": {
+            "name": "webvttHlsSourceSettings"
+          },
+          "description": "Settings specific to WebVTT sources in HLS alternative rendition group. Specify the properties (renditionGroupId, renditionName or renditionLanguageCode) to identify the unique subtitle track among the alternative rendition groups present in the HLS manifest. If no unique track is found, or multiple tracks match the specified properties, the job fails. If there is only one subtitle track in the rendition group, the settings can be left empty and the default subtitle track will be chosen. If your caption source is a sidecar file, use FileSourceSettings instead of WebvttHlsSourceSettings."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-video-codec-settings-structure.json",
+  "name": "VideoCodecSettings",
+  "type": "object",
+  "description": "Video codec settings, (CodecSettings) under (VideoDescription), contains the group of settings related to video encoding. The settings in this group vary depending on the value that you choose for Video codec (Codec). For each codec enum that you choose, define the corresponding settings object. The following lists the codec enum, settings object pairs. * AV1, Av1Settings * AVC_INTRA, AvcIntraSettings * FRAME_CAPTURE, FrameCaptureSettings * H_264, H264Settings * H_265, H265Settings * MPEG2, Mpeg2Settings * PRORES, ProresSettings * VC3, Vc3Settings * VP8, Vp8Settings * VP9, Vp9Settings * XAVC, XavcSettings",
+  "properties": {
+    "Av1Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Av1Settings"
+        },
+        {
+          "xml": {
+            "name": "av1Settings"
+          },
+          "description": "Required when you set Codec, under VideoDescription>CodecSettings to the value AV1."
+        }
+      ]
+    },
+    "AvcIntraSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AvcIntraSettings"
+        },
+        {
+          "xml": {
+            "name": "avcIntraSettings"
+          },
+          "description": "Required when you choose AVC-Intra for your output video codec. For more information about the AVC-Intra settings, see the relevant specification. For detailed information about SD and HD in AVC-Intra, see https://ieeexplore.ieee.org/document/7290936. For information about 4K/2K in AVC-Intra, see https://pro-av.panasonic.net/en/avc-ultra/AVC-ULTRAoverview.pdf."
+        }
+      ]
+    },
+    "Codec": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VideoCodec"
+        },
+        {
+          "xml": {
+            "name": "codec"
+          },
+          "description": "Specifies the video codec. This must be equal to one of the enum values defined by the object VideoCodec."
+        }
+      ]
+    },
+    "FrameCaptureSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FrameCaptureSettings"
+        },
+        {
+          "xml": {
+            "name": "frameCaptureSettings"
+          },
+          "description": "Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value FRAME_CAPTURE."
+        }
+      ]
+    },
+    "H264Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/H264Settings"
+        },
+        {
+          "xml": {
+            "name": "h264Settings"
+          },
+          "description": "Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value H_264."
+        }
+      ]
+    },
+    "H265Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/H265Settings"
+        },
+        {
+          "xml": {
+            "name": "h265Settings"
+          },
+          "description": "Settings for H265 codec"
+        }
+      ]
+    },
+    "Mpeg2Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Mpeg2Settings"
+        },
+        {
+          "xml": {
+            "name": "mpeg2Settings"
+          },
+          "description": "Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value MPEG2."
+        }
+      ]
+    },
+    "ProresSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProresSettings"
+        },
+        {
+          "xml": {
+            "name": "proresSettings"
+          },
+          "description": "Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value PRORES."
+        }
+      ]
+    },
+    "Vc3Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Vc3Settings"
+        },
+        {
+          "xml": {
+            "name": "vc3Settings"
+          },
+          "description": "Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value VC3"
+        }
+      ]
+    },
+    "Vp8Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Vp8Settings"
+        },
+        {
+          "xml": {
+            "name": "vp8Settings"
+          },
+          "description": "Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value VP8."
+        }
+      ]
+    },
+    "Vp9Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Vp9Settings"
+        },
+        {
+          "xml": {
+            "name": "vp9Settings"
+          },
+          "description": "Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value VP9."
+        }
+      ]
+    },
+    "XavcSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/XavcSettings"
+        },
+        {
+          "xml": {
+            "name": "xavcSettings"
+          },
+          "description": "Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value XAVC."
+        }
+      ]
+    }
+  }
+}

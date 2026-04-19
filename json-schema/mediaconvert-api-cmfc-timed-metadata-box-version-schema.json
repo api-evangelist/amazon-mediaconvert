@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-cmfc-timed-metadata-box-version-schema.json",
+  "title": "CmfcTimedMetadataBoxVersion",
+  "description": "Specify the event message box (eMSG) version for ID3 timed metadata in your output.\nFor more information, see ISO/IEC 23009-1:2022 section 5.10.3.3.3 Syntax.\nLeave blank to use the default value Version 0.\nWhen you specify Version 1, you must also set ID3 metadata (timedMetadata) to Passthrough.",
+  "type": "string",
+  "enum": [
+    "VERSION_0",
+    "VERSION_1"
+  ]
+}

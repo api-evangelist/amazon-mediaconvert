@@ -1,0 +1,9 @@
+{
+  "Algorithm": "example-value",
+  "AlgorithmControl": "example-value",
+  "CorrectionGateLevel": "example-value",
+  "LoudnessLogging": "example-value",
+  "PeakCalculation": "example-value",
+  "TargetLkfs": "example-value",
+  "TruePeakLimiterThreshold": "example-value"
+}

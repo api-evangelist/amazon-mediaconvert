@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-dvb-subtitling-type-structure.json",
+  "name": "DvbSubtitlingType",
+  "type": "string",
+  "description": "Specify whether your DVB subtitles are standard or for hearing impaired. Choose hearing impaired if your subtitles include audio descriptions and dialogue. Choose standard if your subtitles include only dialogue.",
+  "enum": [
+    "HEARING_IMPAIRED",
+    "STANDARD"
+  ]
+}

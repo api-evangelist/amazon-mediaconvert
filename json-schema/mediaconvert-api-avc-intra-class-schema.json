@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-avc-intra-class-schema.json",
+  "title": "AvcIntraClass",
+  "description": "Specify the AVC-Intra class of your output. The AVC-Intra class selection determines the output video bit rate depending on the frame rate of the output. Outputs with higher class values have higher bitrates and improved image quality. Note that for Class 4K/2K, MediaConvert supports only 4:2:2 chroma subsampling.",
+  "type": "string",
+  "enum": [
+    "CLASS_50",
+    "CLASS_100",
+    "CLASS_200",
+    "CLASS_4K_2K"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-mpeg2-adaptive-quantization-schema.json",
+  "title": "Mpeg2AdaptiveQuantization",
+  "description": "Specify the strength of any adaptive quantization filters that you enable. The value that you choose here applies to the following settings: Spatial adaptive quantization (spatialAdaptiveQuantization), and Temporal adaptive quantization (temporalAdaptiveQuantization).",
+  "type": "string",
+  "enum": [
+    false,
+    "LOW",
+    "MEDIUM",
+    "HIGH"
+  ]
+}

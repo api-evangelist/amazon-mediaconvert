@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-eac3-atmos-dialogue-intelligence-structure.json",
+  "name": "Eac3AtmosDialogueIntelligence",
+  "type": "string",
+  "description": "Enable Dolby Dialogue Intelligence to adjust loudness based on dialogue analysis.",
+  "enum": [
+    "ENABLED",
+    "DISABLED"
+  ]
+}

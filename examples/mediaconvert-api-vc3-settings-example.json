@@ -1,0 +1,11 @@
+{
+  "FramerateControl": "example-value",
+  "FramerateConversionAlgorithm": "example-value",
+  "FramerateDenominator": "example-value",
+  "FramerateNumerator": "example-value",
+  "InterlaceMode": "example-value",
+  "ScanTypeConversionMode": "STANDARD",
+  "SlowPal": "example-value",
+  "Telecine": "example-value",
+  "Vc3Class": "example-value"
+}

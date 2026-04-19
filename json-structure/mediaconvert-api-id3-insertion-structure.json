@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-id3-insertion-structure.json",
+  "name": "Id3Insertion",
+  "type": "object",
+  "description": "To insert ID3 tags in your output, specify two values. Use ID3 tag (Id3) to specify the base 64 encoded string and use Timecode (TimeCode) to specify the time when the tag should be inserted. To insert multiple ID3 tags in your output, create multiple instances of ID3 insertion (Id3Insertion).",
+  "properties": {
+    "Id3": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringPatternAZaZ0902"
+        },
+        {
+          "xml": {
+            "name": "id3"
+          },
+          "description": "Use ID3 tag (Id3) to provide a fully formed ID3 tag in base64-encode format."
+        }
+      ]
+    },
+    "Timecode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringPattern010920405090509092"
+        },
+        {
+          "xml": {
+            "name": "timecode"
+          },
+          "description": "Provide a Timecode (TimeCode) in HH:MM:SS:FF or HH:MM:SS;FF format."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-preset-settings-structure.json",
+  "name": "PresetSettings",
+  "type": "object",
+  "description": "Settings for preset",
+  "properties": {
+    "AudioDescriptions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfAudioDescription"
+        },
+        {
+          "xml": {
+            "name": "audioDescriptions"
+          },
+          "description": "(AudioDescriptions) contains groups of audio encoding settings organized by audio codec. Include one instance of (AudioDescriptions) per output. (AudioDescriptions) can contain multiple groups of encoding settings."
+        }
+      ]
+    },
+    "CaptionDescriptions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfCaptionDescriptionPreset"
+        },
+        {
+          "xml": {
+            "name": "captionDescriptions"
+          },
+          "description": "This object holds groups of settings related to captions for one output. For each output that has captions, include one instance of CaptionDescriptions."
+        }
+      ]
+    },
+    "ContainerSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ContainerSettings"
+        },
+        {
+          "xml": {
+            "name": "containerSettings"
+          },
+          "description": "Container specific settings."
+        }
+      ]
+    },
+    "VideoDescription": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VideoDescription"
+        },
+        {
+          "xml": {
+            "name": "videoDescription"
+          },
+          "description": "VideoDescription contains a group of video encoding settings. The specific video settings depend on the video codec that you choose for the property codec. Include one instance of VideoDescription per output."
+        }
+      ]
+    }
+  }
+}

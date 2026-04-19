@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-h265-tiles-schema.json",
+  "title": "H265Tiles",
+  "description": "Enable use of tiles, allowing horizontal as well as vertical subdivision of the encoded pictures.",
+  "type": "string",
+  "enum": [
+    "DISABLED",
+    "ENABLED"
+  ]
+}

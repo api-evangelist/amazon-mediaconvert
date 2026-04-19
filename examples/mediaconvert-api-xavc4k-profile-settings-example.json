@@ -1,0 +1,10 @@
+{
+  "BitrateClass": "example-value",
+  "CodecProfile": "example-value",
+  "FlickerAdaptiveQuantization": "example-value",
+  "GopBReference": "example-value",
+  "GopClosedCadence": "example-value",
+  "HrdBufferSize": "example-value",
+  "QualityTuningLevel": "example-value",
+  "Slices": "example-value"
+}

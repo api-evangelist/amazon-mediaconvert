@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-job-status-structure.json",
+  "name": "JobStatus",
+  "type": "string",
+  "description": "A job's status can be SUBMITTED, PROGRESSING, COMPLETE, CANCELED, or ERROR.",
+  "enum": [
+    "SUBMITTED",
+    "PROGRESSING",
+    "COMPLETE",
+    "CANCELED",
+    "ERROR"
+  ]
+}

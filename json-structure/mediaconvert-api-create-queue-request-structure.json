@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-create-queue-request-structure.json",
+  "name": "CreateQueueRequest",
+  "type": "object",
+  "description": "CreateQueueRequest schema from Amazon MediaConvert API",
+  "properties": {
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "Optional. A description of the queue that you are creating."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the queue that you are creating."
+        }
+      ]
+    },
+    "PricingPlan": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PricingPlan"
+        },
+        {
+          "xml": {
+            "name": "pricingPlan"
+          },
+          "description": "Specifies whether the pricing plan for the queue is on-demand or reserved. For on-demand, you pay per minute, billed in increments of .01 minute. For reserved, you pay for the transcoding capacity of the entire queue, regardless of how much or how little you use it. Reserved pricing requires a 12-month commitment. When you use the API to create a queue, the default is on-demand."
+        }
+      ]
+    },
+    "ReservationPlanSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ReservationPlanSettings"
+        },
+        {
+          "xml": {
+            "name": "reservationPlanSettings"
+          },
+          "description": "Details about the pricing plan for your reserved queue. Required for reserved queues and not applicable to on-demand queues."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueueStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "Initial state of the queue. If you create a paused queue, then jobs in that queue won't begin."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__mapOf__string"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The tags that you want to add to the resource. You can tag resources with a key-value pair or with only a key."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Name"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-commitment-structure.json",
+  "name": "Commitment",
+  "type": "string",
+  "description": "The length of the term of your reserved queue pricing plan commitment.",
+  "enum": [
+    "ONE_YEAR"
+  ]
+}

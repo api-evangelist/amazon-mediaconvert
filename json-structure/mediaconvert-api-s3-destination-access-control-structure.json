@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-s3-destination-access-control-structure.json",
+  "name": "S3DestinationAccessControl",
+  "type": "object",
+  "description": "Optional. Have MediaConvert automatically apply Amazon S3 access control for the outputs in this output group. When you don't use this setting, S3 automatically applies the default access control list PRIVATE.",
+  "properties": {
+    "CannedAcl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3ObjectCannedAcl"
+        },
+        {
+          "xml": {
+            "name": "cannedAcl"
+          },
+          "description": "Choose an Amazon S3 canned ACL for MediaConvert to apply to this output."
+        }
+      ]
+    }
+  }
+}

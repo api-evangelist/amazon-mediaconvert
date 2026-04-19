@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-hls-rendition-group-settings-schema.json",
+  "title": "HlsRenditionGroupSettings",
+  "description": "Settings specific to audio sources in an HLS alternate rendition group. Specify the properties (renditionGroupId, renditionName or renditionLanguageCode) to identify the unique audio track among the alternative rendition groups present in the HLS manifest. If no unique track is found, or multiple tracks match the properties provided, the job fails. If no properties in hlsRenditionGroupSettings are specified, the default audio track within the video segment is chosen. If there is no audio within video segment, the alternative audio with DEFAULT=YES is chosen instead.",
+  "type": "object",
+  "properties": {
+    "RenditionGroupId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "renditionGroupId"
+          },
+          "description": "Optional. Specify alternative group ID"
+        }
+      ]
+    },
+    "RenditionLanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "xml": {
+            "name": "renditionLanguageCode"
+          },
+          "description": "Optional. Specify ISO 639-2 or ISO 639-3 code in the language property"
+        }
+      ]
+    },
+    "RenditionName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "renditionName"
+          },
+          "description": "Optional. Specify media name"
+        }
+      ]
+    }
+  }
+}

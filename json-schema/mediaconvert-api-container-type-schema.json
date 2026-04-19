@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-container-type-schema.json",
+  "title": "ContainerType",
+  "description": "Container for this output. Some containers require a container settings object. If not specified, the default object will be created.",
+  "type": "string",
+  "enum": [
+    "F4V",
+    "ISMV",
+    "M2TS",
+    "M3U8",
+    "CMFC",
+    "MOV",
+    "MP4",
+    "MPD",
+    "MXF",
+    "WEBM",
+    "RAW"
+  ]
+}

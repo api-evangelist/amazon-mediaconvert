@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-audio-selector-type-structure.json",
+  "name": "AudioSelectorType",
+  "type": "string",
+  "description": "Specifies the type of the audio selector.",
+  "enum": [
+    "PID",
+    "TRACK",
+    "LANGUAGE_CODE",
+    "HLS_RENDITION_GROUP"
+  ]
+}

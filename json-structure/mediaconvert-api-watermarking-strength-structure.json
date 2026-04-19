@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-watermarking-strength-structure.json",
+  "name": "WatermarkingStrength",
+  "type": "string",
+  "description": "Optional. Ignore this setting unless Nagra support directs you to specify a value. When you don't specify a value here, the Nagra NexGuard library uses its default value.",
+  "enum": [
+    "LIGHTEST",
+    "LIGHTER",
+    "DEFAULT",
+    "STRONGER",
+    "STRONGEST"
+  ]
+}

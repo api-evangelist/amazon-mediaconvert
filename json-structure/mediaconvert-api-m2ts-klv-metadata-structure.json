@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-m2ts-klv-metadata-structure.json",
+  "name": "M2tsKlvMetadata",
+  "type": "string",
+  "description": "To include key-length-value metadata in this output: Set KLV metadata insertion to Passthrough. MediaConvert reads KLV metadata present in your input and passes it through to the output transport stream. To exclude this KLV metadata: Set KLV metadata insertion to None or leave blank.",
+  "enum": [
+    "PASSTHROUGH",
+    "NONE"
+  ]
+}

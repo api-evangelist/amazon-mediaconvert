@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-ac3-bitstream-mode-structure.json",
+  "name": "Ac3BitstreamMode",
+  "type": "string",
+  "description": "Specify the bitstream mode for the AC-3 stream that the encoder emits. For more information about the AC3 bitstream mode, see ATSC A/52-2012 (Annex E).",
+  "enum": [
+    "COMPLETE_MAIN",
+    "COMMENTARY",
+    "DIALOGUE",
+    "EMERGENCY",
+    "HEARING_IMPAIRED",
+    "MUSIC_AND_EFFECTS",
+    "VISUALLY_IMPAIRED",
+    "VOICE_OVER"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-m2ts-es-rate-in-pes-structure.json",
+  "name": "M2tsEsRateInPes",
+  "type": "string",
+  "description": "Controls whether to include the ES Rate field in the PES header.",
+  "enum": [
+    "INCLUDE",
+    "EXCLUDE"
+  ]
+}

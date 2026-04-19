@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-h264-unregistered-sei-timecode-structure.json",
+  "name": "H264UnregisteredSeiTimecode",
+  "type": "string",
+  "description": "Inserts timecode for each frame as 4 bytes of an unregistered SEI message.",
+  "enum": [
+    "DISABLED",
+    "ENABLED"
+  ]
+}

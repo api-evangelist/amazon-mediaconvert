@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-audio-channel-tag-schema.json",
+  "title": "AudioChannelTag",
+  "description": "You can add a tag for this mono-channel audio track to mimic its placement in a multi-channel layout. For example, if this track is the left surround channel, choose Left surround (LS).",
+  "type": "string",
+  "enum": [
+    "L",
+    "R",
+    "C",
+    "LFE",
+    "LS",
+    "RS",
+    "LC",
+    "RC",
+    "CS",
+    "LSD",
+    "RSD",
+    "TCS",
+    "VHL",
+    "VHC",
+    "VHR"
+  ]
+}

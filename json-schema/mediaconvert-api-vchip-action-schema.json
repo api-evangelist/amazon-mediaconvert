@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-vchip-action-schema.json",
+  "title": "VchipAction",
+  "description": "The action to take on content advisory XDS packets. If you select PASSTHROUGH, packets will not be changed. If you select STRIP, any packets will be removed in output captions.",
+  "type": "string",
+  "enum": [
+    "PASSTHROUGH",
+    "STRIP"
+  ]
+}

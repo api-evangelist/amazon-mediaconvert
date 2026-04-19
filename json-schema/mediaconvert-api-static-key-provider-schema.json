@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-static-key-provider-schema.json",
+  "title": "StaticKeyProvider",
+  "description": "Use these settings to set up encryption with a static key provider.",
+  "type": "object",
+  "properties": {
+    "KeyFormat": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringPatternIdentityAZaZ26AZaZ09163"
+        },
+        {
+          "xml": {
+            "name": "keyFormat"
+          },
+          "description": "Relates to DRM implementation. Sets the value of the KEYFORMAT attribute. Must be 'identity' or a reverse DNS string. May be omitted to indicate an implicit value of 'identity'."
+        }
+      ]
+    },
+    "KeyFormatVersions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringPatternDD"
+        },
+        {
+          "xml": {
+            "name": "keyFormatVersions"
+          },
+          "description": "Relates to DRM implementation. Either a single positive integer version value or a slash delimited list of version values (1/2/3)."
+        }
+      ]
+    },
+    "StaticKeyValue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringPatternAZaZ0932"
+        },
+        {
+          "xml": {
+            "name": "staticKeyValue"
+          },
+          "description": "Relates to DRM implementation. Use a 32-character hexidecimal string to specify Key Value (StaticKeyValue)."
+        }
+      ]
+    },
+    "Url": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "url"
+          },
+          "description": "Relates to DRM implementation. The location of the license server used for protecting content."
+        }
+      ]
+    }
+  }
+}

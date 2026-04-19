@@ -1,0 +1,9 @@
+{
+  "ConstantInitializationVector": "example-value",
+  "EncryptionMethod": "example-value",
+  "InitializationVectorInManifest": "example-value",
+  "OfflineEncrypted": "example-value",
+  "SpekeKeyProvider": "id-abc123",
+  "StaticKeyProvider": "id-abc123",
+  "Type": "STANDARD"
+}

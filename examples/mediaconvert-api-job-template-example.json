@@ -1,0 +1,15 @@
+{
+  "AccelerationSettings": "example-value",
+  "Arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "Category": "example-value",
+  "CreatedAt": "example-value",
+  "Description": "example-value",
+  "HopDestinations": "example-value",
+  "LastUpdated": "example-value",
+  "Name": "example-resource",
+  "Priority": "example-value",
+  "Queue": "example-value",
+  "Settings": "example-value",
+  "StatusUpdateInterval": "ACTIVE",
+  "Type": "STANDARD"
+}

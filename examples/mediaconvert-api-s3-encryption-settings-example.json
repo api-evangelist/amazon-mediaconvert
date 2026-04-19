@@ -1,0 +1,5 @@
+{
+  "EncryptionType": "STANDARD",
+  "KmsEncryptionContext": "example-value",
+  "KmsKeyArn": "arn:aws:service:us-east-1:123456789012:resource/example"
+}

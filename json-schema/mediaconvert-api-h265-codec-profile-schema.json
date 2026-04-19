@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-h265-codec-profile-schema.json",
+  "title": "H265CodecProfile",
+  "description": "Represents the Profile and Tier, per the HEVC (H.265) specification. Selections are grouped as [Profile] / [Tier], so \"Main/High\" represents Main Profile with High Tier. 4:2:2 profiles are only available with the HEVC 4:2:2 License.",
+  "type": "string",
+  "enum": [
+    "MAIN_MAIN",
+    "MAIN_HIGH",
+    "MAIN10_MAIN",
+    "MAIN10_HIGH",
+    "MAIN_422_8BIT_MAIN",
+    "MAIN_422_8BIT_HIGH",
+    "MAIN_422_10BIT_MAIN",
+    "MAIN_422_10BIT_HIGH"
+  ]
+}

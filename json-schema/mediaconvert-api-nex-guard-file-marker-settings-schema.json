@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-nex-guard-file-marker-settings-schema.json",
+  "title": "NexGuardFileMarkerSettings",
+  "description": "For forensic video watermarking, MediaConvert supports Nagra NexGuard File Marker watermarking. MediaConvert supports both PreRelease Content (NGPR/G2) and OTT Streaming workflows.",
+  "type": "object",
+  "properties": {
+    "License": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringMin1Max100000"
+        },
+        {
+          "xml": {
+            "name": "license"
+          },
+          "description": "Use the base64 license string that Nagra provides you. Enter it directly in your JSON job specification or in the console. Required when you include Nagra NexGuard File Marker watermarking (NexGuardWatermarkingSettings) in your job."
+        }
+      ]
+    },
+    "Payload": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max4194303"
+        },
+        {
+          "xml": {
+            "name": "payload"
+          },
+          "description": "Specify the payload ID that you want associated with this output. Valid values vary depending on your Nagra NexGuard forensic watermarking workflow. Required when you include Nagra NexGuard File Marker watermarking (NexGuardWatermarkingSettings) in your job. For PreRelease Content (NGPR/G2), specify an integer from 1 through 4,194,303. You must generate a unique ID for each asset you watermark, and keep a record of which ID you have assigned to each asset. Neither Nagra nor MediaConvert keep track of the relationship between output files and your IDs. For OTT Streaming, create two adaptive bitrate (ABR) stacks for each asset. Do this by setting up two output groups. For one output group, set the value of Payload ID (payload) to 0 in every output. For the other output group, set Payload ID (payload) to 1 in every output."
+        }
+      ]
+    },
+    "Preset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringMin1Max256"
+        },
+        {
+          "xml": {
+            "name": "preset"
+          },
+          "description": "Enter one of the watermarking preset strings that Nagra provides you. Required when you include Nagra NexGuard File Marker watermarking (NexGuardWatermarkingSettings) in your job."
+        }
+      ]
+    },
+    "Strength": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WatermarkingStrength"
+        },
+        {
+          "xml": {
+            "name": "strength"
+          },
+          "description": "Optional. Ignore this setting unless Nagra support directs you to specify a value. When you don't specify a value here, the Nagra NexGuard library uses its default value."
+        }
+      ]
+    }
+  }
+}

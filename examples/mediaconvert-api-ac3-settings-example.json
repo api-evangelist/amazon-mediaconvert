@@ -1,0 +1,12 @@
+{
+  "Bitrate": "example-value",
+  "BitstreamMode": "example-value",
+  "CodingMode": "example-value",
+  "Dialnorm": "example-value",
+  "DynamicRangeCompressionLine": "example-value",
+  "DynamicRangeCompressionProfile": "example-value",
+  "DynamicRangeCompressionRf": "example-value",
+  "LfeFilter": "example-value",
+  "MetadataControl": "example-value",
+  "SampleRate": "example-value"
+}

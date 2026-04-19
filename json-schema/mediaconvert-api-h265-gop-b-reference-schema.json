@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-h265-gop-b-reference-schema.json",
+  "title": "H265GopBReference",
+  "description": "If enable, use reference B frames for GOP structures that have B frames > 1.",
+  "type": "string",
+  "enum": [
+    "DISABLED",
+    "ENABLED"
+  ]
+}

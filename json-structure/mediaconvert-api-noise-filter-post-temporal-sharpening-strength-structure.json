@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-noise-filter-post-temporal-sharpening-strength-structure.json",
+  "name": "NoiseFilterPostTemporalSharpeningStrength",
+  "type": "string",
+  "description": "Use Post temporal sharpening strength (postTemporalSharpeningStrength) to define the amount of sharpening the transcoder applies to your output. Set Post temporal sharpening strength to Low (LOW), Medium (MEDIUM), or High (HIGH) to indicate the amount of sharpening.",
+  "enum": [
+    "LOW",
+    "MEDIUM",
+    "HIGH"
+  ]
+}

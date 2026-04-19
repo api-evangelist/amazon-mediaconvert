@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-delete-preset-request-structure.json",
+  "name": "DeletePresetRequest",
+  "type": "object",
+  "description": "DeletePresetRequest schema from Amazon MediaConvert API",
+  "properties": {}
+}

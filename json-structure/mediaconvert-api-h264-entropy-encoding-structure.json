@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-h264-entropy-encoding-structure.json",
+  "name": "H264EntropyEncoding",
+  "type": "string",
+  "description": "Entropy encoding mode. Use CABAC (must be in Main or High profile) or CAVLC.",
+  "enum": [
+    "CABAC",
+    "CAVLC"
+  ]
+}

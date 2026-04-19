@@ -1,0 +1,15 @@
+{
+  "ChannelName": "example-resource",
+  "ContentReference": "example-value",
+  "CredentialsSecretName": "example-resource",
+  "FileOffset": "example-value",
+  "KantarLicenseId": "id-abc123",
+  "KantarServerUrl": "example-value",
+  "LogDestination": "example-value",
+  "Metadata3": "example-value",
+  "Metadata4": "example-value",
+  "Metadata5": "example-value",
+  "Metadata6": "example-value",
+  "Metadata7": "example-value",
+  "Metadata8": "example-value"
+}

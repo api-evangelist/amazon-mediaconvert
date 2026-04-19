@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-ancillary-source-settings-structure.json",
+  "name": "AncillarySourceSettings",
+  "type": "object",
+  "description": "Settings for ancillary captions source.",
+  "properties": {
+    "Convert608To708": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AncillaryConvert608To708"
+        },
+        {
+          "xml": {
+            "name": "convert608To708"
+          },
+          "description": "Specify whether this set of input captions appears in your outputs in both 608 and 708 format. If you choose Upconvert (UPCONVERT), MediaConvert includes the captions data in two ways: it passes the 608 data through using the 608 compatibility bytes fields of the 708 wrapper, and it also translates the 608 data into 708."
+        }
+      ]
+    },
+    "SourceAncillaryChannelNumber": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin1Max4"
+        },
+        {
+          "xml": {
+            "name": "sourceAncillaryChannelNumber"
+          },
+          "description": "Specifies the 608 channel number in the ancillary data track from which to extract captions. Unused for passthrough."
+        }
+      ]
+    },
+    "TerminateCaptions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AncillaryTerminateCaptions"
+        },
+        {
+          "xml": {
+            "name": "terminateCaptions"
+          },
+          "description": "By default, the service terminates any unterminated captions at the end of each input. If you want the caption to continue onto your next input, disable this setting."
+        }
+      ]
+    }
+  }
+}

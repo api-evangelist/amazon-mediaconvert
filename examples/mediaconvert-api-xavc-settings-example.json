@@ -1,0 +1,18 @@
+{
+  "AdaptiveQuantization": "example-value",
+  "EntropyEncoding": "example-value",
+  "FramerateControl": "example-value",
+  "FramerateConversionAlgorithm": "example-value",
+  "FramerateDenominator": "example-value",
+  "FramerateNumerator": "example-value",
+  "Profile": "example-value",
+  "SlowPal": "example-value",
+  "Softness": "example-value",
+  "SpatialAdaptiveQuantization": "example-value",
+  "TemporalAdaptiveQuantization": "example-value",
+  "Xavc4kIntraCbgProfileSettings": "example-value",
+  "Xavc4kIntraVbrProfileSettings": "example-value",
+  "Xavc4kProfileSettings": "example-value",
+  "XavcHdIntraCbgProfileSettings": "example-value",
+  "XavcHdProfileSettings": "example-value"
+}

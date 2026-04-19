@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-reservation-plan-status-structure.json",
+  "name": "ReservationPlanStatus",
+  "type": "string",
+  "description": "Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.",
+  "enum": [
+    "ACTIVE",
+    "EXPIRED"
+  ]
+}

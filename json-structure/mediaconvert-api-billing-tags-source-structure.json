@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-billing-tags-source-structure.json",
+  "name": "BillingTagsSource",
+  "type": "string",
+  "description": "The tag type that AWS Billing and Cost Management will use to sort your AWS Elemental MediaConvert costs on any billing report that you set up.",
+  "enum": [
+    "QUEUE",
+    "PRESET",
+    "JOB_TEMPLATE",
+    "JOB"
+  ]
+}

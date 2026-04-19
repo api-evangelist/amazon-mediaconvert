@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-endpoint-structure.json",
+  "name": "Endpoint",
+  "type": "object",
+  "description": "Describes an account-specific API endpoint.",
+  "properties": {
+    "Url": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "url"
+          },
+          "description": "URL of endpoint"
+        }
+      ]
+    }
+  }
+}

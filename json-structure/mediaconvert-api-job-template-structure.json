@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-job-template-structure.json",
+  "name": "JobTemplate",
+  "type": "object",
+  "description": "A job template is a pre-made set of encoding instructions that you can use to quickly create a job.",
+  "properties": {
+    "AccelerationSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccelerationSettings"
+        },
+        {
+          "xml": {
+            "name": "accelerationSettings"
+          },
+          "description": "Accelerated transcoding can significantly speed up jobs with long, visually complex content."
+        }
+      ]
+    },
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "arn"
+          },
+          "description": "An identifier for this resource that is unique within all of AWS."
+        }
+      ]
+    },
+    "Category": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "category"
+          },
+          "description": "An optional category you create to organize your job templates."
+        }
+      ]
+    },
+    "CreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__timestampUnix"
+        },
+        {
+          "xml": {
+            "name": "createdAt"
+          },
+          "description": "The timestamp in epoch seconds for Job template creation."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "An optional description you create for each job template."
+        }
+      ]
+    },
+    "HopDestinations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfHopDestination"
+        },
+        {
+          "xml": {
+            "name": "hopDestinations"
+          },
+          "description": "Optional list of hop destinations."
+        }
+      ]
+    },
+    "LastUpdated": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__timestampUnix"
+        },
+        {
+          "xml": {
+            "name": "lastUpdated"
+          },
+          "description": "The timestamp in epoch seconds when the Job template was last updated."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "A name you create for each job template. Each name must be unique within your account."
+        }
+      ]
+    },
+    "Priority": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMinNegative50Max50"
+        },
+        {
+          "xml": {
+            "name": "priority"
+          },
+          "description": "Relative priority on the job."
+        }
+      ]
+    },
+    "Queue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "queue"
+          },
+          "description": "Optional. The queue that jobs created from this template are assigned to. If you don't specify this, jobs will go to the default queue."
+        }
+      ]
+    },
+    "Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobTemplateSettings"
+        },
+        {
+          "xml": {
+            "name": "settings"
+          },
+          "description": "JobTemplateSettings contains all the transcode settings saved in the template that will be applied to jobs created from it."
+        }
+      ]
+    },
+    "StatusUpdateInterval": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StatusUpdateInterval"
+        },
+        {
+          "xml": {
+            "name": "statusUpdateInterval"
+          },
+          "description": "Specify how often MediaConvert sends STATUS_UPDATE events to Amazon CloudWatch Events. Set the interval, in seconds, between status updates. MediaConvert sends an update at this interval from the time the service begins processing your job to the time it completes the transcode or encounters an error."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Type"
+        },
+        {
+          "xml": {
+            "name": "type"
+          },
+          "description": "A job template can be of two types: system or custom. System or built-in job templates can't be modified or deleted by the user."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Settings",
+    "Name"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-h264-rate-control-mode-schema.json",
+  "title": "H264RateControlMode",
+  "description": "Use this setting to specify whether this output has a variable bitrate (VBR), constant bitrate (CBR) or quality-defined variable bitrate (QVBR).",
+  "type": "string",
+  "enum": [
+    "VBR",
+    "CBR",
+    "QVBR"
+  ]
+}

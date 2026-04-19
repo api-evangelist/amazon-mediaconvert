@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-f4v-moov-placement-structure.json",
+  "name": "F4vMoovPlacement",
+  "type": "string",
+  "description": "If set to PROGRESSIVE_DOWNLOAD, the MOOV atom is relocated to the beginning of the archive as required for progressive downloading. Otherwise it is placed normally at the end.",
+  "enum": [
+    "PROGRESSIVE_DOWNLOAD",
+    "NORMAL"
+  ]
+}

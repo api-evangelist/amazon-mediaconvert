@@ -1,0 +1,15 @@
+{
+  "ChromaSampling": "example-value",
+  "CodecProfile": "example-value",
+  "FramerateControl": "example-value",
+  "FramerateConversionAlgorithm": "example-value",
+  "FramerateDenominator": "example-value",
+  "FramerateNumerator": "example-value",
+  "InterlaceMode": "example-value",
+  "ParControl": "example-value",
+  "ParDenominator": "example-value",
+  "ParNumerator": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "ScanTypeConversionMode": "STANDARD",
+  "SlowPal": "example-value",
+  "Telecine": "example-value"
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-get-policy-request-structure.json",
+  "name": "GetPolicyRequest",
+  "type": "object",
+  "description": "GetPolicyRequest schema from Amazon MediaConvert API",
+  "properties": {}
+}

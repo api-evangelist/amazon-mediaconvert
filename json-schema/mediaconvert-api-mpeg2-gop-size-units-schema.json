@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-mpeg2-gop-size-units-schema.json",
+  "title": "Mpeg2GopSizeUnits",
+  "description": "Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder measures GOP size in frames.",
+  "type": "string",
+  "enum": [
+    "FRAMES",
+    "SECONDS"
+  ]
+}

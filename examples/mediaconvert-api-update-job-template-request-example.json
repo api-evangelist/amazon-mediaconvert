@@ -1,0 +1,10 @@
+{
+  "AccelerationSettings": "example-value",
+  "Category": "example-value",
+  "Description": "example-value",
+  "HopDestinations": "example-value",
+  "Priority": "example-value",
+  "Queue": "example-value",
+  "Settings": "example-value",
+  "StatusUpdateInterval": "ACTIVE"
+}

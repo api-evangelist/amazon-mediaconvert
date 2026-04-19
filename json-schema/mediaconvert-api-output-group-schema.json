@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-output-group-schema.json",
+  "title": "OutputGroup",
+  "description": "Group of outputs",
+  "type": "object",
+  "properties": {
+    "AutomatedEncodingSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AutomatedEncodingSettings"
+        },
+        {
+          "xml": {
+            "name": "automatedEncodingSettings"
+          },
+          "description": "Use automated encoding to have MediaConvert choose your encoding settings for you, based on characteristics of your input video."
+        }
+      ]
+    },
+    "CustomName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "customName"
+          },
+          "description": "Use Custom Group Name (CustomName) to specify a name for the output group. This value is displayed on the console and can make your job settings JSON more human-readable. It does not affect your outputs. Use up to twelve characters that are either letters, numbers, spaces, or underscores."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "Name of the output group"
+        }
+      ]
+    },
+    "OutputGroupSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OutputGroupSettings"
+        },
+        {
+          "xml": {
+            "name": "outputGroupSettings"
+          },
+          "description": "Output Group settings, including type"
+        }
+      ]
+    },
+    "Outputs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfOutput"
+        },
+        {
+          "xml": {
+            "name": "outputs"
+          },
+          "description": "This object holds groups of encoding settings, one group of settings per output."
+        }
+      ]
+    }
+  }
+}

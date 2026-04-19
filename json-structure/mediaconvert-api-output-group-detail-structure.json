@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-output-group-detail-structure.json",
+  "name": "OutputGroupDetail",
+  "type": "object",
+  "description": "Contains details about the output groups specified in the job settings.",
+  "properties": {
+    "OutputDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfOutputDetail"
+        },
+        {
+          "xml": {
+            "name": "outputDetails"
+          },
+          "description": "Details about the output"
+        }
+      ]
+    }
+  }
+}

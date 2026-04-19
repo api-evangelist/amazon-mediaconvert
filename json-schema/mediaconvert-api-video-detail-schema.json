@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-video-detail-schema.json",
+  "title": "VideoDetail",
+  "description": "Contains details about the output's video stream",
+  "type": "object",
+  "properties": {
+    "HeightInPx": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integer"
+        },
+        {
+          "xml": {
+            "name": "heightInPx"
+          },
+          "description": "Height in pixels for the output"
+        }
+      ]
+    },
+    "WidthInPx": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integer"
+        },
+        {
+          "xml": {
+            "name": "widthInPx"
+          },
+          "description": "Width in pixels for the output"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-nielsen-configuration-schema.json",
+  "title": "NielsenConfiguration",
+  "description": "Settings for your Nielsen configuration. If you don't do Nielsen measurement and analytics, ignore these settings. When you enable Nielsen configuration (nielsenConfiguration), MediaConvert enables PCM to ID3 tagging for all outputs in the job. To enable Nielsen configuration programmatically, include an instance of nielsenConfiguration in your JSON job specification. Even if you don't include any children of nielsenConfiguration, you still enable the setting.",
+  "type": "object",
+  "properties": {
+    "BreakoutCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max0"
+        },
+        {
+          "xml": {
+            "name": "breakoutCode"
+          },
+          "description": "Nielsen has discontinued the use of breakout code functionality. If you must include this property, set the value to zero."
+        }
+      ]
+    },
+    "DistributorId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "distributorId"
+          },
+          "description": "Use Distributor ID (DistributorID) to specify the distributor ID that is assigned to your organization by Neilsen."
+        }
+      ]
+    }
+  }
+}

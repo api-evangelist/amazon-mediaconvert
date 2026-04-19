@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-hls-manifest-compression-structure.json",
+  "name": "HlsManifestCompression",
+  "type": "string",
+  "description": "When set to GZIP, compresses HLS playlist.",
+  "enum": [
+    "GZIP",
+    "NONE"
+  ]
+}

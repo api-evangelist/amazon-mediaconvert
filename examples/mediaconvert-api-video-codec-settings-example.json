@@ -1,0 +1,14 @@
+{
+  "Av1Settings": "example-value",
+  "AvcIntraSettings": "example-value",
+  "Codec": "example-value",
+  "FrameCaptureSettings": "example-value",
+  "H264Settings": "example-value",
+  "H265Settings": "example-value",
+  "Mpeg2Settings": "example-value",
+  "ProresSettings": "example-value",
+  "Vc3Settings": "example-value",
+  "Vp8Settings": "example-value",
+  "Vp9Settings": "example-value",
+  "XavcSettings": "example-value"
+}

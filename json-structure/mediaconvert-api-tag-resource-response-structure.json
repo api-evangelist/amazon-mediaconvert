@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-tag-resource-response-structure.json",
+  "name": "TagResourceResponse",
+  "type": "object",
+  "description": "TagResourceResponse schema from Amazon MediaConvert API",
+  "properties": {}
+}

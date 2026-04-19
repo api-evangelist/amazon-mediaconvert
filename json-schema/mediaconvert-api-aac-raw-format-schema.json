@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-aac-raw-format-schema.json",
+  "title": "AacRawFormat",
+  "description": "Enables LATM/LOAS AAC output. Note that if you use LATM/LOAS AAC in an output, you must choose \"No container\" for the output container.",
+  "type": "string",
+  "enum": [
+    "LATM_LOAS",
+    "NONE"
+  ]
+}

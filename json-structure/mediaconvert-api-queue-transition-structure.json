@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-queue-transition-structure.json",
+  "name": "QueueTransition",
+  "type": "object",
+  "description": "Description of the source and destination queues between which the job has moved, along with the timestamp of the move",
+  "properties": {
+    "DestinationQueue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "destinationQueue"
+          },
+          "description": "The queue that the job was on after the transition."
+        }
+      ]
+    },
+    "SourceQueue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "sourceQueue"
+          },
+          "description": "The queue that the job was on before the transition."
+        }
+      ]
+    },
+    "Timestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__timestampUnix"
+        },
+        {
+          "xml": {
+            "name": "timestamp"
+          },
+          "description": "The time, in Unix epoch format, that the job moved from the source queue to the destination queue."
+        }
+      ]
+    }
+  }
+}

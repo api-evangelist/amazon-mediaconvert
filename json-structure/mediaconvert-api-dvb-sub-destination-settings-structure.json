@@ -1,0 +1,360 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-dvb-sub-destination-settings-structure.json",
+  "name": "DvbSubDestinationSettings",
+  "type": "object",
+  "description": "Settings related to DVB-Sub captions. Set up DVB-Sub captions in the same output as your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/dvb-sub-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to DVB_SUB.",
+  "properties": {
+    "Alignment": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubtitleAlignment"
+        },
+        {
+          "xml": {
+            "name": "alignment"
+          },
+          "description": "Specify the alignment of your captions. If no explicit x_position is provided, setting alignment to centered will placethe captions at the bottom center of the output. Similarly, setting a left alignment willalign captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "ApplyFontColor": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubtitleApplyFontColor"
+        },
+        {
+          "xml": {
+            "name": "applyFontColor"
+          },
+          "description": "Ignore this setting unless Style Passthrough (StylePassthrough) is set to Enabled and Font color (FontColor) set to Black, Yellow, Red, Green, Blue, or Hex. Use Apply font color (ApplyFontColor) for additional font color controls. When you choose White text only (WHITE_TEXT_ONLY), or leave blank, your font color setting only applies to white text in your input captions. For example, if your font color setting is Yellow, and your input captions have red and white text, your output captions will have red and yellow text. When you choose ALL_TEXT, your font color setting applies to all of your output captions text."
+        }
+      ]
+    },
+    "BackgroundColor": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubtitleBackgroundColor"
+        },
+        {
+          "xml": {
+            "name": "backgroundColor"
+          },
+          "description": "Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and set Style passthrough (StylePassthrough) to enabled to use the background color data from your input captions, if present."
+        }
+      ]
+    },
+    "BackgroundOpacity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max255"
+        },
+        {
+          "xml": {
+            "name": "backgroundOpacity"
+          },
+          "description": "Specify the opacity of the background rectangle. Enter a value from 0 to 255, where 0 is transparent and 255 is opaque. If Style passthrough (StylePassthrough) is set to enabled, leave blank to pass through the background style information in your input captions to your output captions. If Style passthrough is set to disabled, leave blank to use a value of 0 and remove all backgrounds from your output captions. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "DdsHandling": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbddsHandling"
+        },
+        {
+          "xml": {
+            "name": "ddsHandling"
+          },
+          "description": "Specify how MediaConvert handles the display definition segment (DDS). To exclude the DDS from this set of captions: Keep the default, None. To include the DDS: Choose Specified. When you do, also specify the offset coordinates of the display window with DDS x-coordinate and DDS y-coordinate. To include the DDS, but not include display window data: Choose No display window. When you do, you can write position metadata to the page composition segment (PCS) with DDS x-coordinate and DDS y-coordinate. For video resolutions with a height of 576 pixels or less, MediaConvert doesn't include the DDS, regardless of the value you choose for DDS handling. All burn-in and DVB-Sub font settings must match."
+        }
+      ]
+    },
+    "DdsXCoordinate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "ddsXCoordinate"
+          },
+          "description": "Use this setting, along with DDS y-coordinate (ddsYCoordinate), to specify the upper left corner of the display definition segment (DDS) display window. With this setting, specify the distance, in pixels, between the left side of the frame and the left side of the DDS display window. Keep the default value, 0, to have MediaConvert automatically choose this offset. Related setting: When you use this setting, you must set DDS handling (ddsHandling) to a value other than None (NONE). MediaConvert uses these values to determine whether to write page position data to the DDS or to the page composition segment (PCS). All burn-in and DVB-Sub font settings must match."
+        }
+      ]
+    },
+    "DdsYCoordinate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "ddsYCoordinate"
+          },
+          "description": "Use this setting, along with DDS x-coordinate (ddsXCoordinate), to specify the upper left corner of the display definition segment (DDS) display window. With this setting, specify the distance, in pixels, between the top of the frame and the top of the DDS display window. Keep the default value, 0, to have MediaConvert automatically choose this offset. Related setting: When you use this setting, you must set DDS handling (ddsHandling) to a value other than None (NONE). MediaConvert uses these values to determine whether to write page position data to the DDS or to the page composition segment (PCS). All burn-in and DVB-Sub font settings must match."
+        }
+      ]
+    },
+    "FallbackFont": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubSubtitleFallbackFont"
+        },
+        {
+          "xml": {
+            "name": "fallbackFont"
+          },
+          "description": "Specify the font that you want the service to use for your burn in captions when your input captions specify a font that MediaConvert doesn't support. When you set Fallback font (FallbackFont) to best match (BEST_MATCH), or leave blank, MediaConvert uses a supported font that most closely matches the font that your input captions specify. When there are multiple unsupported fonts in your input captions, MediaConvert matches each font with the supported font that matches best. When you explicitly choose a replacement font, MediaConvert uses that font to replace all unsupported fonts from your input."
+        }
+      ]
+    },
+    "FontColor": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubtitleFontColor"
+        },
+        {
+          "xml": {
+            "name": "fontColor"
+          },
+          "description": "Specify the color of the captions text. Leave Font color (FontColor) blank and set Style passthrough (StylePassthrough) to enabled to use the font color data from your input captions, if present. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "FontOpacity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max255"
+        },
+        {
+          "xml": {
+            "name": "fontOpacity"
+          },
+          "description": "Specify the opacity of the burned-in captions. 255 is opaque; 0 is transparent.\nWithin your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "FontResolution": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin96Max600"
+        },
+        {
+          "xml": {
+            "name": "fontResolution"
+          },
+          "description": "Specify the Font resolution (FontResolution) in DPI (dots per inch).\nWithin your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "FontScript": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FontScript"
+        },
+        {
+          "xml": {
+            "name": "fontScript"
+          },
+          "description": "Set Font script (FontScript) to Automatically determined (AUTOMATIC), or leave blank, to automatically determine the font script in your input captions. Otherwise, set to Simplified Chinese (HANS) or Traditional Chinese (HANT) if your input font script uses Simplified or Traditional Chinese. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "FontSize": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max96"
+        },
+        {
+          "xml": {
+            "name": "fontSize"
+          },
+          "description": "Specify the Font size (FontSize) in pixels. Must be a positive integer. Set to 0, or leave blank, for automatic font size. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "Height": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin1Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "height"
+          },
+          "description": "Specify the height, in pixels, of this set of DVB-Sub captions. The default value is 576 pixels. Related setting: When you use this setting, you must set DDS handling (ddsHandling) to a value other than None (NONE). All burn-in and DVB-Sub font settings must match."
+        }
+      ]
+    },
+    "HexFontColor": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringMin6Max8Pattern09aFAF609aFAF2"
+        },
+        {
+          "xml": {
+            "name": "hexFontColor"
+          },
+          "description": "Ignore this setting unless your Font color is set to Hex. Enter either six or eight hexidecimal digits, representing red, green, and blue, with two optional extra digits for alpha. For example a value of 1122AABB is a red value of 0x11, a green value of 0x22, a blue value of 0xAA, and an alpha value of 0xBB."
+        }
+      ]
+    },
+    "OutlineColor": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubtitleOutlineColor"
+        },
+        {
+          "xml": {
+            "name": "outlineColor"
+          },
+          "description": "Specify font outline color. Leave Outline color (OutlineColor) blank and set Style passthrough (StylePassthrough) to enabled to use the font outline color data from your input captions, if present. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "OutlineSize": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max10"
+        },
+        {
+          "xml": {
+            "name": "outlineSize"
+          },
+          "description": "Specify the Outline size (OutlineSize) of the caption text, in pixels. Leave Outline size blank and set Style passthrough (StylePassthrough) to enabled to use the outline size data from your input captions, if present. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "ShadowColor": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubtitleShadowColor"
+        },
+        {
+          "xml": {
+            "name": "shadowColor"
+          },
+          "description": "Specify the color of the shadow cast by the captions. Leave Shadow color (ShadowColor) blank and set Style passthrough (StylePassthrough) to enabled to use the shadow color data from your input captions, if present. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "ShadowOpacity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max255"
+        },
+        {
+          "xml": {
+            "name": "shadowOpacity"
+          },
+          "description": "Specify the opacity of the shadow. Enter a value from 0 to 255, where 0 is transparent and 255 is opaque. If Style passthrough (StylePassthrough) is set to Enabled, leave Shadow opacity (ShadowOpacity) blank to pass through the shadow style information in your input captions to your output captions. If Style passthrough is set to disabled, leave blank to use a value of 0 and remove all shadows from your output captions. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "ShadowXOffset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMinNegative2147483648Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "shadowXOffset"
+          },
+          "description": "Specify the horizontal offset of the shadow, relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "ShadowYOffset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMinNegative2147483648Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "shadowYOffset"
+          },
+          "description": "Specify the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text. Leave Shadow y-offset (ShadowYOffset) blank and set Style passthrough (StylePassthrough) to enabled to use the shadow y-offset data from your input captions, if present. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "StylePassthrough": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubtitleStylePassthrough"
+        },
+        {
+          "xml": {
+            "name": "stylePassthrough"
+          },
+          "description": "Set Style passthrough (StylePassthrough) to ENABLED to use the available style, color, and position information from your input captions. MediaConvert uses default settings for any missing style and position information in your input captions. Set Style passthrough to DISABLED, or leave blank, to ignore the style and position information from your input captions and use default settings: white text with black outlining, bottom-center positioning, and automatic sizing. Whether you set Style passthrough to enabled or not, you can also choose to manually override any of the individual style and position settings."
+        }
+      ]
+    },
+    "SubtitlingType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubtitlingType"
+        },
+        {
+          "xml": {
+            "name": "subtitlingType"
+          },
+          "description": "Specify whether your DVB subtitles are standard or for hearing impaired. Choose hearing impaired if your subtitles include audio descriptions and dialogue. Choose standard if your subtitles include only dialogue."
+        }
+      ]
+    },
+    "TeletextSpacing": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DvbSubtitleTeletextSpacing"
+        },
+        {
+          "xml": {
+            "name": "teletextSpacing"
+          },
+          "description": "Specify whether the Text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "Width": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin1Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "width"
+          },
+          "description": "Specify the width, in pixels, of this set of DVB-Sub captions. The default value is 720 pixels. Related setting: When you use this setting, you must set DDS handling (ddsHandling) to a value other than None (NONE). All burn-in and DVB-Sub font settings must match."
+        }
+      ]
+    },
+    "XPosition": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "xPosition"
+          },
+          "description": "Specify the horizontal position (XPosition) of the captions, relative to the left side of the outputin pixels. A value of 10 would result in the captions starting 10 pixels from the left ofthe output. If no explicit x_position is provided, the horizontal caption position will bedetermined by the alignment parameter. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    },
+    "YPosition": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "yPosition"
+          },
+          "description": "Specify the vertical position (YPosition) of the captions, relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit y_position is provided, the caption will be positioned towards the bottom of the output. Within your job settings, all of your DVB-Sub settings must be identical."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-output-group-detail-schema.json",
+  "title": "OutputGroupDetail",
+  "description": "Contains details about the output groups specified in the job settings.",
+  "type": "object",
+  "properties": {
+    "OutputDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfOutputDetail"
+        },
+        {
+          "xml": {
+            "name": "outputDetails"
+          },
+          "description": "Details about the output"
+        }
+      ]
+    }
+  }
+}

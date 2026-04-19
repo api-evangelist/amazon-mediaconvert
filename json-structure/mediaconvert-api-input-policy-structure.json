@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-input-policy-structure.json",
+  "name": "InputPolicy",
+  "type": "string",
+  "description": "An input policy allows or disallows a job you submit to run based on the conditions that you specify.",
+  "enum": [
+    "ALLOWED",
+    "DISALLOWED"
+  ]
+}

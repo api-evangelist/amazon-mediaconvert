@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-decryption-mode-schema.json",
+  "title": "DecryptionMode",
+  "description": "Specify the encryption mode that you used to encrypt your input files.",
+  "type": "string",
+  "enum": [
+    "AES_CTR",
+    "AES_CBC",
+    "AES_GCM"
+  ]
+}

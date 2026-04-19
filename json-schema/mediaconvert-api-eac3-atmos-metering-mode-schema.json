@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-eac3-atmos-metering-mode-schema.json",
+  "title": "Eac3AtmosMeteringMode",
+  "description": "Choose how the service meters the loudness of your audio.",
+  "type": "string",
+  "enum": [
+    "LEQ_A",
+    "ITU_BS_1770_1",
+    "ITU_BS_1770_2",
+    "ITU_BS_1770_3",
+    "ITU_BS_1770_4"
+  ]
+}

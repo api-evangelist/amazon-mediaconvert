@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-burnin-subtitle-outline-color-structure.json",
+  "name": "BurninSubtitleOutlineColor",
+  "type": "string",
+  "description": "Specify font outline color. Leave Outline color (OutlineColor) blank and set Style passthrough (StylePassthrough) to enabled to use the font outline color data from your input captions, if present.",
+  "enum": [
+    "BLACK",
+    "WHITE",
+    "YELLOW",
+    "RED",
+    "GREEN",
+    "BLUE",
+    "AUTO"
+  ]
+}

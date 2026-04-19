@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-font-script-structure.json",
+  "name": "FontScript",
+  "type": "string",
+  "description": "Provide the font script, using an ISO 15924 script code, if the LanguageCode is not sufficient for determining the script type. Where LanguageCode or CustomLanguageCode is sufficient, use \"AUTOMATIC\" or leave unset.",
+  "enum": [
+    "AUTOMATIC",
+    "HANS",
+    "HANT"
+  ]
+}

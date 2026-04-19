@@ -1,0 +1,631 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon MediaConvert API
+  description: AWS Elemental MediaConvert is a file-based video transcoding service that allows you to easily create video-on-demand (VOD) content for broadcast and multiscreen delivery at scale. It 
+    supports broadcast-grade features including graphic overlays, content protection, multi-language audio, closed captioning, and a comprehensive range of video formats.
+  tags:
+  - AWS
+  - Media
+  - Broadcasting
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - type: http
+    namespace: mediaconvert
+    baseUri: http://mediaconvert.{region}.amazonaws.com
+    description: Amazon MediaConvert REST API
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{AWS_ACCESS_KEY_ID}}'
+      placement: header
+    resources:
+    - name: default
+      path: /
+      description: Amazon MediaConvert resources
+      operations:
+      - name: associate-certificate
+        method: POST
+        description: AssociateCertificate
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: get-job
+        method: GET
+        description: GetJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: id
+          in: path
+          type: string
+          required: true
+          description: the job ID of the job.
+      - name: cancel-job
+        method: DELETE
+        description: CancelJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: id
+          in: path
+          type: string
+          required: true
+          description: The Job ID of the job to be cancelled.
+      - name: list-jobs
+        method: GET
+        description: ListJobs
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+          required: false
+          description: Optional. Number of jobs, up to twenty, that will be returned at one time.
+        - name: nextToken
+          in: query
+          type: string
+          required: false
+          description: Optional. Use this string, provided with the response to a previous request, to request the next batch of jobs.
+        - name: order
+          in: query
+          type: string
+          required: false
+          description: Optional. When you request lists of resources, you can specify whether they are sorted in ASCENDING or DESCENDING order. Default varies by resource.
+        - name: queue
+          in: query
+          type: string
+          required: false
+          description: Optional. Provide a queue name to get back only jobs from that queue.
+        - name: status
+          in: query
+          type: string
+          required: false
+          description: Optional. A job's status can be SUBMITTED, PROGRESSING, COMPLETE, CANCELED, or ERROR.
+        - name: MaxResults
+          in: query
+          type: string
+          required: false
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          required: false
+          description: Pagination token
+      - name: create-job
+        method: POST
+        description: CreateJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: list-job-templates
+        method: GET
+        description: ListJobTemplates
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: category
+          in: query
+          type: string
+          required: false
+          description: Optionally, specify a job template category to limit responses to only job templates from that category.
+        - name: listBy
+          in: query
+          type: string
+          required: false
+          description: Optional. When you request a list of job templates, you can choose to list them alphabetically by NAME or chronologically by CREATION_DATE. If you don't specify, the service 
+            will list them by name.
+        - name: maxResults
+          in: query
+          type: integer
+          required: false
+          description: Optional. Number of job templates, up to twenty, that will be returned at one time.
+        - name: nextToken
+          in: query
+          type: string
+          required: false
+          description: Use this string, provided with the response to a previous request, to request the next batch of job templates.
+        - name: order
+          in: query
+          type: string
+          required: false
+          description: Optional. When you request lists of resources, you can specify whether they are sorted in ASCENDING or DESCENDING order. Default varies by resource.
+        - name: MaxResults
+          in: query
+          type: string
+          required: false
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          required: false
+          description: Pagination token
+      - name: create-job-template
+        method: POST
+        description: CreateJobTemplate
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: list-presets
+        method: GET
+        description: ListPresets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: category
+          in: query
+          type: string
+          required: false
+          description: Optionally, specify a preset category to limit responses to only presets from that category.
+        - name: listBy
+          in: query
+          type: string
+          required: false
+          description: Optional. When you request a list of presets, you can choose to list them alphabetically by NAME or chronologically by CREATION_DATE. If you don't specify, the service will list
+            them by name.
+        - name: maxResults
+          in: query
+          type: integer
+          required: false
+          description: Optional. Number of presets, up to twenty, that will be returned at one time
+        - name: nextToken
+          in: query
+          type: string
+          required: false
+          description: Use this string, provided with the response to a previous request, to request the next batch of presets.
+        - name: order
+          in: query
+          type: string
+          required: false
+          description: Optional. When you request lists of resources, you can specify whether they are sorted in ASCENDING or DESCENDING order. Default varies by resource.
+        - name: MaxResults
+          in: query
+          type: string
+          required: false
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          required: false
+          description: Pagination token
+      - name: create-preset
+        method: POST
+        description: CreatePreset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: list-queues
+        method: GET
+        description: ListQueues
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: listBy
+          in: query
+          type: string
+          required: false
+          description: Optional. When you request a list of queues, you can choose to list them alphabetically by NAME or chronologically by CREATION_DATE. If you don't specify, the service will list 
+            them by creation date.
+        - name: maxResults
+          in: query
+          type: integer
+          required: false
+          description: Optional. Number of queues, up to twenty, that will be returned at one time.
+        - name: nextToken
+          in: query
+          type: string
+          required: false
+          description: Use this string, provided with the response to a previous request, to request the next batch of queues.
+        - name: order
+          in: query
+          type: string
+          required: false
+          description: Optional. When you request lists of resources, you can specify whether they are sorted in ASCENDING or DESCENDING order. Default varies by resource.
+        - name: MaxResults
+          in: query
+          type: string
+          required: false
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          required: false
+          description: Pagination token
+      - name: create-queue
+        method: POST
+        description: CreateQueue
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: get-job-template
+        method: GET
+        description: GetJobTemplate
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: The name of the job template.
+      - name: update-job-template
+        method: PUT
+        description: UpdateJobTemplate
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: The name of the job template you are modifying
+        body:
+          type: json
+          data: {}
+      - name: delete-job-template
+        method: DELETE
+        description: DeleteJobTemplate
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: The name of the job template to be deleted.
+      - name: get-policy
+        method: GET
+        description: GetPolicy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put-policy
+        method: PUT
+        description: PutPolicy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+      - name: delete-policy
+        method: DELETE
+        description: DeletePolicy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: get-preset
+        method: GET
+        description: GetPreset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: The name of the preset.
+      - name: update-preset
+        method: PUT
+        description: UpdatePreset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: The name of the preset you are modifying.
+        body:
+          type: json
+          data: {}
+      - name: delete-preset
+        method: DELETE
+        description: DeletePreset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: The name of the preset to be deleted.
+      - name: get-queue
+        method: GET
+        description: GetQueue
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: The name of the queue that you want information about.
+      - name: update-queue
+        method: PUT
+        description: UpdateQueue
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: The name of the queue that you are modifying.
+        body:
+          type: json
+          data: {}
+      - name: delete-queue
+        method: DELETE
+        description: DeleteQueue
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: The name of the queue that you want to delete.
+      - name: describe-endpoints
+        method: POST
+        description: DescribeEndpoints
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxResults
+          in: query
+          type: string
+          required: false
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          required: false
+          description: Pagination token
+        body:
+          type: json
+          data: {}
+      - name: disassociate-certificate
+        method: DELETE
+        description: DisassociateCertificate
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: arn
+          in: path
+          type: string
+          required: true
+          description: The ARN of the ACM certificate that you want to disassociate from your MediaConvert resource.
+      - name: list-tags-for-resource
+        method: GET
+        description: ListTagsForResource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: arn
+          in: path
+          type: string
+          required: true
+          description: The Amazon Resource Name (ARN) of the resource that you want to list tags for. To get the ARN, send a GET request with the resource name.
+      - name: untag-resource
+        method: PUT
+        description: UntagResource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: arn
+          in: path
+          type: string
+          required: true
+          description: The Amazon Resource Name (ARN) of the resource that you want to remove tags from. To get the ARN, send a GET request with the resource name.
+        body:
+          type: json
+          data: {}
+      - name: tag-resource
+        method: POST
+        description: TagResource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}
+  exposes:
+  - type: rest
+    port: 8100
+    namespace: mediaconvert-rest
+    resources:
+    - path: /v1/resources
+      name: resources
+      description: Amazon MediaConvert resources
+      operations:
+      - method: GET
+        name: list-resources
+        description: List Amazon MediaConvert resources
+        call: mediaconvert.list
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9100
+    namespace: mediaconvert-mcp
+    transport: http
+    tools:
+    - name: associate-certificate
+      description: AssociateCertificate
+      hints:
+        readOnly: false
+      call: mediaconvert.associate-certificate
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-job
+      description: GetJob
+      hints:
+        readOnly: true
+      call: mediaconvert.get-job
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: cancel-job
+      description: CancelJob
+      hints:
+        readOnly: false
+      call: mediaconvert.cancel-job
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-jobs
+      description: ListJobs
+      hints:
+        readOnly: true
+      call: mediaconvert.list-jobs
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-job
+      description: CreateJob
+      hints:
+        readOnly: false
+      call: mediaconvert.create-job
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-job-templates
+      description: ListJobTemplates
+      hints:
+        readOnly: true
+      call: mediaconvert.list-job-templates
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-job-template
+      description: CreateJobTemplate
+      hints:
+        readOnly: false
+      call: mediaconvert.create-job-template
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-presets
+      description: ListPresets
+      hints:
+        readOnly: true
+      call: mediaconvert.list-presets
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-preset
+      description: CreatePreset
+      hints:
+        readOnly: false
+      call: mediaconvert.create-preset
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-queues
+      description: ListQueues
+      hints:
+        readOnly: true
+      call: mediaconvert.list-queues
+      outputParameters:
+      - type: object
+        mapping: $.

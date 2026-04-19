@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-m2ts-nielsen-id3-schema.json",
+  "title": "M2tsNielsenId3",
+  "description": "If INSERT, Nielsen inaudible tones for media tracking will be detected in the input audio and an equivalent ID3 tag will be inserted in the output.",
+  "type": "string",
+  "enum": [
+    "INSERT",
+    "NONE"
+  ]
+}

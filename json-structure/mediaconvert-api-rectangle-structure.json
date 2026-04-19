@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-rectangle-structure.json",
+  "name": "Rectangle",
+  "type": "object",
+  "description": "Use Rectangle to identify a specific area of the video frame.",
+  "properties": {
+    "Height": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin2Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "height"
+          },
+          "description": "Height of rectangle in pixels. Specify only even numbers."
+        }
+      ]
+    },
+    "Width": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin2Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "width"
+          },
+          "description": "Width of rectangle in pixels. Specify only even numbers."
+        }
+      ]
+    },
+    "X": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "x"
+          },
+          "description": "The distance, in pixels, between the rectangle and the left edge of the video frame. Specify only even numbers."
+        }
+      ]
+    },
+    "Y": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "y"
+          },
+          "description": "The distance, in pixels, between the rectangle and the top edge of the video frame. Specify only even numbers."
+        }
+      ]
+    }
+  }
+}

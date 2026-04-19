@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-acceleration-settings-schema.json",
+  "title": "AccelerationSettings",
+  "description": "Accelerated transcoding can significantly speed up jobs with long, visually complex content.",
+  "type": "object",
+  "properties": {
+    "Mode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccelerationMode"
+        },
+        {
+          "xml": {
+            "name": "mode"
+          },
+          "description": "Specify the conditions when the service will run your job with accelerated transcoding."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Mode"
+  ]
+}

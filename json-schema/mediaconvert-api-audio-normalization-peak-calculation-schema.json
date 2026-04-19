@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-audio-normalization-peak-calculation-schema.json",
+  "title": "AudioNormalizationPeakCalculation",
+  "description": "If set to TRUE_PEAK, calculate and log the TruePeak for each output's audio track loudness.",
+  "type": "string",
+  "enum": [
+    "TRUE_PEAK",
+    "NONE"
+  ]
+}

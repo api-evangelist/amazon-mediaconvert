@@ -1,0 +1,14 @@
+{
+  "BluePrimaryX": "example-value",
+  "BluePrimaryY": "example-value",
+  "GreenPrimaryX": "example-value",
+  "GreenPrimaryY": "example-value",
+  "MaxContentLightLevel": "example-value",
+  "MaxFrameAverageLightLevel": "example-value",
+  "MaxLuminance": "example-value",
+  "MinLuminance": "example-value",
+  "RedPrimaryX": "example-value",
+  "RedPrimaryY": "example-value",
+  "WhitePointX": "example-value",
+  "WhitePointY": "example-value"
+}

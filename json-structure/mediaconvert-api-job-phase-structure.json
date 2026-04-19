@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-job-phase-structure.json",
+  "name": "JobPhase",
+  "type": "string",
+  "description": "A job's phase can be PROBING, TRANSCODING OR UPLOADING",
+  "enum": [
+    "PROBING",
+    "TRANSCODING",
+    "UPLOADING"
+  ]
+}

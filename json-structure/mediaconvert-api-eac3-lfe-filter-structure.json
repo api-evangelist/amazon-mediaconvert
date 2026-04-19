@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-eac3-lfe-filter-structure.json",
+  "name": "Eac3LfeFilter",
+  "type": "string",
+  "description": "Applies a 120Hz lowpass filter to the LFE channel prior to encoding. Only valid with 3_2_LFE coding mode.",
+  "enum": [
+    "ENABLED",
+    "DISABLED"
+  ]
+}

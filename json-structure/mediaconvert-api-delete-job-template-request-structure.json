@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-delete-job-template-request-structure.json",
+  "name": "DeleteJobTemplateRequest",
+  "type": "object",
+  "description": "DeleteJobTemplateRequest schema from Amazon MediaConvert API",
+  "properties": {}
+}

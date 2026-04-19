@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-hls-codec-specification-structure.json",
+  "name": "HlsCodecSpecification",
+  "type": "string",
+  "description": "Specification to use (RFC-6381 or the default RFC-4281) during m3u8 playlist generation.",
+  "enum": [
+    "RFC_6381",
+    "RFC_4281"
+  ]
+}

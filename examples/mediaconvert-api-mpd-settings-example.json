@@ -1,0 +1,13 @@
+{
+  "AccessibilityCaptionHints": "example-value",
+  "AudioDuration": "example-value",
+  "CaptionContainerType": "STANDARD",
+  "KlvMetadata": "example-value",
+  "ManifestMetadataSignaling": "example-value",
+  "Scte35Esam": "example-value",
+  "Scte35Source": "example-value",
+  "TimedMetadata": "example-value",
+  "TimedMetadataBoxVersion": "example-value",
+  "TimedMetadataSchemeIdUri": "id-abc123",
+  "TimedMetadataValue": "example-value"
+}

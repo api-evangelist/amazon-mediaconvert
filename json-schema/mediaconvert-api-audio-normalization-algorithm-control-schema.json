@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-audio-normalization-algorithm-control-schema.json",
+  "title": "AudioNormalizationAlgorithmControl",
+  "description": "When enabled the output audio is corrected using the chosen algorithm. If disabled, the audio will be measured but not adjusted.",
+  "type": "string",
+  "enum": [
+    "CORRECT_AUDIO",
+    "MEASURE_ONLY"
+  ]
+}

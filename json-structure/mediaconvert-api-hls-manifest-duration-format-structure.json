@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-hls-manifest-duration-format-structure.json",
+  "name": "HlsManifestDurationFormat",
+  "type": "string",
+  "description": "Indicates whether the output manifest should use floating point values for segment duration.",
+  "enum": [
+    "FLOATING_POINT",
+    "INTEGER"
+  ]
+}

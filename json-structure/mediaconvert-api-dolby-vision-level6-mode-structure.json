@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-dolby-vision-level6-mode-structure.json",
+  "name": "DolbyVisionLevel6Mode",
+  "type": "string",
+  "description": "Use Dolby Vision Mode to choose how the service will handle Dolby Vision MaxCLL and MaxFALL properies.",
+  "enum": [
+    "PASSTHROUGH",
+    "RECALCULATE",
+    "SPECIFY"
+  ]
+}

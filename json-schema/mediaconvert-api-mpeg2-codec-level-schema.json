@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-mpeg2-codec-level-schema.json",
+  "title": "Mpeg2CodecLevel",
+  "description": "Use Level (Mpeg2CodecLevel) to set the MPEG-2 level for the video output.",
+  "type": "string",
+  "enum": [
+    "AUTO",
+    "LOW",
+    "MAIN",
+    "HIGH1440",
+    "HIGH"
+  ]
+}

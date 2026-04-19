@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-burnin-subtitle-font-color-schema.json",
+  "title": "BurninSubtitleFontColor",
+  "description": "Specify the color of the burned-in captions text. Leave Font color (FontColor) blank and set Style passthrough (StylePassthrough) to enabled to use the font color data from your input captions, if present.",
+  "type": "string",
+  "enum": [
+    "WHITE",
+    "BLACK",
+    "YELLOW",
+    "RED",
+    "GREEN",
+    "BLUE",
+    "HEX",
+    "AUTO"
+  ]
+}

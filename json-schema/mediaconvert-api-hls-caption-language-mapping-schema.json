@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-hls-caption-language-mapping-schema.json",
+  "title": "HlsCaptionLanguageMapping",
+  "description": "Caption Language Mapping",
+  "type": "object",
+  "properties": {
+    "CaptionChannel": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMinNegative2147483648Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "captionChannel"
+          },
+          "description": "Caption channel."
+        }
+      ]
+    },
+    "CustomLanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringMin3Max3PatternAZaZ3"
+        },
+        {
+          "xml": {
+            "name": "customLanguageCode"
+          },
+          "description": "Specify the language for this captions channel, using the ISO 639-2 or ISO 639-3 three-letter language code"
+        }
+      ]
+    },
+    "LanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "xml": {
+            "name": "languageCode"
+          },
+          "description": "Specify the language, using the ISO 639-2 three-letter code listed at https://www.loc.gov/standards/iso639-2/php/code_list.php."
+        }
+      ]
+    },
+    "LanguageDescription": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "languageDescription"
+          },
+          "description": "Caption language description."
+        }
+      ]
+    }
+  }
+}

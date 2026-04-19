@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-dvb-sub-source-settings-schema.json",
+  "title": "DvbSubSourceSettings",
+  "description": "DVB Sub Source Settings",
+  "type": "object",
+  "properties": {
+    "Pid": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin1Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "pid"
+          },
+          "description": "When using DVB-Sub with Burn-In or SMPTE-TT, use this PID for the source content. Unused for DVB-Sub passthrough. All DVB-Sub content is passed through, regardless of selectors."
+        }
+      ]
+    }
+  }
+}

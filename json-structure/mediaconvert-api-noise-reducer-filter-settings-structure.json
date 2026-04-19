@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-noise-reducer-filter-settings-structure.json",
+  "name": "NoiseReducerFilterSettings",
+  "type": "object",
+  "description": "Settings for a noise reducer filter",
+  "properties": {
+    "Strength": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max3"
+        },
+        {
+          "xml": {
+            "name": "strength"
+          },
+          "description": "Relative strength of noise reducing filter. Higher values produce stronger filtering."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-ancillary-terminate-captions-schema.json",
+  "title": "AncillaryTerminateCaptions",
+  "description": "By default, the service terminates any unterminated captions at the end of each input. If you want the caption to continue onto your next input, disable this setting.",
+  "type": "string",
+  "enum": [
+    "END_OF_INPUT",
+    "DISABLED"
+  ]
+}

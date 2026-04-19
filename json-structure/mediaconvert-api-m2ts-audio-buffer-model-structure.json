@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-m2ts-audio-buffer-model-structure.json",
+  "name": "M2tsAudioBufferModel",
+  "type": "string",
+  "description": "Selects between the DVB and ATSC buffer models for Dolby Digital audio.",
+  "enum": [
+    "DVB",
+    "ATSC"
+  ]
+}

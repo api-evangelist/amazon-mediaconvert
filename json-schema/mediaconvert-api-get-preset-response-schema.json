@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-get-preset-response-schema.json",
+  "title": "GetPresetResponse",
+  "description": "GetPresetResponse schema from Amazon MediaConvert API",
+  "type": "object",
+  "properties": {
+    "Preset": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Preset"
+        },
+        {
+          "xml": {
+            "name": "preset"
+          },
+          "description": "A preset is a collection of preconfigured media conversion settings that you want MediaConvert to apply to the output during the conversion process."
+        }
+      ]
+    }
+  }
+}

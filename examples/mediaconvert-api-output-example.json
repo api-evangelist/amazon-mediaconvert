@@ -1,0 +1,10 @@
+{
+  "AudioDescriptions": "example-value",
+  "CaptionDescriptions": "example-value",
+  "ContainerSettings": "example-value",
+  "Extension": "example-value",
+  "NameModifier": "example-resource",
+  "OutputSettings": "example-value",
+  "Preset": "example-value",
+  "VideoDescription": "id-abc123"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-h264-repeat-pps-schema.json",
+  "title": "H264RepeatPps",
+  "description": "Places a PPS header on each encoded picture, even if repeated.",
+  "type": "string",
+  "enum": [
+    "DISABLED",
+    "ENABLED"
+  ]
+}

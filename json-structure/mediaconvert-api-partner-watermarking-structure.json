@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-partner-watermarking-structure.json",
+  "name": "PartnerWatermarking",
+  "type": "object",
+  "description": "If you work with a third party video watermarking partner, use the group of settings that correspond with your watermarking partner to include watermarks in your output.",
+  "properties": {
+    "NexguardFileMarkerSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NexGuardFileMarkerSettings"
+        },
+        {
+          "xml": {
+            "name": "nexguardFileMarkerSettings"
+          },
+          "description": "For forensic video watermarking, MediaConvert supports Nagra NexGuard File Marker watermarking. MediaConvert supports both PreRelease Content (NGPR/G2) and OTT Streaming workflows."
+        }
+      ]
+    }
+  }
+}

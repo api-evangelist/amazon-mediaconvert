@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-aac-specification-schema.json",
+  "title": "AacSpecification",
+  "description": "Use MPEG-2 AAC instead of MPEG-4 AAC audio for raw or MPEG-2 Transport Stream containers.",
+  "type": "string",
+  "enum": [
+    "MPEG2",
+    "MPEG4"
+  ]
+}

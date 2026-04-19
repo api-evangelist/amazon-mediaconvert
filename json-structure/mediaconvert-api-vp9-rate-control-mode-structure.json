@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-vp9-rate-control-mode-structure.json",
+  "name": "Vp9RateControlMode",
+  "type": "string",
+  "description": "With the VP9 codec, you can use only the variable bitrate (VBR) rate control mode.",
+  "enum": [
+    "VBR"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-xavc4k-profile-codec-profile-structure.json",
+  "name": "Xavc4kProfileCodecProfile",
+  "type": "string",
+  "description": "Specify the codec profile for this output. Choose High, 8-bit, 4:2:0 (HIGH) or High, 10-bit, 4:2:2 (HIGH_422). These profiles are specified in ITU-T H.264.",
+  "enum": [
+    "HIGH",
+    "HIGH_422"
+  ]
+}

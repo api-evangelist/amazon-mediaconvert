@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-h265-quality-tuning-level-structure.json",
+  "name": "H265QualityTuningLevel",
+  "type": "string",
+  "description": "Optional. Use Quality tuning level (qualityTuningLevel) to choose how you want to trade off encoding speed for output video quality. The default behavior is faster, lower quality, single-pass encoding.",
+  "enum": [
+    "SINGLE_PASS",
+    "SINGLE_PASS_HQ",
+    "MULTI_PASS_HQ"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-input-deblock-filter-structure.json",
+  "name": "InputDeblockFilter",
+  "type": "string",
+  "description": "Enable Deblock (InputDeblockFilter) to produce smoother motion in the output. Default is disabled. Only manually controllable for MPEG2 and uncompressed video inputs.",
+  "enum": [
+    "ENABLED",
+    "DISABLED"
+  ]
+}

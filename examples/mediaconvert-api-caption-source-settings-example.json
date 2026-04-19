@@ -1,0 +1,10 @@
+{
+  "AncillarySourceSettings": "example-value",
+  "DvbSubSourceSettings": "example-value",
+  "EmbeddedSourceSettings": "example-value",
+  "FileSourceSettings": "example-value",
+  "SourceType": "STANDARD",
+  "TeletextSourceSettings": "example-value",
+  "TrackSourceSettings": "example-value",
+  "WebvttHlsSourceSettings": "example-value"
+}

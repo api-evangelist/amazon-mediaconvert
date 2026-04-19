@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-audio-selector-type-schema.json",
+  "title": "AudioSelectorType",
+  "description": "Specifies the type of the audio selector.",
+  "type": "string",
+  "enum": [
+    "PID",
+    "TRACK",
+    "LANGUAGE_CODE",
+    "HLS_RENDITION_GROUP"
+  ]
+}

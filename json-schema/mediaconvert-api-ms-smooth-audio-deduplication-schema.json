@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-ms-smooth-audio-deduplication-schema.json",
+  "title": "MsSmoothAudioDeduplication",
+  "description": "COMBINE_DUPLICATE_STREAMS combines identical audio encoding settings across a Microsoft Smooth output group into a single audio stream.",
+  "type": "string",
+  "enum": [
+    "COMBINE_DUPLICATE_STREAMS",
+    "NONE"
+  ]
+}

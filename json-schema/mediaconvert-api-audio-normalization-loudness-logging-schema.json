@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-audio-normalization-loudness-logging-schema.json",
+  "title": "AudioNormalizationLoudnessLogging",
+  "description": "If set to LOG, log each output's audio track loudness to a CSV file.",
+  "type": "string",
+  "enum": [
+    "LOG",
+    "DONT_LOG"
+  ]
+}

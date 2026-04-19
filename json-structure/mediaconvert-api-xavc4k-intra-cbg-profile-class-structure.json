@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-xavc4k-intra-cbg-profile-class-structure.json",
+  "name": "Xavc4kIntraCbgProfileClass",
+  "type": "string",
+  "description": "Specify the XAVC Intra 4k (CBG) Class to set the bitrate of your output. Outputs of the same class have similar image quality over the operating points that are valid for that class.",
+  "enum": [
+    "CLASS_100",
+    "CLASS_300",
+    "CLASS_480"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-mp3-rate-control-mode-schema.json",
+  "title": "Mp3RateControlMode",
+  "description": "Specify whether the service encodes this MP3 audio output with a constant bitrate (CBR) or a variable bitrate (VBR).",
+  "type": "string",
+  "enum": [
+    "CBR",
+    "VBR"
+  ]
+}

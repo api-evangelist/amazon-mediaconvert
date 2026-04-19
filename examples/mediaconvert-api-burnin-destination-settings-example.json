@@ -1,0 +1,23 @@
+{
+  "Alignment": "example-value",
+  "ApplyFontColor": "example-value",
+  "BackgroundColor": "example-value",
+  "BackgroundOpacity": "example-value",
+  "FallbackFont": "example-value",
+  "FontColor": "example-value",
+  "FontOpacity": "example-value",
+  "FontResolution": "example-value",
+  "FontScript": "example-value",
+  "FontSize": "example-value",
+  "HexFontColor": "example-value",
+  "OutlineColor": "example-value",
+  "OutlineSize": "example-value",
+  "ShadowColor": "example-value",
+  "ShadowOpacity": "example-value",
+  "ShadowXOffset": "example-value",
+  "ShadowYOffset": "example-value",
+  "StylePassthrough": "example-value",
+  "TeletextSpacing": "example-value",
+  "XPosition": "example-value",
+  "YPosition": "example-value"
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-automated-abr-settings-schema.json",
+  "title": "AutomatedAbrSettings",
+  "description": "Use automated ABR to have MediaConvert set up the renditions in your ABR package for you automatically, based on characteristics of your input video. This feature optimizes video quality while minimizing the overall size of your ABR package.",
+  "type": "object",
+  "properties": {
+    "MaxAbrBitrate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin100000Max100000000"
+        },
+        {
+          "xml": {
+            "name": "maxAbrBitrate"
+          },
+          "description": "Optional. The maximum target bit rate used in your automated ABR stack. Use this value to set an upper limit on the bandwidth consumed by the highest-quality rendition. This is the rendition that is delivered to viewers with the fastest internet connections. If you don't specify a value, MediaConvert uses 8,000,000 (8 mb/s) by default."
+        }
+      ]
+    },
+    "MaxRenditions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin3Max15"
+        },
+        {
+          "xml": {
+            "name": "maxRenditions"
+          },
+          "description": "Optional. The maximum number of renditions that MediaConvert will create in your automated ABR stack. The number of renditions is determined automatically, based on analysis of each job, but will never exceed this limit. When you set this to Auto in the console, which is equivalent to excluding it from your JSON job specification, MediaConvert defaults to a limit of 15."
+        }
+      ]
+    },
+    "MinAbrBitrate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin100000Max100000000"
+        },
+        {
+          "xml": {
+            "name": "minAbrBitrate"
+          },
+          "description": "Optional. The minimum target bitrate used in your automated ABR stack. Use this value to set a lower limit on the bitrate of video delivered to viewers with slow internet connections. If you don't specify a value, MediaConvert uses 600,000 (600 kb/s) by default."
+        }
+      ]
+    },
+    "Rules": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfAutomatedAbrRule"
+        },
+        {
+          "xml": {
+            "name": "rules"
+          },
+          "description": "Optional. Use Automated ABR rules to specify restrictions for the rendition sizes MediaConvert will create in your ABR stack. You can use these rules if your ABR workflow has specific rendition size requirements, but you still want MediaConvert to optimize for video quality and overall file size."
+        }
+      ]
+    }
+  }
+}

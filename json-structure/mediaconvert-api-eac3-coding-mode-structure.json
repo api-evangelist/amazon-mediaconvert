@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-eac3-coding-mode-structure.json",
+  "name": "Eac3CodingMode",
+  "type": "string",
+  "description": "Dolby Digital Plus coding mode. Determines number of channels.",
+  "enum": [
+    "CODING_MODE_1_0",
+    "CODING_MODE_2_0",
+    "CODING_MODE_3_2"
+  ]
+}

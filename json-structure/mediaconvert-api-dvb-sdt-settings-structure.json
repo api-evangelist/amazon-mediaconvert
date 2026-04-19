@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-dvb-sdt-settings-structure.json",
+  "name": "DvbSdtSettings",
+  "type": "object",
+  "description": "Use these settings to insert a DVB Service Description Table (SDT) in the transport stream of this output. When you work directly in your JSON job specification, include this object only when your job has a transport stream output and the container settings contain the object M2tsSettings.",
+  "properties": {
+    "OutputSdt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OutputSdt"
+        },
+        {
+          "xml": {
+            "name": "outputSdt"
+          },
+          "description": "Selects method of inserting SDT information into output stream. \"Follow input SDT\" copies SDT information from input stream to output stream. \"Follow input SDT if present\" copies SDT information from input stream to output stream if SDT information is present in the input, otherwise it will fall back on the user-defined values. Enter \"SDT Manually\" means user will enter the SDT information. \"No SDT\" means output stream will not contain SDT information."
+        }
+      ]
+    },
+    "SdtInterval": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin25Max2000"
+        },
+        {
+          "xml": {
+            "name": "sdtInterval"
+          },
+          "description": "The number of milliseconds between instances of this table in the output transport stream."
+        }
+      ]
+    },
+    "ServiceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringMin1Max256"
+        },
+        {
+          "xml": {
+            "name": "serviceName"
+          },
+          "description": "The service name placed in the service_descriptor in the Service Description Table. Maximum length is 256 characters."
+        }
+      ]
+    },
+    "ServiceProviderName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringMin1Max256"
+        },
+        {
+          "xml": {
+            "name": "serviceProviderName"
+          },
+          "description": "The service provider name placed in the service_descriptor in the Service Description Table. Maximum length is 256 characters."
+        }
+      ]
+    }
+  }
+}

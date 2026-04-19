@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-get-job-response-structure.json",
+  "name": "GetJobResponse",
+  "type": "object",
+  "description": "GetJobResponse schema from Amazon MediaConvert API",
+  "properties": {
+    "Job": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Job"
+        },
+        {
+          "xml": {
+            "name": "job"
+          },
+          "description": "Each job converts an input file into an output file or files. For more information, see the User Guide at https://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html"
+        }
+      ]
+    }
+  }
+}

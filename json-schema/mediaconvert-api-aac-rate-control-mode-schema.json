@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-aac-rate-control-mode-schema.json",
+  "title": "AacRateControlMode",
+  "description": "Rate Control Mode.",
+  "type": "string",
+  "enum": [
+    "CBR",
+    "VBR"
+  ]
+}

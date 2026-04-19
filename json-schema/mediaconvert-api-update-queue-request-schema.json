@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-update-queue-request-schema.json",
+  "title": "UpdateQueueRequest",
+  "description": "UpdateQueueRequest schema from Amazon MediaConvert API",
+  "type": "object",
+  "properties": {
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "The new description for the queue, if you are changing it."
+        }
+      ]
+    },
+    "ReservationPlanSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ReservationPlanSettings"
+        },
+        {
+          "xml": {
+            "name": "reservationPlanSettings"
+          },
+          "description": "The new details of your pricing plan for your reserved queue. When you set up a new pricing plan to replace an expired one, you enter into another 12-month commitment. When you add capacity to your queue by increasing the number of RTS, you extend the term of your commitment to 12 months from when you add capacity. After you make these commitments, you can't cancel them."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/QueueStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "Pause or activate a queue by changing its status between ACTIVE and PAUSED. If you pause a queue, jobs in that queue won't begin. Jobs that are running when you pause the queue continue to run until they finish or result in an error."
+        }
+      ]
+    }
+  }
+}

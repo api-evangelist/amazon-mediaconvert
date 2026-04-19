@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-deinterlacer-mode-schema.json",
+  "title": "DeinterlacerMode",
+  "description": "Use Deinterlacer (DeinterlaceMode) to choose how the service will do deinterlacing. Default is Deinterlace. - Deinterlace converts interlaced to progressive. - Inverse telecine converts Hard Telecine 29.97i to progressive 23.976p. - Adaptive auto-detects and converts to progressive.",
+  "type": "string",
+  "enum": [
+    "DEINTERLACE",
+    "INVERSE_TELECINE",
+    "ADAPTIVE"
+  ]
+}

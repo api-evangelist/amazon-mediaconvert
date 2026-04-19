@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-list-queues-response-schema.json",
+  "title": "ListQueuesResponse",
+  "description": "ListQueuesResponse schema from Amazon MediaConvert API",
+  "type": "object",
+  "properties": {
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "Use this string to request the next batch of queues."
+        }
+      ]
+    },
+    "Queues": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfQueue"
+        },
+        {
+          "xml": {
+            "name": "queues"
+          },
+          "description": "List of queues."
+        }
+      ]
+    }
+  }
+}

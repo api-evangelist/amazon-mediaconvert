@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-eac3-surround-mode-schema.json",
+  "title": "Eac3SurroundMode",
+  "description": "When encoding 2/0 audio, sets whether Dolby Surround is matrix encoded into the two channels.",
+  "type": "string",
+  "enum": [
+    "NOT_INDICATED",
+    "ENABLED",
+    "DISABLED"
+  ]
+}

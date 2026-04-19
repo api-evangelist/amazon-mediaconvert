@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-webvtt-hls-source-settings-schema.json",
+  "title": "WebvttHlsSourceSettings",
+  "description": "Settings specific to WebVTT sources in HLS alternative rendition group. Specify the properties (renditionGroupId, renditionName or renditionLanguageCode) to identify the unique subtitle track among the alternative rendition groups present in the HLS manifest. If no unique track is found, or multiple tracks match the specified properties, the job fails. If there is only one subtitle track in the rendition group, the settings can be left empty and the default subtitle track will be chosen. If your caption source is a sidecar file, use FileSourceSettings instead of WebvttHlsSourceSettings.",
+  "type": "object",
+  "properties": {
+    "RenditionGroupId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "renditionGroupId"
+          },
+          "description": "Optional. Specify alternative group ID"
+        }
+      ]
+    },
+    "RenditionLanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "xml": {
+            "name": "renditionLanguageCode"
+          },
+          "description": "Optional. Specify ISO 639-2 or ISO 639-3 code in the language property"
+        }
+      ]
+    },
+    "RenditionName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "renditionName"
+          },
+          "description": "Optional. Specify media name"
+        }
+      ]
+    }
+  }
+}

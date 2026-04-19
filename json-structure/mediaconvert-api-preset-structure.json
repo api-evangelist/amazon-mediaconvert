@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-preset-structure.json",
+  "name": "Preset",
+  "type": "object",
+  "description": "A preset is a collection of preconfigured media conversion settings that you want MediaConvert to apply to the output during the conversion process.",
+  "properties": {
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "arn"
+          },
+          "description": "An identifier for this resource that is unique within all of AWS."
+        }
+      ]
+    },
+    "Category": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "category"
+          },
+          "description": "An optional category you create to organize your presets."
+        }
+      ]
+    },
+    "CreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__timestampUnix"
+        },
+        {
+          "xml": {
+            "name": "createdAt"
+          },
+          "description": "The timestamp in epoch seconds for preset creation."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "An optional description you create for each preset."
+        }
+      ]
+    },
+    "LastUpdated": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__timestampUnix"
+        },
+        {
+          "xml": {
+            "name": "lastUpdated"
+          },
+          "description": "The timestamp in epoch seconds when the preset was last updated."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "A name you create for each preset. Each name must be unique within your account."
+        }
+      ]
+    },
+    "Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PresetSettings"
+        },
+        {
+          "xml": {
+            "name": "settings"
+          },
+          "description": "Settings for preset"
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Type"
+        },
+        {
+          "xml": {
+            "name": "type"
+          },
+          "description": "A preset can be of two types: system or custom. System or built-in preset can't be modified or deleted by the user."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Settings",
+    "Name"
+  ]
+}

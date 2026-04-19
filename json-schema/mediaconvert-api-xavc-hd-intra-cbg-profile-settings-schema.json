@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-xavc-hd-intra-cbg-profile-settings-schema.json",
+  "title": "XavcHdIntraCbgProfileSettings",
+  "description": "Required when you set (Profile) under (VideoDescription)>(CodecSettings)>(XavcSettings) to the value XAVC_HD_INTRA_CBG.",
+  "type": "object",
+  "properties": {
+    "XavcClass": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/XavcHdIntraCbgProfileClass"
+        },
+        {
+          "xml": {
+            "name": "xavcClass"
+          },
+          "description": "Specify the XAVC Intra HD (CBG) Class to set the bitrate of your output. Outputs of the same class have similar image quality over the operating points that are valid for that class."
+        }
+      ]
+    }
+  }
+}

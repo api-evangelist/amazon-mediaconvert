@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-burnin-subtitle-teletext-spacing-schema.json",
+  "title": "BurninSubtitleTeletextSpacing",
+  "description": "Specify whether the text spacing (TeletextSpacing) in your captions is set by the captions grid, or varies depending on letter width. Choose fixed grid (FIXED_GRID) to conform to the spacing specified in the captions file more accurately. Choose proportional (PROPORTIONAL) to make the text easier to read for closed captions.",
+  "type": "string",
+  "enum": [
+    "FIXED_GRID",
+    "PROPORTIONAL",
+    "AUTO"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "AacSettings": "example-value",
+  "Ac3Settings": "example-value",
+  "AiffSettings": "example-value",
+  "Codec": "example-value",
+  "Eac3AtmosSettings": "example-value",
+  "Eac3Settings": "example-value",
+  "Mp2Settings": "example-value",
+  "Mp3Settings": "example-value",
+  "OpusSettings": "example-value",
+  "VorbisSettings": "example-value",
+  "WavSettings": "example-value"
+}

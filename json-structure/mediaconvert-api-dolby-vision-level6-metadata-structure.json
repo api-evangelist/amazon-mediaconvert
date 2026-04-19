@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-dolby-vision-level6-metadata-structure.json",
+  "name": "DolbyVisionLevel6Metadata",
+  "type": "object",
+  "description": "Use these settings when you set DolbyVisionLevel6Mode to SPECIFY to override the MaxCLL and MaxFALL values in your input with new values.",
+  "properties": {
+    "MaxCll": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max65535"
+        },
+        {
+          "xml": {
+            "name": "maxCll"
+          },
+          "description": "Maximum Content Light Level. Static HDR metadata that corresponds to the brightest pixel in the entire stream. Measured in nits."
+        }
+      ]
+    },
+    "MaxFall": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max65535"
+        },
+        {
+          "xml": {
+            "name": "maxFall"
+          },
+          "description": "Maximum Frame-Average Light Level. Static HDR metadata that corresponds to the highest frame-average brightness in the entire stream. Measured in nits."
+        }
+      ]
+    }
+  }
+}

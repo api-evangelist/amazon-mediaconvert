@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-s3-destination-settings-schema.json",
+  "title": "S3DestinationSettings",
+  "description": "Settings associated with S3 destination",
+  "type": "object",
+  "properties": {
+    "AccessControl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3DestinationAccessControl"
+        },
+        {
+          "xml": {
+            "name": "accessControl"
+          },
+          "description": "Optional. Have MediaConvert automatically apply Amazon S3 access control for the outputs in this output group. When you don't use this setting, S3 automatically applies the default access control list PRIVATE."
+        }
+      ]
+    },
+    "Encryption": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3EncryptionSettings"
+        },
+        {
+          "xml": {
+            "name": "encryption"
+          },
+          "description": "Settings for how your job outputs are encrypted as they are uploaded to Amazon S3."
+        }
+      ]
+    }
+  }
+}

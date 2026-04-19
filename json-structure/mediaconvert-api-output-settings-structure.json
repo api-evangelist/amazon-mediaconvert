@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-output-settings-structure.json",
+  "name": "OutputSettings",
+  "type": "object",
+  "description": "Specific settings for this type of output.",
+  "properties": {
+    "HlsSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/HlsSettings"
+        },
+        {
+          "xml": {
+            "name": "hlsSettings"
+          },
+          "description": "Settings for HLS output groups"
+        }
+      ]
+    }
+  }
+}

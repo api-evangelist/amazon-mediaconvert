@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-get-policy-response-structure.json",
+  "name": "GetPolicyResponse",
+  "type": "object",
+  "description": "GetPolicyResponse schema from Amazon MediaConvert API",
+  "properties": {
+    "Policy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Policy"
+        },
+        {
+          "xml": {
+            "name": "policy"
+          },
+          "description": "A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html"
+        }
+      ]
+    }
+  }
+}

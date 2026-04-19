@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-caption-source-type-schema.json",
+  "title": "CaptionSourceType",
+  "description": "Use Source (SourceType) to identify the format of your input captions. The service cannot auto-detect caption format.",
+  "type": "string",
+  "enum": [
+    "ANCILLARY",
+    "DVB_SUB",
+    "EMBEDDED",
+    "SCTE20",
+    "SCC",
+    "TTML",
+    "STL",
+    "SRT",
+    "SMI",
+    "SMPTE_TT",
+    "TELETEXT",
+    "NULL_SOURCE",
+    "IMSC",
+    "WEBVTT"
+  ]
+}

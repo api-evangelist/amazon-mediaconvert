@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-destination-settings-schema.json",
+  "title": "DestinationSettings",
+  "description": "Settings associated with the destination. Will vary based on the type of destination",
+  "type": "object",
+  "properties": {
+    "S3Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3DestinationSettings"
+        },
+        {
+          "xml": {
+            "name": "s3Settings"
+          },
+          "description": "Settings associated with S3 destination"
+        }
+      ]
+    }
+  }
+}

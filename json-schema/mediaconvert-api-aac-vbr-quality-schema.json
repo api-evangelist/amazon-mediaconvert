@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-aac-vbr-quality-schema.json",
+  "title": "AacVbrQuality",
+  "description": "VBR Quality Level - Only used if rate_control_mode is VBR.",
+  "type": "string",
+  "enum": [
+    "LOW",
+    "MEDIUM_LOW",
+    "MEDIUM_HIGH",
+    "HIGH"
+  ]
+}

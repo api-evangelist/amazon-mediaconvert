@@ -1,0 +1,7 @@
+{
+  "AggressiveMode": "example-value",
+  "PostTemporalSharpening": "example-value",
+  "PostTemporalSharpeningStrength": "example-value",
+  "Speed": "example-value",
+  "Strength": "example-value"
+}

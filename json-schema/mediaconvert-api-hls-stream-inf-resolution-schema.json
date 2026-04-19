@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-hls-stream-inf-resolution-schema.json",
+  "title": "HlsStreamInfResolution",
+  "description": "Include or exclude RESOLUTION attribute for video in EXT-X-STREAM-INF tag of variant manifest.",
+  "type": "string",
+  "enum": [
+    "INCLUDE",
+    "EXCLUDE"
+  ]
+}

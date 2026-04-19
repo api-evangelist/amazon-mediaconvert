@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-nielsen-unique-tic-per-audio-track-type-structure.json",
+  "name": "NielsenUniqueTicPerAudioTrackType",
+  "type": "string",
+  "description": "To create assets that have the same TIC values in each audio track, keep the default value Share TICs (SAME_TICS_PER_TRACK). To create assets that have unique TIC values for each audio track, choose Use unique TICs (RESERVE_UNIQUE_TICS_PER_TRACK).",
+  "enum": [
+    "RESERVE_UNIQUE_TICS_PER_TRACK",
+    "SAME_TICS_PER_TRACK"
+  ]
+}

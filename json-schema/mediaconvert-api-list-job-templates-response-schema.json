@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-list-job-templates-response-schema.json",
+  "title": "ListJobTemplatesResponse",
+  "description": "ListJobTemplatesResponse schema from Amazon MediaConvert API",
+  "type": "object",
+  "properties": {
+    "JobTemplates": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfJobTemplate"
+        },
+        {
+          "xml": {
+            "name": "jobTemplates"
+          },
+          "description": "List of Job templates."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "Use this string to request the next batch of job templates."
+        }
+      ]
+    }
+  }
+}

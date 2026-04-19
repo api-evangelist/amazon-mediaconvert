@@ -1,0 +1,7 @@
+{
+  "Bitrate": "example-value",
+  "Channels": "example-value",
+  "RateControlMode": "example-value",
+  "SampleRate": "example-value",
+  "VbrQuality": "example-value"
+}

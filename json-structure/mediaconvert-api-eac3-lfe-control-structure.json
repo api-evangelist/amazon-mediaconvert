@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-eac3-lfe-control-structure.json",
+  "name": "Eac3LfeControl",
+  "type": "string",
+  "description": "When encoding 3/2 audio, controls whether the LFE channel is enabled",
+  "enum": [
+    "LFE",
+    "NO_LFE"
+  ]
+}

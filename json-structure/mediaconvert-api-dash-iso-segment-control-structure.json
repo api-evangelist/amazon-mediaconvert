@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-dash-iso-segment-control-structure.json",
+  "name": "DashIsoSegmentControl",
+  "type": "string",
+  "description": "When set to SINGLE_FILE, a single output file is generated, which is internally segmented using the Fragment Length and Segment Length. When set to SEGMENTED_FILES, separate segment files will be created.",
+  "enum": [
+    "SINGLE_FILE",
+    "SEGMENTED_FILES"
+  ]
+}

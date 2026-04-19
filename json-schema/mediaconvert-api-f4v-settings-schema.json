@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-f4v-settings-schema.json",
+  "title": "F4vSettings",
+  "description": "Settings for F4v container",
+  "type": "object",
+  "properties": {
+    "MoovPlacement": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/F4vMoovPlacement"
+        },
+        {
+          "xml": {
+            "name": "moovPlacement"
+          },
+          "description": "If set to PROGRESSIVE_DOWNLOAD, the MOOV atom is relocated to the beginning of the archive as required for progressive downloading. Otherwise it is placed normally at the end."
+        }
+      ]
+    }
+  }
+}

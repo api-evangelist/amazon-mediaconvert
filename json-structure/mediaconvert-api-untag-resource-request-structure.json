@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-untag-resource-request-structure.json",
+  "name": "UntagResourceRequest",
+  "type": "object",
+  "description": "UntagResourceRequest schema from Amazon MediaConvert API",
+  "properties": {
+    "TagKeys": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOf__string"
+        },
+        {
+          "xml": {
+            "name": "tagKeys"
+          },
+          "description": "The keys of the tags that you want to remove from the resource."
+        }
+      ]
+    }
+  }
+}

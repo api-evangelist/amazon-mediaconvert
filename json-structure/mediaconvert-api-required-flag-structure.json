@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-required-flag-structure.json",
+  "name": "RequiredFlag",
+  "type": "string",
+  "description": "Set to ENABLED to force a rendition to be included.",
+  "enum": [
+    "ENABLED",
+    "DISABLED"
+  ]
+}

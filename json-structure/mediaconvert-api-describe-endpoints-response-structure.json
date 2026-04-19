@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-describe-endpoints-response-structure.json",
+  "name": "DescribeEndpointsResponse",
+  "type": "object",
+  "description": "DescribeEndpointsResponse schema from Amazon MediaConvert API",
+  "properties": {
+    "Endpoints": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfEndpoint"
+        },
+        {
+          "xml": {
+            "name": "endpoints"
+          },
+          "description": "List of endpoints"
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "Use this string to request the next batch of endpoints."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-put-policy-request-schema.json",
+  "title": "PutPolicyRequest",
+  "description": "PutPolicyRequest schema from Amazon MediaConvert API",
+  "type": "object",
+  "properties": {
+    "Policy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Policy"
+        },
+        {
+          "xml": {
+            "name": "policy"
+          },
+          "description": "A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html"
+        }
+      ]
+    }
+  },
+  "required": [
+    "Policy"
+  ]
+}

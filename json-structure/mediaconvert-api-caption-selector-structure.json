@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-caption-selector-structure.json",
+  "name": "CaptionSelector",
+  "type": "object",
+  "description": "Use captions selectors to specify the captions data from your input that you use in your outputs. You can use up to 20 captions selectors per input.",
+  "properties": {
+    "CustomLanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringMin3Max3PatternAZaZ3"
+        },
+        {
+          "xml": {
+            "name": "customLanguageCode"
+          },
+          "description": "The specific language to extract from source, using the ISO 639-2 or ISO 639-3 three-letter language code. If input is SCTE-27, complete this field and/or PID to select the caption language to extract. If input is DVB-Sub and output is Burn-in or SMPTE-TT, complete this field and/or PID to select the caption language to extract. If input is DVB-Sub that is being passed through, omit this field (and PID field); there is no way to extract a specific language with pass-through captions."
+        }
+      ]
+    },
+    "LanguageCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LanguageCode"
+        },
+        {
+          "xml": {
+            "name": "languageCode"
+          },
+          "description": "The specific language to extract from source. If input is SCTE-27, complete this field and/or PID to select the caption language to extract. If input is DVB-Sub and output is Burn-in or SMPTE-TT, complete this field and/or PID to select the caption language to extract. If input is DVB-Sub that is being passed through, omit this field (and PID field); there is no way to extract a specific language with pass-through captions."
+        }
+      ]
+    },
+    "SourceSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CaptionSourceSettings"
+        },
+        {
+          "xml": {
+            "name": "sourceSettings"
+          },
+          "description": "If your input captions are SCC, TTML, STL, SMI, SRT, or IMSC in an xml file, specify the URI of the input captions source file. If your input captions are IMSC in an IMF package, use TrackSourceSettings instead of FileSoureSettings."
+        }
+      ]
+    }
+  }
+}

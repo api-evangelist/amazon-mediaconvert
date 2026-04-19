@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-mov-reference-structure.json",
+  "name": "MovReference",
+  "type": "string",
+  "description": "Always keep the default value (SELF_CONTAINED) for this setting.",
+  "enum": [
+    "SELF_CONTAINED",
+    "EXTERNAL"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-timecode-burnin-position-structure.json",
+  "name": "TimecodeBurninPosition",
+  "type": "string",
+  "description": "Use Position (Position) under under Timecode burn-in (TimecodeBurnIn) to specify the location the burned-in timecode on output video.",
+  "enum": [
+    "TOP_CENTER",
+    "TOP_LEFT",
+    "TOP_RIGHT",
+    "MIDDLE_LEFT",
+    "MIDDLE_CENTER",
+    "MIDDLE_RIGHT",
+    "BOTTOM_LEFT",
+    "BOTTOM_CENTER",
+    "BOTTOM_RIGHT"
+  ]
+}

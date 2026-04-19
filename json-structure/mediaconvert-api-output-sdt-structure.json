@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-output-sdt-structure.json",
+  "name": "OutputSdt",
+  "type": "string",
+  "description": "Selects method of inserting SDT information into output stream. \"Follow input SDT\" copies SDT information from input stream to output stream. \"Follow input SDT if present\" copies SDT information from input stream to output stream if SDT information is present in the input, otherwise it will fall back on the user-defined values. Enter \"SDT Manually\" means user will enter the SDT information. \"No SDT\" means output stream will not contain SDT information.",
+  "enum": [
+    "SDT_FOLLOW",
+    "SDT_FOLLOW_IF_PRESENT",
+    "SDT_MANUAL",
+    "SDT_NONE"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-eac3-dc-filter-structure.json",
+  "name": "Eac3DcFilter",
+  "type": "string",
+  "description": "Activates a DC highpass filter for all input channels.",
+  "enum": [
+    "ENABLED",
+    "DISABLED"
+  ]
+}

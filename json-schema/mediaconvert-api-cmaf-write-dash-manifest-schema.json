@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-cmaf-write-dash-manifest-schema.json",
+  "title": "CmafWriteDASHManifest",
+  "description": "When set to ENABLED, a DASH MPD manifest will be generated for this output.",
+  "type": "string",
+  "enum": [
+    "DISABLED",
+    "ENABLED"
+  ]
+}

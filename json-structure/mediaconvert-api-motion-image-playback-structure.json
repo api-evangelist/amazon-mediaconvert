@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-motion-image-playback-structure.json",
+  "name": "MotionImagePlayback",
+  "type": "string",
+  "description": "Specify whether your motion graphic overlay repeats on a loop or plays only once.",
+  "enum": [
+    "ONCE",
+    "REPEAT"
+  ]
+}

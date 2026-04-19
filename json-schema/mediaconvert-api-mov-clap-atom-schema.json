@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-mov-clap-atom-schema.json",
+  "title": "MovClapAtom",
+  "description": "When enabled, include 'clap' atom if appropriate for the video output settings.",
+  "type": "string",
+  "enum": [
+    "INCLUDE",
+    "EXCLUDE"
+  ]
+}

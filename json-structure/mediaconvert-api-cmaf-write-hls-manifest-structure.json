@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-cmaf-write-hls-manifest-structure.json",
+  "name": "CmafWriteHLSManifest",
+  "type": "string",
+  "description": "When set to ENABLED, an Apple HLS manifest will be generated for this output.",
+  "enum": [
+    "DISABLED",
+    "ENABLED"
+  ]
+}

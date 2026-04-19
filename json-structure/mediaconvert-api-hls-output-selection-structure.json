@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-hls-output-selection-structure.json",
+  "name": "HlsOutputSelection",
+  "type": "string",
+  "description": "Indicates whether the .m3u8 manifest file should be generated for this HLS output group.",
+  "enum": [
+    "MANIFESTS_AND_SEGMENTS",
+    "SEGMENTS_ONLY"
+  ]
+}

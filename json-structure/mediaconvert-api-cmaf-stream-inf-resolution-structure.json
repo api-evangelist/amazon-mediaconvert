@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-cmaf-stream-inf-resolution-structure.json",
+  "name": "CmafStreamInfResolution",
+  "type": "string",
+  "description": "Include or exclude RESOLUTION attribute for video in EXT-X-STREAM-INF tag of variant manifest.",
+  "enum": [
+    "INCLUDE",
+    "EXCLUDE"
+  ]
+}

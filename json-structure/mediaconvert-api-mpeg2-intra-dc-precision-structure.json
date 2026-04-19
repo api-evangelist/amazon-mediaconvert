@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-mpeg2-intra-dc-precision-structure.json",
+  "name": "Mpeg2IntraDcPrecision",
+  "type": "string",
+  "description": "Use Intra DC precision (Mpeg2IntraDcPrecision) to set quantization precision for intra-block DC coefficients. If you choose the value auto, the service will automatically select the precision based on the per-frame compression ratio.",
+  "enum": [
+    "AUTO",
+    "INTRA_DC_PRECISION_8",
+    "INTRA_DC_PRECISION_9",
+    "INTRA_DC_PRECISION_10",
+    "INTRA_DC_PRECISION_11"
+  ]
+}

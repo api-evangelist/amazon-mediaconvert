@@ -1,0 +1,9 @@
+{
+  "AudioGroupId": "id-abc123",
+  "AudioOnlyContainer": "example-value",
+  "AudioRenditionSets": "example-value",
+  "AudioTrackType": "STANDARD",
+  "DescriptiveVideoServiceFlag": "id-abc123",
+  "IFrameOnlyManifest": "example-value",
+  "SegmentModifier": "example-value"
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-update-preset-request-structure.json",
+  "name": "UpdatePresetRequest",
+  "type": "object",
+  "description": "UpdatePresetRequest schema from Amazon MediaConvert API",
+  "properties": {
+    "Category": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "category"
+          },
+          "description": "The new category for the preset, if you are changing it."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "The new description for the preset, if you are changing it."
+        }
+      ]
+    },
+    "Settings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PresetSettings"
+        },
+        {
+          "xml": {
+            "name": "settings"
+          },
+          "description": "Settings for preset"
+        }
+      ]
+    }
+  }
+}

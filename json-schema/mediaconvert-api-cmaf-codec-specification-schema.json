@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-cmaf-codec-specification-schema.json",
+  "title": "CmafCodecSpecification",
+  "description": "Specification to use (RFC-6381 or the default RFC-4281) during m3u8 playlist generation.",
+  "type": "string",
+  "enum": [
+    "RFC_6381",
+    "RFC_4281"
+  ]
+}

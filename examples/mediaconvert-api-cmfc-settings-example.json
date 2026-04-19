@@ -1,0 +1,16 @@
+{
+  "AudioDuration": "example-value",
+  "AudioGroupId": "id-abc123",
+  "AudioRenditionSets": "example-value",
+  "AudioTrackType": "STANDARD",
+  "DescriptiveVideoServiceFlag": "id-abc123",
+  "IFrameOnlyManifest": "example-value",
+  "KlvMetadata": "example-value",
+  "ManifestMetadataSignaling": "example-value",
+  "Scte35Esam": "example-value",
+  "Scte35Source": "example-value",
+  "TimedMetadata": "example-value",
+  "TimedMetadataBoxVersion": "example-value",
+  "TimedMetadataSchemeIdUri": "id-abc123",
+  "TimedMetadataValue": "example-value"
+}

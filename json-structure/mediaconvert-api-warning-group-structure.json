@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-warning-group-structure.json",
+  "name": "WarningGroup",
+  "type": "object",
+  "description": "Contains any warning codes and their count for the job.",
+  "properties": {
+    "Code": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integer"
+        },
+        {
+          "xml": {
+            "name": "code"
+          },
+          "description": "Warning code that identifies a specific warning in the job. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/warning_codes.html"
+        }
+      ]
+    },
+    "Count": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integer"
+        },
+        {
+          "xml": {
+            "name": "count"
+          },
+          "description": "The number of times this warning occurred in the job."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Count",
+    "Code"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-hls-initialization-vector-in-manifest-structure.json",
+  "name": "HlsInitializationVectorInManifest",
+  "type": "string",
+  "description": "The Initialization Vector is a 128-bit number used in conjunction with the key for encrypting blocks. If set to INCLUDE, Initialization Vector is listed in the manifest. Otherwise Initialization Vector is not in the manifest.",
+  "enum": [
+    "INCLUDE",
+    "EXCLUDE"
+  ]
+}

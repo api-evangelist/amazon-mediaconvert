@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-hdr10-metadata-structure.json",
+  "name": "Hdr10Metadata",
+  "type": "object",
+  "description": "Use these settings to specify static color calibration metadata, as defined by SMPTE ST 2086. These values don't affect the pixel values that are encoded in the video stream. They are intended to help the downstream video player display content in a way that reflects the intentions of the the content creator.",
+  "properties": {
+    "BluePrimaryX": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max50000"
+        },
+        {
+          "xml": {
+            "name": "bluePrimaryX"
+          },
+          "description": "HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction."
+        }
+      ]
+    },
+    "BluePrimaryY": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max50000"
+        },
+        {
+          "xml": {
+            "name": "bluePrimaryY"
+          },
+          "description": "HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction."
+        }
+      ]
+    },
+    "GreenPrimaryX": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max50000"
+        },
+        {
+          "xml": {
+            "name": "greenPrimaryX"
+          },
+          "description": "HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction."
+        }
+      ]
+    },
+    "GreenPrimaryY": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max50000"
+        },
+        {
+          "xml": {
+            "name": "greenPrimaryY"
+          },
+          "description": "HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction."
+        }
+      ]
+    },
+    "MaxContentLightLevel": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max65535"
+        },
+        {
+          "xml": {
+            "name": "maxContentLightLevel"
+          },
+          "description": "Maximum light level among all samples in the coded video sequence, in units of candelas per square meter. This setting doesn't have a default value; you must specify a value that is suitable for the content."
+        }
+      ]
+    },
+    "MaxFrameAverageLightLevel": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max65535"
+        },
+        {
+          "xml": {
+            "name": "maxFrameAverageLightLevel"
+          },
+          "description": "Maximum average light level of any frame in the coded video sequence, in units of candelas per square meter. This setting doesn't have a default value; you must specify a value that is suitable for the content."
+        }
+      ]
+    },
+    "MaxLuminance": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "maxLuminance"
+          },
+          "description": "Nominal maximum mastering display luminance in units of of 0.0001 candelas per square meter."
+        }
+      ]
+    },
+    "MinLuminance": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "minLuminance"
+          },
+          "description": "Nominal minimum mastering display luminance in units of of 0.0001 candelas per square meter"
+        }
+      ]
+    },
+    "RedPrimaryX": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max50000"
+        },
+        {
+          "xml": {
+            "name": "redPrimaryX"
+          },
+          "description": "HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction."
+        }
+      ]
+    },
+    "RedPrimaryY": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max50000"
+        },
+        {
+          "xml": {
+            "name": "redPrimaryY"
+          },
+          "description": "HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction."
+        }
+      ]
+    },
+    "WhitePointX": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max50000"
+        },
+        {
+          "xml": {
+            "name": "whitePointX"
+          },
+          "description": "HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction."
+        }
+      ]
+    },
+    "WhitePointY": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max50000"
+        },
+        {
+          "xml": {
+            "name": "whitePointY"
+          },
+          "description": "HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction."
+        }
+      ]
+    }
+  }
+}

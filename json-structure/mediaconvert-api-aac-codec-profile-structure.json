@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-aac-codec-profile-structure.json",
+  "name": "AacCodecProfile",
+  "type": "string",
+  "description": "AAC Profile.",
+  "enum": [
+    "LC",
+    "HEV1",
+    "HEV2"
+  ]
+}

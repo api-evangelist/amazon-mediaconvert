@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-xavc4k-intra-vbr-profile-class-schema.json",
+  "title": "Xavc4kIntraVbrProfileClass",
+  "description": "Specify the XAVC Intra 4k (VBR) Class to set the bitrate of your output. Outputs of the same class have similar image quality over the operating points that are valid for that class.",
+  "type": "string",
+  "enum": [
+    "CLASS_100",
+    "CLASS_300",
+    "CLASS_480"
+  ]
+}

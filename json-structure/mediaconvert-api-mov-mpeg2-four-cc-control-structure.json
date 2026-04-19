@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-mov-mpeg2-four-cc-control-structure.json",
+  "name": "MovMpeg2FourCCControl",
+  "type": "string",
+  "description": "When set to XDCAM, writes MPEG2 video streams into the QuickTime file using XDCAM fourcc codes. This increases compatibility with Apple editors and players, but may decrease compatibility with other players. Only applicable when the video codec is MPEG2.",
+  "enum": [
+    "XDCAM",
+    "MPEG"
+  ]
+}

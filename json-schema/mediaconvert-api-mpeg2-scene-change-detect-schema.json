@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-mpeg2-scene-change-detect-schema.json",
+  "title": "Mpeg2SceneChangeDetect",
+  "description": "Enable this setting to insert I-frames at scene changes that the service automatically detects. This improves video quality and is enabled by default.",
+  "type": "string",
+  "enum": [
+    "DISABLED",
+    "ENABLED"
+  ]
+}

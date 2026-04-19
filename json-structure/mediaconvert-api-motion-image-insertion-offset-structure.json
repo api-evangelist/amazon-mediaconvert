@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-motion-image-insertion-offset-structure.json",
+  "name": "MotionImageInsertionOffset",
+  "type": "object",
+  "description": "Specify the offset between the upper-left corner of the video frame and the top left corner of the overlay.",
+  "properties": {
+    "ImageX": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "imageX"
+          },
+          "description": "Set the distance, in pixels, between the overlay and the left edge of the video frame."
+        }
+      ]
+    },
+    "ImageY": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max2147483647"
+        },
+        {
+          "xml": {
+            "name": "imageY"
+          },
+          "description": "Set the distance, in pixels, between the overlay and the top edge of the video frame."
+        }
+      ]
+    }
+  }
+}

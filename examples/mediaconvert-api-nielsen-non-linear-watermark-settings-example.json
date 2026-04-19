@@ -1,0 +1,13 @@
+{
+  "ActiveWatermarkProcess": "example-value",
+  "AdiFilename": "example-resource",
+  "AssetId": "id-abc123",
+  "AssetName": "example-resource",
+  "CbetSourceId": "id-abc123",
+  "EpisodeId": "id-abc123",
+  "MetadataDestination": "example-value",
+  "SourceId": "id-abc123",
+  "SourceWatermarkStatus": "ACTIVE",
+  "TicServerUrl": "example-value",
+  "UniqueTicPerAudioTrack": "example-value"
+}

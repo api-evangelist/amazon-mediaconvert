@@ -1,0 +1,12 @@
+{
+  "BurninDestinationSettings": "example-value",
+  "DestinationType": "STANDARD",
+  "DvbSubDestinationSettings": "example-value",
+  "EmbeddedDestinationSettings": "example-value",
+  "ImscDestinationSettings": "example-value",
+  "SccDestinationSettings": "example-value",
+  "SrtDestinationSettings": "example-value",
+  "TeletextDestinationSettings": "example-value",
+  "TtmlDestinationSettings": "example-value",
+  "WebvttDestinationSettings": "example-value"
+}

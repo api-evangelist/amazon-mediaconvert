@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-h265-codec-level-schema.json",
+  "title": "H265CodecLevel",
+  "description": "H.265 Level.",
+  "type": "string",
+  "enum": [
+    "AUTO",
+    "LEVEL_1",
+    "LEVEL_2",
+    "LEVEL_2_1",
+    "LEVEL_3",
+    "LEVEL_3_1",
+    "LEVEL_4",
+    "LEVEL_4_1",
+    "LEVEL_5",
+    "LEVEL_5_1",
+    "LEVEL_5_2",
+    "LEVEL_6",
+    "LEVEL_6_1",
+    "LEVEL_6_2"
+  ]
+}

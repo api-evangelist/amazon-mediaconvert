@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-noise-reducer-spatial-filter-settings-schema.json",
+  "title": "NoiseReducerSpatialFilterSettings",
+  "description": "Noise reducer filter settings for spatial filter.",
+  "type": "object",
+  "properties": {
+    "PostFilterSharpenStrength": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max3"
+        },
+        {
+          "xml": {
+            "name": "postFilterSharpenStrength"
+          },
+          "description": "Specify strength of post noise reduction sharpening filter, with 0 disabling the filter and 3 enabling it at maximum strength."
+        }
+      ]
+    },
+    "Speed": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMinNegative2Max3"
+        },
+        {
+          "xml": {
+            "name": "speed"
+          },
+          "description": "The speed of the filter, from -2 (lower speed) to 3 (higher speed), with 0 being the nominal value."
+        }
+      ]
+    },
+    "Strength": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integerMin0Max16"
+        },
+        {
+          "xml": {
+            "name": "strength"
+          },
+          "description": "Relative strength of noise reducing filter. Higher values produce stronger filtering."
+        }
+      ]
+    }
+  }
+}

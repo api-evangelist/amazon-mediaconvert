@@ -1,0 +1,15 @@
+{
+  "AdaptiveQuantization": "example-value",
+  "BitDepth": "example-value",
+  "FramerateControl": "example-value",
+  "FramerateConversionAlgorithm": "example-value",
+  "FramerateDenominator": "example-value",
+  "FramerateNumerator": "example-value",
+  "GopSize": "example-value",
+  "MaxBitrate": "example-value",
+  "NumberBFramesBetweenReferenceFrames": "example-value",
+  "QvbrSettings": "example-value",
+  "RateControlMode": "example-value",
+  "Slices": "example-value",
+  "SpatialAdaptiveQuantization": "example-value"
+}

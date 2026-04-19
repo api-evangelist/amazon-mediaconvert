@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-mp4-free-space-box-structure.json",
+  "name": "Mp4FreeSpaceBox",
+  "type": "string",
+  "description": "Inserts a free-space box immediately after the moov box.",
+  "enum": [
+    "INCLUDE",
+    "EXCLUDE"
+  ]
+}

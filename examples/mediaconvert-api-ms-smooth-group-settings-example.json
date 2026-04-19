@@ -1,0 +1,10 @@
+{
+  "AdditionalManifests": "example-value",
+  "AudioDeduplication": "example-value",
+  "Destination": "example-value",
+  "DestinationSettings": "example-value",
+  "Encryption": "example-value",
+  "FragmentLength": "example-value",
+  "FragmentLengthControl": "example-value",
+  "ManifestEncoding": "example-value"
+}

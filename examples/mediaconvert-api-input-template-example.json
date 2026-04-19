@@ -1,0 +1,20 @@
+{
+  "AudioSelectorGroups": "example-value",
+  "AudioSelectors": "example-value",
+  "CaptionSelectors": "example-value",
+  "Crop": "example-value",
+  "DeblockFilter": "example-value",
+  "DenoiseFilter": "example-value",
+  "DolbyVisionMetadataXml": "example-value",
+  "FilterEnable": "example-value",
+  "FilterStrength": "example-value",
+  "ImageInserter": "example-value",
+  "InputClippings": "example-value",
+  "InputScanType": "STANDARD",
+  "Position": "example-value",
+  "ProgramNumber": "example-value",
+  "PsiControl": "example-value",
+  "TimecodeSource": "example-value",
+  "TimecodeStart": "example-value",
+  "VideoSelector": "id-abc123"
+}

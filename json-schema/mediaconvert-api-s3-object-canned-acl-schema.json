@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-s3-object-canned-acl-schema.json",
+  "title": "S3ObjectCannedAcl",
+  "description": "Choose an Amazon S3 canned ACL for MediaConvert to apply to this output.",
+  "type": "string",
+  "enum": [
+    "PUBLIC_READ",
+    "AUTHENTICATED_READ",
+    "BUCKET_OWNER_READ",
+    "BUCKET_OWNER_FULL_CONTROL"
+  ]
+}

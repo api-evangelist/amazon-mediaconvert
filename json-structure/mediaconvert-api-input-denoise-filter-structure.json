@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-input-denoise-filter-structure.json",
+  "name": "InputDenoiseFilter",
+  "type": "string",
+  "description": "Enable Denoise (InputDenoiseFilter) to filter noise from the input. Default is disabled. Only applicable to MPEG2, H.264, H.265, and uncompressed video inputs.",
+  "enum": [
+    "ENABLED",
+    "DISABLED"
+  ]
+}

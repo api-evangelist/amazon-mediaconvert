@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-teletext-source-settings-schema.json",
+  "title": "TeletextSourceSettings",
+  "description": "Settings specific to Teletext caption sources, including Page number.",
+  "type": "object",
+  "properties": {
+    "PageNumber": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringMin3Max3Pattern1809aFAF09aEAE"
+        },
+        {
+          "xml": {
+            "name": "pageNumber"
+          },
+          "description": "Use Page Number (PageNumber) to specify the three-digit hexadecimal page number that will be used for Teletext captions. Do not use this setting if you are passing through teletext from the input source to output."
+        }
+      ]
+    }
+  }
+}

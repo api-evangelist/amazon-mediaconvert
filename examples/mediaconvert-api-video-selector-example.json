@@ -1,0 +1,12 @@
+{
+  "AlphaBehavior": "example-value",
+  "ColorSpace": "example-value",
+  "ColorSpaceUsage": "example-value",
+  "EmbeddedTimecodeOverride": "id-abc123",
+  "Hdr10Metadata": "example-value",
+  "PadVideo": "id-abc123",
+  "Pid": "id-abc123",
+  "ProgramNumber": "example-value",
+  "Rotate": "example-value",
+  "SampleRange": "example-value"
+}

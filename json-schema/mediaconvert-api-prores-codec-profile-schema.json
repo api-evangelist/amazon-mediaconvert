@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-prores-codec-profile-schema.json",
+  "title": "ProresCodecProfile",
+  "description": "Use Profile (ProResCodecProfile) to specify the type of Apple ProRes codec to use for this output.",
+  "type": "string",
+  "enum": [
+    "APPLE_PRORES_422",
+    "APPLE_PRORES_422_HQ",
+    "APPLE_PRORES_422_LT",
+    "APPLE_PRORES_422_PROXY",
+    "APPLE_PRORES_4444",
+    "APPLE_PRORES_4444_XQ"
+  ]
+}

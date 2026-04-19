@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-automated-encoding-settings-schema.json",
+  "title": "AutomatedEncodingSettings",
+  "description": "Use automated encoding to have MediaConvert choose your encoding settings for you, based on characteristics of your input video.",
+  "type": "object",
+  "properties": {
+    "AbrSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AutomatedAbrSettings"
+        },
+        {
+          "xml": {
+            "name": "abrSettings"
+          },
+          "description": "Use automated ABR to have MediaConvert set up the renditions in your ABR package for you automatically, based on characteristics of your input video. This feature optimizes video quality while minimizing the overall size of your ABR package."
+        }
+      ]
+    }
+  }
+}

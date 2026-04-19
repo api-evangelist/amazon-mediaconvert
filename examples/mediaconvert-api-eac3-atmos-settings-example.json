@@ -1,0 +1,19 @@
+{
+  "Bitrate": "example-value",
+  "BitstreamMode": "example-value",
+  "CodingMode": "example-value",
+  "DialogueIntelligence": "example-value",
+  "DownmixControl": "example-value",
+  "DynamicRangeCompressionLine": "example-value",
+  "DynamicRangeCompressionRf": "example-value",
+  "DynamicRangeControl": "example-value",
+  "LoRoCenterMixLevel": "example-value",
+  "LoRoSurroundMixLevel": "example-value",
+  "LtRtCenterMixLevel": "example-value",
+  "LtRtSurroundMixLevel": "example-value",
+  "MeteringMode": "example-value",
+  "SampleRate": "example-value",
+  "SpeechThreshold": "example-value",
+  "StereoDownmix": "example-value",
+  "SurroundExMode": "example-value"
+}

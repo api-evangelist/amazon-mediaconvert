@@ -1,0 +1,213 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon MediaConvert
+  description: Unified vocabulary for Amazon MediaConvert APIs and capabilities.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: Amazon MediaConvert API
+    namespace: mediaconvert
+    version: '2018-11-14'
+    baseUrl: http://mediaconvert.{region}.amazonaws.com
+    status: active
+  resources:
+  - name: '2017-08-29'
+    api: Amazon MediaConvert API
+    actions:
+    - list
+    - get
+    - create
+    - update
+    - delete
+  - name: certificates
+    api: Amazon MediaConvert API
+    actions:
+    - list
+    - get
+    - create
+    - update
+    - delete
+  - name: jobs
+    api: Amazon MediaConvert API
+    actions:
+    - list
+    - get
+    - create
+    - update
+    - delete
+  - name: jobTemplates
+    api: Amazon MediaConvert API
+    actions:
+    - list
+    - get
+    - create
+    - update
+    - delete
+  - name: presets
+    api: Amazon MediaConvert API
+    actions:
+    - list
+    - get
+    - create
+    - update
+    - delete
+  - name: queues
+    api: Amazon MediaConvert API
+    actions:
+    - list
+    - get
+    - create
+    - update
+    - delete
+  - name: policy
+    api: Amazon MediaConvert API
+    actions:
+    - list
+    - get
+    - create
+    - update
+    - delete
+  - name: endpoints
+    api: Amazon MediaConvert API
+    actions:
+    - list
+    - get
+    - create
+    - update
+    - delete
+  - name: tags
+    api: Amazon MediaConvert API
+    actions:
+    - list
+    - get
+    - create
+    - update
+    - delete
+  actions:
+  - name: list
+    httpMethod: GET
+    pattern: read
+  - name: get
+    httpMethod: GET
+    pattern: read
+  - name: create
+    httpMethod: POST
+    pattern: write
+  - name: update
+    httpMethod: PUT
+    pattern: write
+  - name: delete
+    httpMethod: DELETE
+    pattern: write
+  schemas:
+    core:
+    - AssociateCertificateResponse
+    - CancelJobResponse
+    - CreateJobResponse
+    - AccelerationMode
+    - HopDestination
+    - AvailBlanking
+    - EsamSettings
+    - ExtendedDataServices
+  parameters:
+    pagination:
+    - name: nextToken
+      description: Pagination token
+    - name: maxResults
+      description: Max results per page
+  authentication:
+    schemes:
+    - type: awsSigV4
+      description: AWS Signature Version 4
+capability:
+  workflows:
+  - name: Amazon MediaConvert Workflow
+    file: capabilities/amazon-mediaconvert-media-workflow.yaml
+    description: Amazon MediaConvert media processing workflow
+    personas:
+    - Broadcast Engineer
+    - Media Developer
+    domains:
+    - Media Processing
+  personas:
+  - id: broadcast-engineer
+    name: Broadcast Engineer
+    description: Engineer managing broadcast media workflows
+    workflows:
+    - Amazon MediaConvert Workflow
+  - id: media-developer
+    name: Media Developer
+    description: Developer building media processing applications
+    workflows:
+    - Amazon MediaConvert Workflow
+  domains:
+  - name: Media Processing
+    description: AWS media processing and delivery
+  namespaces:
+  - name: mediaconvert
+    type: consumed
+  - name: mediaconvert-workflow-api
+    type: rest
+    port: 8080
+  - name: mediaconvert-workflow-mcp
+    type: mcp
+    port: 9090
+  binds:
+  - name: AWS_ACCESS_KEY_ID
+  - name: AWS_SECRET_ACCESS_KEY
+crossReference:
+- resource: '2017-08-29'
+  api: Amazon MediaConvert API
+  workflows:
+  - Amazon MediaConvert Workflow
+  personas:
+  - Broadcast Engineer
+- resource: certificates
+  api: Amazon MediaConvert API
+  workflows:
+  - Amazon MediaConvert Workflow
+  personas:
+  - Broadcast Engineer
+- resource: jobs
+  api: Amazon MediaConvert API
+  workflows:
+  - Amazon MediaConvert Workflow
+  personas:
+  - Broadcast Engineer
+- resource: jobTemplates
+  api: Amazon MediaConvert API
+  workflows:
+  - Amazon MediaConvert Workflow
+  personas:
+  - Broadcast Engineer
+- resource: presets
+  api: Amazon MediaConvert API
+  workflows:
+  - Amazon MediaConvert Workflow
+  personas:
+  - Broadcast Engineer
+- resource: queues
+  api: Amazon MediaConvert API
+  workflows:
+  - Amazon MediaConvert Workflow
+  personas:
+  - Broadcast Engineer
+- resource: policy
+  api: Amazon MediaConvert API
+  workflows:
+  - Amazon MediaConvert Workflow
+  personas:
+  - Broadcast Engineer
+- resource: endpoints
+  api: Amazon MediaConvert API
+  workflows:
+  - Amazon MediaConvert Workflow
+  personas:
+  - Broadcast Engineer
+- resource: tags
+  api: Amazon MediaConvert API
+  workflows:
+  - Amazon MediaConvert Workflow
+  personas:
+  - Broadcast Engineer

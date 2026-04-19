@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-queue-list-by-structure.json",
+  "name": "QueueListBy",
+  "type": "string",
+  "description": "Optional. When you request a list of queues, you can choose to list them alphabetically by NAME or chronologically by CREATION_DATE. If you don't specify, the service will list them by creation date.",
+  "enum": [
+    "NAME",
+    "CREATION_DATE"
+  ]
+}

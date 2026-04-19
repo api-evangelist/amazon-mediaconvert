@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-vc3-interlace-mode-schema.json",
+  "title": "Vc3InterlaceMode",
+  "description": "Optional. Choose the scan line type for this output. If you don't specify a value, MediaConvert will create a progressive output.",
+  "type": "string",
+  "enum": [
+    "INTERLACED",
+    "PROGRESSIVE"
+  ]
+}

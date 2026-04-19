@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-input-psi-control-structure.json",
+  "name": "InputPsiControl",
+  "type": "string",
+  "description": "Set PSI control (InputPsiControl) for transport stream inputs to specify which data the demux process to scans. * Ignore PSI - Scan all PIDs for audio and video. * Use PSI - Scan only PSI data.",
+  "enum": [
+    "IGNORE_PSI",
+    "USE_PSI"
+  ]
+}

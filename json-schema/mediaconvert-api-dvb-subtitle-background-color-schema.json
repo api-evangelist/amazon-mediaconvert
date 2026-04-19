@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-dvb-subtitle-background-color-schema.json",
+  "title": "DvbSubtitleBackgroundColor",
+  "description": "Specify the color of the rectangle behind the captions. Leave background color (BackgroundColor) blank and set Style passthrough (StylePassthrough) to enabled to use the background color data from your input captions, if present.",
+  "type": "string",
+  "enum": [
+    "NONE",
+    "BLACK",
+    "WHITE",
+    "AUTO"
+  ]
+}

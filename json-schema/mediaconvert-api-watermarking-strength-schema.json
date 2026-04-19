@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-watermarking-strength-schema.json",
+  "title": "WatermarkingStrength",
+  "description": "Optional. Ignore this setting unless Nagra support directs you to specify a value. When you don't specify a value here, the Nagra NexGuard library uses its default value.",
+  "type": "string",
+  "enum": [
+    "LIGHTEST",
+    "LIGHTER",
+    "DEFAULT",
+    "STRONGER",
+    "STRONGEST"
+  ]
+}

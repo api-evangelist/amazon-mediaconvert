@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-output-group-settings-schema.json",
+  "title": "OutputGroupSettings",
+  "description": "Output Group settings, including type",
+  "type": "object",
+  "properties": {
+    "CmafGroupSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CmafGroupSettings"
+        },
+        {
+          "xml": {
+            "name": "cmafGroupSettings"
+          },
+          "description": "Settings related to your CMAF output package. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/outputs-file-ABR.html. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to CMAF_GROUP_SETTINGS."
+        }
+      ]
+    },
+    "DashIsoGroupSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DashIsoGroupSettings"
+        },
+        {
+          "xml": {
+            "name": "dashIsoGroupSettings"
+          },
+          "description": "Settings related to your DASH output package. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/outputs-file-ABR.html. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to DASH_ISO_GROUP_SETTINGS."
+        }
+      ]
+    },
+    "FileGroupSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileGroupSettings"
+        },
+        {
+          "xml": {
+            "name": "fileGroupSettings"
+          },
+          "description": "Settings related to your File output group. MediaConvert uses this group of settings to generate a single standalone file, rather than a streaming package. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to FILE_GROUP_SETTINGS."
+        }
+      ]
+    },
+    "HlsGroupSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/HlsGroupSettings"
+        },
+        {
+          "xml": {
+            "name": "hlsGroupSettings"
+          },
+          "description": "Settings related to your HLS output package. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/outputs-file-ABR.html. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to HLS_GROUP_SETTINGS."
+        }
+      ]
+    },
+    "MsSmoothGroupSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MsSmoothGroupSettings"
+        },
+        {
+          "xml": {
+            "name": "msSmoothGroupSettings"
+          },
+          "description": "Settings related to your Microsoft Smooth Streaming output package. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/outputs-file-ABR.html. When you work directly in your JSON job specification, include this object and any required children when you set Type, under OutputGroupSettings, to MS_SMOOTH_GROUP_SETTINGS."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OutputGroupType"
+        },
+        {
+          "xml": {
+            "name": "type"
+          },
+          "description": "Type of output group (File group, Apple HLS, DASH ISO, Microsoft Smooth Streaming, CMAF)"
+        }
+      ]
+    }
+  }
+}

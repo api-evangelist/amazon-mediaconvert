@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-xavc-hd-profile-bitrate-class-schema.json",
+  "title": "XavcHdProfileBitrateClass",
+  "description": "Specify the XAVC HD (Long GOP) Bitrate Class to set the bitrate of your output. Outputs of the same class have similar image quality over the operating points that are valid for that class.",
+  "type": "string",
+  "enum": [
+    "BITRATE_CLASS_25",
+    "BITRATE_CLASS_35",
+    "BITRATE_CLASS_50"
+  ]
+}

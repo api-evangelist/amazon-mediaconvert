@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-hls-ad-markers-structure.json",
+  "name": "HlsAdMarkers",
+  "type": "string",
+  "description": "Ad marker for Apple HLS manifest.",
+  "enum": [
+    "ELEMENTAL",
+    "ELEMENTAL_SCTE35"
+  ]
+}

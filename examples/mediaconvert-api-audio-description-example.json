@@ -1,0 +1,13 @@
+{
+  "AudioChannelTaggingSettings": "example-value",
+  "AudioNormalizationSettings": "example-value",
+  "AudioSourceName": "example-resource",
+  "AudioType": "STANDARD",
+  "AudioTypeControl": "STANDARD",
+  "CodecSettings": "example-value",
+  "CustomLanguageCode": "example-value",
+  "LanguageCode": "example-value",
+  "LanguageCodeControl": "example-value",
+  "RemixSettings": "example-value",
+  "StreamName": "example-resource"
+}

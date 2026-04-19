@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-eac3-metadata-control-schema.json",
+  "title": "Eac3MetadataControl",
+  "description": "When set to FOLLOW_INPUT, encoder metadata will be sourced from the DD, DD+, or DolbyE decoder that supplied this audio data. If audio was not supplied from one of these streams, then the static metadata settings will be used.",
+  "type": "string",
+  "enum": [
+    "FOLLOW_INPUT",
+    "USE_CONFIGURED"
+  ]
+}

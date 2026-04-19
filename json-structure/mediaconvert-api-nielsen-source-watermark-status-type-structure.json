@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-nielsen-source-watermark-status-type-structure.json",
+  "name": "NielsenSourceWatermarkStatusType",
+  "type": "string",
+  "description": "Required. Specify whether your source content already contains Nielsen non-linear watermarks. When you set this value to Watermarked (WATERMARKED), the service fails the job. Nielsen requires that you add non-linear watermarking to only clean content that doesn't already have non-linear Nielsen watermarks.",
+  "enum": [
+    "CLEAN",
+    "WATERMARKED"
+  ]
+}

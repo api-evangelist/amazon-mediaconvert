@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-xavc-profile-schema.json",
+  "title": "XavcProfile",
+  "description": "Specify the XAVC profile for this output. For more information, see the Sony documentation at https://www.xavc-info.org/. Note that MediaConvert doesn't support the interlaced video XAVC operating points for XAVC_HD_INTRA_CBG. To create an interlaced XAVC output, choose the profile XAVC_HD.",
+  "type": "string",
+  "enum": [
+    "XAVC_HD_INTRA_CBG",
+    "XAVC_4K_INTRA_CBG",
+    "XAVC_4K_INTRA_VBR",
+    "XAVC_HD",
+    "XAVC_4K"
+  ]
+}

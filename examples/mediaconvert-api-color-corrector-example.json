@@ -1,0 +1,12 @@
+{
+  "Brightness": "example-value",
+  "ClipLimits": "example-value",
+  "ColorSpaceConversion": "example-value",
+  "Contrast": "example-value",
+  "Hdr10Metadata": "example-value",
+  "HdrToSdrToneMapper": "example-value",
+  "Hue": "example-value",
+  "SampleRangeConversion": "example-value",
+  "Saturation": "example-value",
+  "SdrReferenceWhiteLevel": "example-value"
+}

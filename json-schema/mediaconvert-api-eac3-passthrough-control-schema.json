@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-eac3-passthrough-control-schema.json",
+  "title": "Eac3PassthroughControl",
+  "description": "When set to WHEN_POSSIBLE, input DD+ audio will be passed through if it is present on the input. this detection is dynamic over the life of the transcode. Inputs that alternate between DD+ and non-DD+ content will have a consistent DD+ output as the system alternates between passthrough and encoding.",
+  "type": "string",
+  "enum": [
+    "WHEN_POSSIBLE",
+    "NO_PASSTHROUGH"
+  ]
+}

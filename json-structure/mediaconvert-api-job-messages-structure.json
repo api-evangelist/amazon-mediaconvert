@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-job-messages-structure.json",
+  "name": "JobMessages",
+  "type": "object",
+  "description": "Provides messages from the service about jobs that you have already successfully submitted.",
+  "properties": {
+    "Info": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOf__string"
+        },
+        {
+          "xml": {
+            "name": "info"
+          },
+          "description": "List of messages that are informational only and don't indicate a problem with your job."
+        }
+      ]
+    },
+    "Warning": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOf__string"
+        },
+        {
+          "xml": {
+            "name": "warning"
+          },
+          "description": "List of messages that warn about conditions that might cause your job not to run or to fail."
+        }
+      ]
+    }
+  }
+}

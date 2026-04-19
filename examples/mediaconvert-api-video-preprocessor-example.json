@@ -1,0 +1,10 @@
+{
+  "ColorCorrector": "example-value",
+  "Deinterlacer": "example-value",
+  "DolbyVision": "example-value",
+  "Hdr10Plus": "example-value",
+  "ImageInserter": "example-value",
+  "NoiseReducer": "example-value",
+  "PartnerWatermarking": "example-value",
+  "TimecodeBurnin": "example-value"
+}

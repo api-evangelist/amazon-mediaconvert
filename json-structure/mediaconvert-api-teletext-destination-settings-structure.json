@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-teletext-destination-settings-structure.json",
+  "name": "TeletextDestinationSettings",
+  "type": "object",
+  "description": "Settings related to teletext captions. Set up teletext captions in the same output as your video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/teletext-output-captions.html. When you work directly in your JSON job specification, include this object and any required children when you set destinationType to TELETEXT.",
+  "properties": {
+    "PageNumber": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringMin3Max3Pattern1809aFAF09aEAE"
+        },
+        {
+          "xml": {
+            "name": "pageNumber"
+          },
+          "description": "Set pageNumber to the Teletext page number for the destination captions for this output. This value must be a three-digit hexadecimal string; strings ending in -FF are invalid. If you are passing through the entire set of Teletext data, do not use this field."
+        }
+      ]
+    },
+    "PageTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfTeletextPageType"
+        },
+        {
+          "xml": {
+            "name": "pageTypes"
+          },
+          "description": "Specify the page types for this Teletext page. If you don't specify a value here, the service sets the page type to the default value Subtitle (PAGE_TYPE_SUBTITLE). If you pass through the entire set of Teletext data, don't use this field. When you pass through a set of Teletext pages, your output has the same page types as your input."
+        }
+      ]
+    }
+  }
+}

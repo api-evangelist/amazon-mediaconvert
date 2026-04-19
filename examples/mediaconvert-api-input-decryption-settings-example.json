@@ -1,0 +1,6 @@
+{
+  "DecryptionMode": "example-value",
+  "EncryptedDecryptionKey": "example-value",
+  "InitializationVector": "example-value",
+  "KmsKeyRegion": "example-value"
+}

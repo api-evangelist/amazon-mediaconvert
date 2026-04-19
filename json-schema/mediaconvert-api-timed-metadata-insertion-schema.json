@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-timed-metadata-insertion-schema.json",
+  "title": "TimedMetadataInsertion",
+  "description": "Insert user-defined custom ID3 metadata (id3) at timecodes (timecode) that you specify. In each output that you want to include this metadata, you must set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).",
+  "type": "object",
+  "properties": {
+    "Id3Insertions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOfId3Insertion"
+        },
+        {
+          "xml": {
+            "name": "id3Insertions"
+          },
+          "description": "Id3Insertions contains the array of Id3Insertion instances."
+        }
+      ]
+    }
+  }
+}

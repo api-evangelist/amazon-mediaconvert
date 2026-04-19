@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-av1-adaptive-quantization-structure.json",
+  "name": "Av1AdaptiveQuantization",
+  "type": "string",
+  "description": "Specify the strength of any adaptive quantization filters that you enable. The value that you choose here applies to Spatial adaptive quantization (spatialAdaptiveQuantization).",
+  "enum": [
+    false,
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "HIGHER",
+    "MAX"
+  ]
+}

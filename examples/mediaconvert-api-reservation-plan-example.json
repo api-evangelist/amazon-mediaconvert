@@ -1,0 +1,8 @@
+{
+  "Commitment": "example-value",
+  "ExpiresAt": "example-value",
+  "PurchasedAt": "example-value",
+  "RenewalType": "STANDARD",
+  "ReservedSlots": "example-value",
+  "Status": "ACTIVE"
+}

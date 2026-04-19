@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-motion-image-insertion-mode-structure.json",
+  "name": "MotionImageInsertionMode",
+  "type": "string",
+  "description": "Choose the type of motion graphic asset that you are providing for your overlay. You can choose either a .mov file or a series of .png files.",
+  "enum": [
+    "MOV",
+    "PNG"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-output-detail-schema.json",
+  "title": "OutputDetail",
+  "description": "Details regarding output",
+  "type": "object",
+  "properties": {
+    "DurationInMs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__integer"
+        },
+        {
+          "xml": {
+            "name": "durationInMs"
+          },
+          "description": "Duration in milliseconds"
+        }
+      ]
+    },
+    "VideoDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VideoDetail"
+        },
+        {
+          "xml": {
+            "name": "videoDetails"
+          },
+          "description": "Contains details about the output's video stream"
+        }
+      ]
+    }
+  }
+}

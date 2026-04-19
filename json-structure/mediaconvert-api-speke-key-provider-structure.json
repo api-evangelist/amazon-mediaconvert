@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-speke-key-provider-structure.json",
+  "name": "SpekeKeyProvider",
+  "type": "object",
+  "description": "If your output group type is HLS, DASH, or Microsoft Smooth, use these settings when doing DRM encryption with a SPEKE-compliant key provider. If your output group type is CMAF, use the SpekeKeyProviderCmaf settings instead.",
+  "properties": {
+    "CertificateArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringPatternArnAwsUsGovAcm"
+        },
+        {
+          "xml": {
+            "name": "certificateArn"
+          },
+          "description": "If you want your key provider to encrypt the content keys that it provides to MediaConvert, set up a certificate with a master key using AWS Certificate Manager. Specify the certificate's Amazon Resource Name (ARN) here."
+        }
+      ]
+    },
+    "ResourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__string"
+        },
+        {
+          "xml": {
+            "name": "resourceId"
+          },
+          "description": "Specify the resource ID that your SPEKE-compliant key provider uses to identify this content."
+        }
+      ]
+    },
+    "SystemIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__listOf__stringPattern09aFAF809aFAF409aFAF409aFAF409aFAF12"
+        },
+        {
+          "xml": {
+            "name": "systemIds"
+          },
+          "description": "Relates to SPEKE implementation. DRM system identifiers. DASH output groups support a max of two system ids. Other group types support one system id. See\n https://dashif.org/identifiers/content_protection/ for more details."
+        }
+      ]
+    },
+    "Url": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringPatternHttps"
+        },
+        {
+          "xml": {
+            "name": "url"
+          },
+          "description": "Specify the URL to the key server that your SPEKE-compliant DRM key provider uses to provide keys for encrypting your content."
+        }
+      ]
+    }
+  }
+}

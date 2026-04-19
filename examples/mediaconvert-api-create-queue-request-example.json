@@ -1,0 +1,8 @@
+{
+  "Description": "example-value",
+  "Name": "example-resource",
+  "PricingPlan": "example-value",
+  "ReservationPlanSettings": "example-value",
+  "Status": "ACTIVE",
+  "Tags": "example-value"
+}

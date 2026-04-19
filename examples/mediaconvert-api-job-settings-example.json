@@ -1,0 +1,14 @@
+{
+  "AdAvailOffset": "example-value",
+  "AvailBlanking": "example-value",
+  "Esam": "example-value",
+  "ExtendedDataServices": "example-value",
+  "Inputs": "example-value",
+  "KantarWatermark": "example-value",
+  "MotionImageInserter": "example-value",
+  "NielsenConfiguration": "example-value",
+  "NielsenNonLinearWatermark": "example-value",
+  "OutputGroups": "example-value",
+  "TimecodeConfig": "example-value",
+  "TimedMetadataInsertion": "example-value"
+}

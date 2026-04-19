@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-hls-segment-control-schema.json",
+  "title": "HlsSegmentControl",
+  "description": "When set to SINGLE_FILE, emits program as a single media resource (.ts) file, uses #EXT-X-BYTERANGE tags to index segment for playback.",
+  "type": "string",
+  "enum": [
+    "SINGLE_FILE",
+    "SEGMENTED_FILES"
+  ]
+}

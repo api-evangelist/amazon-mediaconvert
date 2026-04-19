@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-noise-reducer-schema.json",
+  "title": "NoiseReducer",
+  "description": "Enable the Noise reducer feature to remove noise from your video output if necessary. Enable or disable this feature for each output individually. This setting is disabled by default. When you enable Noise reducer, you must also select a value for Noise reducer filter. For AVC outputs, when you include Noise reducer, you cannot include the Bandwidth reduction filter.",
+  "type": "object",
+  "properties": {
+    "Filter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NoiseReducerFilter"
+        },
+        {
+          "xml": {
+            "name": "filter"
+          },
+          "description": "Use Noise reducer filter (NoiseReducerFilter) to select one of the following spatial image filtering functions. To use this setting, you must also enable Noise reducer (NoiseReducer). * Bilateral preserves edges while reducing noise. * Mean (softest), Gaussian, Lanczos, and Sharpen (sharpest) do convolution filtering. * Conserve does min/max noise reduction. * Spatial does frequency-domain filtering based on JND principles. * Temporal optimizes video quality for complex motion."
+        }
+      ]
+    },
+    "FilterSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NoiseReducerFilterSettings"
+        },
+        {
+          "xml": {
+            "name": "filterSettings"
+          },
+          "description": "Settings for a noise reducer filter"
+        }
+      ]
+    },
+    "SpatialFilterSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NoiseReducerSpatialFilterSettings"
+        },
+        {
+          "xml": {
+            "name": "spatialFilterSettings"
+          },
+          "description": "Noise reducer filter settings for spatial filter."
+        }
+      ]
+    },
+    "TemporalFilterSettings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NoiseReducerTemporalFilterSettings"
+        },
+        {
+          "xml": {
+            "name": "temporalFilterSettings"
+          },
+          "description": "Noise reducer filter settings for temporal filter."
+        }
+      ]
+    }
+  }
+}

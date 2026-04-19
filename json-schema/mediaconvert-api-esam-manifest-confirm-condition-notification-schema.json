@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-esam-manifest-confirm-condition-notification-schema.json",
+  "title": "EsamManifestConfirmConditionNotification",
+  "description": "ESAM ManifestConfirmConditionNotification defined by OC-SP-ESAM-API-I03-131025.",
+  "type": "object",
+  "properties": {
+    "MccXml": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/__stringPatternSNManifestConfirmConditionNotificationNS"
+        },
+        {
+          "xml": {
+            "name": "mccXml"
+          },
+          "description": "Provide your ESAM ManifestConfirmConditionNotification XML document inside your JSON job settings. Form the XML document as per OC-SP-ESAM-API-I03-131025. The transcoder will use the Manifest Conditioning instructions in the message that you supply."
+        }
+      ]
+    }
+  }
+}

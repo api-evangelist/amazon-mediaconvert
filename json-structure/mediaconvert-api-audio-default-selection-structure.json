@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-structure/mediaconvert-api-audio-default-selection-structure.json",
+  "name": "AudioDefaultSelection",
+  "type": "string",
+  "description": "Enable this setting on one audio selector to set it as the default for the job. The service uses this default for outputs where it can't find the specified input audio. If you don't set a default, those outputs have no audio.",
+  "enum": [
+    "DEFAULT",
+    "NOT_DEFAULT"
+  ]
+}

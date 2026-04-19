@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/json-schema/mediaconvert-api-preset-list-by-schema.json",
+  "title": "PresetListBy",
+  "description": "Optional. When you request a list of presets, you can choose to list them alphabetically by NAME or chronologically by CREATION_DATE. If you don't specify, the service will list them by name.",
+  "type": "string",
+  "enum": [
+    "NAME",
+    "CREATION_DATE",
+    "SYSTEM"
+  ]
+}

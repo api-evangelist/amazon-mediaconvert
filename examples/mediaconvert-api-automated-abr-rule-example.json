@@ -1,0 +1,7 @@
+{
+  "AllowedRenditions": "example-value",
+  "ForceIncludeRenditions": "example-value",
+  "MinBottomRenditionSize": "example-value",
+  "MinTopRenditionSize": "example-value",
+  "Type": "STANDARD"
+}
