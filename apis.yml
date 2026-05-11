@@ -100,6 +100,17 @@ common:
     description: Trigger downstream workflows based on MediaConvert job state changes.
   - name: AWS IAM
     description: Control access to MediaConvert resources and S3 buckets using IAM roles.
+- type: Integrations
+  url: https://aws.amazon.com/partners/
+integrations:
+  - name: Partner Programs
+  - name: Resources
+  - name: Success Stories
+  - name: Work with an AWS Partner
+  - name: AWS Marketplace
+  - name: AWS Partner Central
+  - name: Partner Paths
+  - name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
