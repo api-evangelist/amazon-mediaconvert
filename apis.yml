@@ -1,7 +1,8 @@
 aid: amazon-mediaconvert
 name: Amazon MediaConvert
-description: AWS Elemental MediaConvert is a file-based video transcoding service that allows you to easily create video-on-demand (VOD) content for broadcast and multiscreen delivery at scale. It 
-  supports broadcast-grade features including graphic overlays, content protection, multi-language audio, closed captioning, and a comprehensive range of video formats.
+description: AWS Elemental MediaConvert is a file-based video transcoding service that allows you to easily create video-on-demand
+  (VOD) content for broadcast and multiscreen delivery at scale. It supports broadcast-grade features including graphic overlays,
+  content protection, multi-language audio, closed captioning, and a comprehensive range of video formats.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -11,13 +12,14 @@ tags:
 - Media
 url: https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
 - aid: amazon-mediaconvert:mediaconvert-api
   name: Amazon MediaConvert API
-  description: AWS Elemental MediaConvert is a file-based video transcoding service that allows you to easily create video-on-demand (VOD) content for broadcast and multiscreen delivery at scale. It 
-    supports broadcast-grade features including graphic overlays, content protection, multi-language audio, closed captioning, and a comprehensive range of video formats.
+  description: AWS Elemental MediaConvert is a file-based video transcoding service that allows you to easily create video-on-demand
+    (VOD) content for broadcast and multiscreen delivery at scale. It supports broadcast-grade features including graphic
+    overlays, content protection, multi-language audio, closed captioning, and a comprehensive range of video formats.
   humanURL: https://aws.amazon.com/mediaconvert/
   baseURL: http://mediaconvert.{region}.amazonaws.com
   tags:
@@ -35,6 +37,8 @@ apis:
     url: https://aws.amazon.com/mediaconvert/pricing/
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
+  - type: NaftikoCapability
+    url: capabilities/amazon-mediaconvert.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/mediaconvert/
@@ -62,18 +66,19 @@ common:
   url: rules/amazon-mediaconvert-spectral-rules.yml
 - type: Vocabulary
   url: vocabulary/amazon-mediaconvert-vocabulary.yaml
-- type: NaftikoCapability
-  url: capabilities/amazon-mediaconvert-media-workflow.yaml
 - type: Features
   data:
   - name: Broadcast-Grade Video Processing
-    description: Graphic overlays, content protection, multi-language audio, closed captioning, and professional broadcast formats.
+    description: Graphic overlays, content protection, multi-language audio, closed captioning, and professional broadcast
+      formats.
   - name: Comprehensive Format Support
-    description: Supports AVC, HEVC, AV1, Apple ProRes, MPEG-2, CMAF, HLS, DASH ISO, Smooth Streaming, 4K, 8K, and HDR including Dolby Vision.
+    description: Supports AVC, HEVC, AV1, Apple ProRes, MPEG-2, CMAF, HLS, DASH ISO, Smooth Streaming, 4K, 8K, and HDR including
+      Dolby Vision.
   - name: Automated Infrastructure Management
     description: Automates workload provisioning, scaling, monitoring, and resource optimization without manual server management.
   - name: Built-in Reliability
-    description: Jobs run on redundant infrastructure across multiple Availability Zones with automatic health monitoring and failover.
+    description: Jobs run on redundant infrastructure across multiple Availability Zones with automatic health monitoring
+      and failover.
   - name: Job Templates and Presets
     description: Create reusable job templates and output presets to standardize and accelerate video transcoding workflows.
   - name: Queue Management
@@ -103,14 +108,14 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
