@@ -40,6 +40,14 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-mediaconvert.yaml
 common:
+- type: TrustCenter
+  url: security/amazon-mediaconvert-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-mediaconvert-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-mediaconvert-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-mediaconvert-authentication.yml
 - type: Portal
   url: https://aws.amazon.com/mediaconvert/
 - type: Documentation
