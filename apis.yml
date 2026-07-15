@@ -40,6 +40,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-mediaconvert.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-mediaconvert-agentic-access.yml
 - type: TrustCenter
   url: security/amazon-mediaconvert-trust-center.yml
 - type: VulnerabilityDisclosure
