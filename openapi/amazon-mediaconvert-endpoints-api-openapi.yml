@@ -1,0 +1,339 @@
+openapi: 3.0.0
+info:
+  version: 2017-08-29
+  x-release: v4
+  title: AWS Elemental MediaConvert Certificates Endpoints API
+  description: AWS Elemental MediaConvert
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: mediaconvert
+  x-aws-signingName: mediaconvert
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/mediaconvert-2017-08-29.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://mediaconvert.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The MediaConvert multi-region endpoint
+- url: https://mediaconvert.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The MediaConvert multi-region endpoint
+- url: http://mediaconvert.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The MediaConvert endpoint for China (Beijing) and China (Ningxia)
+- url: https://mediaconvert.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The MediaConvert endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: Endpoints
+paths:
+  /2017-08-29/endpoints:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeEndpoints
+      description: Send an request with an empty body to the regional API endpoint to get your account API endpoint.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeEndpointsResponse'
+              examples:
+                DescribeEndpoints200Example:
+                  summary: Default DescribeEndpoints 200 response
+                  x-microcks-default: true
+                  value:
+                    Endpoints: example-value
+                    NextToken: example-value
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                DescribeEndpoints480Example:
+                  summary: Default DescribeEndpoints 480 response
+                  x-microcks-default: true
+                  value: {}
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                DescribeEndpoints481Example:
+                  summary: Default DescribeEndpoints 481 response
+                  x-microcks-default: true
+                  value: {}
+        '482':
+          description: ForbiddenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForbiddenException'
+              examples:
+                DescribeEndpoints482Example:
+                  summary: Default DescribeEndpoints 482 response
+                  x-microcks-default: true
+                  value: {}
+        '483':
+          description: NotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+              examples:
+                DescribeEndpoints483Example:
+                  summary: Default DescribeEndpoints 483 response
+                  x-microcks-default: true
+                  value: {}
+        '484':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                DescribeEndpoints484Example:
+                  summary: Default DescribeEndpoints 484 response
+                  x-microcks-default: true
+                  value: {}
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                DescribeEndpoints485Example:
+                  summary: Default DescribeEndpoints 485 response
+                  x-microcks-default: true
+                  value: {}
+      parameters:
+      - name: MaxResults
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: NextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                maxResults:
+                  description: Optional. Max number of endpoints, up to twenty, that will be returned at one time.
+                  type: integer
+                mode:
+                  description: Optional field, defaults to DEFAULT. Specify DEFAULT for this operation to return your endpoints if any exist, or to create an endpoint for you and return it if one doesn't already exist. Specify GET_ONLY to return your endpoints if any exist, or an empty list if none exist.
+                  type: string
+                  enum:
+                  - DEFAULT
+                  - GET_ONLY
+                nextToken:
+                  description: Use this string, provided with the response to a previous request, to request the next batch of endpoints.
+                  type: string
+      summary: Amazon MediaConvert Describe Endpoints
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Endpoints
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    InternalServerErrorException: {}
+    __listOfEndpoint:
+      type: array
+      items:
+        $ref: '#/components/schemas/Endpoint'
+    Endpoint:
+      type: object
+      properties:
+        Url:
+          allOf:
+          - $ref: '#/components/schemas/__string'
+          - xml:
+              name: url
+            description: URL of endpoint
+      description: Describes an account-specific API endpoint.
+    __string:
+      type: string
+    NotFoundException: {}
+    TooManyRequestsException: {}
+    BadRequestException: {}
+    ForbiddenException: {}
+    ConflictException: {}
+    DescribeEndpointsResponse:
+      type: object
+      properties:
+        Endpoints:
+          allOf:
+          - $ref: '#/components/schemas/__listOfEndpoint'
+          - xml:
+              name: endpoints
+            description: List of endpoints
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/__string'
+          - xml:
+              name: nextToken
+            description: Use this string to request the next batch of endpoints.
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/mediaconvert/

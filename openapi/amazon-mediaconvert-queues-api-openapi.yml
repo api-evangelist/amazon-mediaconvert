@@ -1,0 +1,999 @@
+openapi: 3.0.0
+info:
+  version: 2017-08-29
+  x-release: v4
+  title: AWS Elemental MediaConvert Certificates Queues API
+  description: AWS Elemental MediaConvert
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: mediaconvert
+  x-aws-signingName: mediaconvert
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/mediaconvert-2017-08-29.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://mediaconvert.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The MediaConvert multi-region endpoint
+- url: https://mediaconvert.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The MediaConvert multi-region endpoint
+- url: http://mediaconvert.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The MediaConvert endpoint for China (Beijing) and China (Ningxia)
+- url: https://mediaconvert.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The MediaConvert endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: Queues
+paths:
+  /2017-08-29/queues:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: CreateQueue
+      description: Create a new transcoding queue. For information about queues, see Working With Queues in the User Guide at https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html
+      responses:
+        '201':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateQueueResponse'
+              examples:
+                CreateQueue201Example:
+                  summary: Default CreateQueue 201 response
+                  x-microcks-default: true
+                  value:
+                    Queue: example-value
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                CreateQueue480Example:
+                  summary: Default CreateQueue 480 response
+                  x-microcks-default: true
+                  value: {}
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                CreateQueue481Example:
+                  summary: Default CreateQueue 481 response
+                  x-microcks-default: true
+                  value: {}
+        '482':
+          description: ForbiddenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForbiddenException'
+              examples:
+                CreateQueue482Example:
+                  summary: Default CreateQueue 482 response
+                  x-microcks-default: true
+                  value: {}
+        '483':
+          description: NotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+              examples:
+                CreateQueue483Example:
+                  summary: Default CreateQueue 483 response
+                  x-microcks-default: true
+                  value: {}
+        '484':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                CreateQueue484Example:
+                  summary: Default CreateQueue 484 response
+                  x-microcks-default: true
+                  value: {}
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                CreateQueue485Example:
+                  summary: Default CreateQueue 485 response
+                  x-microcks-default: true
+                  value: {}
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - name
+              properties:
+                description:
+                  description: Optional. A description of the queue that you are creating.
+                  type: string
+                name:
+                  description: The name of the queue that you are creating.
+                  type: string
+                pricingPlan:
+                  description: Specifies whether the pricing plan for the queue is on-demand or reserved. For on-demand, you pay per minute, billed in increments of .01 minute. For reserved, you pay for the transcoding capacity of the entire queue, regardless of how much or how little you use it. Reserved pricing requires a 12-month commitment.
+                  type: string
+                  enum:
+                  - ON_DEMAND
+                  - RESERVED
+                reservationPlanSettings:
+                  description: Details about the pricing plan for your reserved queue. Required for reserved queues and not applicable to on-demand queues.
+                  type: object
+                  properties:
+                    Commitment:
+                      allOf:
+                      - $ref: '#/components/schemas/Commitment'
+                      - xml:
+                          name: commitment
+                        description: The length of the term of your reserved queue pricing plan commitment.
+                    RenewalType:
+                      allOf:
+                      - $ref: '#/components/schemas/RenewalType'
+                      - xml:
+                          name: renewalType
+                        description: Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term. When your term is auto renewed, you extend your commitment by 12 months from the auto renew date. You can cancel this commitment.
+                    ReservedSlots:
+                      allOf:
+                      - $ref: '#/components/schemas/__integer'
+                      - xml:
+                          name: reservedSlots
+                        description: Specifies the number of reserved transcode slots (RTS) for this queue. The number of RTS determines how many jobs the queue can process in parallel; each RTS can process one job at a time. You can't decrease the number of RTS in your reserved queue. You can increase the number of RTS by extending your existing commitment with a new 12-month commitment for the larger number. The new commitment begins when you purchase the additional capacity. You can't cancel your commitment or revert to your original commitment after you increase the capacity.
+                status:
+                  description: Queues can be ACTIVE or PAUSED. If you pause a queue, jobs in that queue won't begin. Jobs that are running when you pause a queue continue to run until they finish or result in an error.
+                  type: string
+                  enum:
+                  - ACTIVE
+                  - PAUSED
+                tags:
+                  description: The tags that you want to add to the resource. You can tag resources with a key-value pair or with only a key.
+                  type: object
+                  additionalProperties:
+                    $ref: '#/components/schemas/__string'
+      summary: Amazon MediaConvert Create Queue
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Queues
+    get:
+      operationId: ListQueues
+      description: Retrieve a JSON array of up to twenty of your queues. This will return the queues themselves, not just a list of them. To retrieve the next twenty queues, use the nextToken string returned with the array.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListQueuesResponse'
+              examples:
+                ListQueues200Example:
+                  summary: Default ListQueues 200 response
+                  x-microcks-default: true
+                  value:
+                    NextToken: example-value
+                    Queues: example-value
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                ListQueues480Example:
+                  summary: Default ListQueues 480 response
+                  x-microcks-default: true
+                  value: {}
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                ListQueues481Example:
+                  summary: Default ListQueues 481 response
+                  x-microcks-default: true
+                  value: {}
+        '482':
+          description: ForbiddenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForbiddenException'
+              examples:
+                ListQueues482Example:
+                  summary: Default ListQueues 482 response
+                  x-microcks-default: true
+                  value: {}
+        '483':
+          description: NotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+              examples:
+                ListQueues483Example:
+                  summary: Default ListQueues 483 response
+                  x-microcks-default: true
+                  value: {}
+        '484':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                ListQueues484Example:
+                  summary: Default ListQueues 484 response
+                  x-microcks-default: true
+                  value: {}
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                ListQueues485Example:
+                  summary: Default ListQueues 485 response
+                  x-microcks-default: true
+                  value: {}
+      parameters:
+      - name: listBy
+        in: query
+        required: false
+        description: Optional. When you request a list of queues, you can choose to list them alphabetically by NAME or chronologically by CREATION_DATE. If you don't specify, the service will list them by creation date.
+        schema:
+          type: string
+          enum:
+          - NAME
+          - CREATION_DATE
+          description: Optional. When you request a list of queues, you can choose to list them alphabetically by NAME or chronologically by CREATION_DATE. If you don't specify, the service will list them by creation date.
+      - name: maxResults
+        in: query
+        required: false
+        description: Optional. Number of queues, up to twenty, that will be returned at one time.
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 20
+      - name: nextToken
+        in: query
+        required: false
+        description: Use this string, provided with the response to a previous request, to request the next batch of queues.
+        schema:
+          type: string
+      - name: order
+        in: query
+        required: false
+        description: Optional. When you request lists of resources, you can specify whether they are sorted in ASCENDING or DESCENDING order. Default varies by resource.
+        schema:
+          type: string
+          enum:
+          - ASCENDING
+          - DESCENDING
+          description: Optional. When you request lists of resources, you can specify whether they are sorted in ASCENDING or DESCENDING order. Default varies by resource.
+      - name: MaxResults
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: NextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      summary: Amazon MediaConvert List Queues
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Queues
+  /2017-08-29/queues/{name}:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DeleteQueue
+      description: Permanently delete a queue you have created.
+      responses:
+        '202':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteQueueResponse'
+              examples:
+                DeleteQueue202Example:
+                  summary: Default DeleteQueue 202 response
+                  x-microcks-default: true
+                  value: {}
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                DeleteQueue480Example:
+                  summary: Default DeleteQueue 480 response
+                  x-microcks-default: true
+                  value: {}
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                DeleteQueue481Example:
+                  summary: Default DeleteQueue 481 response
+                  x-microcks-default: true
+                  value: {}
+        '482':
+          description: ForbiddenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForbiddenException'
+              examples:
+                DeleteQueue482Example:
+                  summary: Default DeleteQueue 482 response
+                  x-microcks-default: true
+                  value: {}
+        '483':
+          description: NotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+              examples:
+                DeleteQueue483Example:
+                  summary: Default DeleteQueue 483 response
+                  x-microcks-default: true
+                  value: {}
+        '484':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                DeleteQueue484Example:
+                  summary: Default DeleteQueue 484 response
+                  x-microcks-default: true
+                  value: {}
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                DeleteQueue485Example:
+                  summary: Default DeleteQueue 485 response
+                  x-microcks-default: true
+                  value: {}
+      parameters:
+      - name: name
+        in: path
+        required: true
+        description: The name of the queue that you want to delete.
+        schema:
+          type: string
+      summary: Amazon MediaConvert Delete Queue
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Queues
+    get:
+      operationId: GetQueue
+      description: Retrieve the JSON for a specific queue.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetQueueResponse'
+              examples:
+                GetQueue200Example:
+                  summary: Default GetQueue 200 response
+                  x-microcks-default: true
+                  value:
+                    Queue: example-value
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                GetQueue480Example:
+                  summary: Default GetQueue 480 response
+                  x-microcks-default: true
+                  value: {}
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                GetQueue481Example:
+                  summary: Default GetQueue 481 response
+                  x-microcks-default: true
+                  value: {}
+        '482':
+          description: ForbiddenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForbiddenException'
+              examples:
+                GetQueue482Example:
+                  summary: Default GetQueue 482 response
+                  x-microcks-default: true
+                  value: {}
+        '483':
+          description: NotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+              examples:
+                GetQueue483Example:
+                  summary: Default GetQueue 483 response
+                  x-microcks-default: true
+                  value: {}
+        '484':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                GetQueue484Example:
+                  summary: Default GetQueue 484 response
+                  x-microcks-default: true
+                  value: {}
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                GetQueue485Example:
+                  summary: Default GetQueue 485 response
+                  x-microcks-default: true
+                  value: {}
+      parameters:
+      - name: name
+        in: path
+        required: true
+        description: The name of the queue that you want information about.
+        schema:
+          type: string
+      summary: Amazon MediaConvert Get Queue
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Queues
+    put:
+      operationId: UpdateQueue
+      description: Modify one of your existing queues.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateQueueResponse'
+              examples:
+                UpdateQueue200Example:
+                  summary: Default UpdateQueue 200 response
+                  x-microcks-default: true
+                  value:
+                    Queue: example-value
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                UpdateQueue480Example:
+                  summary: Default UpdateQueue 480 response
+                  x-microcks-default: true
+                  value: {}
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                UpdateQueue481Example:
+                  summary: Default UpdateQueue 481 response
+                  x-microcks-default: true
+                  value: {}
+        '482':
+          description: ForbiddenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForbiddenException'
+              examples:
+                UpdateQueue482Example:
+                  summary: Default UpdateQueue 482 response
+                  x-microcks-default: true
+                  value: {}
+        '483':
+          description: NotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+              examples:
+                UpdateQueue483Example:
+                  summary: Default UpdateQueue 483 response
+                  x-microcks-default: true
+                  value: {}
+        '484':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                UpdateQueue484Example:
+                  summary: Default UpdateQueue 484 response
+                  x-microcks-default: true
+                  value: {}
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                UpdateQueue485Example:
+                  summary: Default UpdateQueue 485 response
+                  x-microcks-default: true
+                  value: {}
+      parameters:
+      - name: name
+        in: path
+        required: true
+        description: The name of the queue that you are modifying.
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  description: The new description for the queue, if you are changing it.
+                  type: string
+                reservationPlanSettings:
+                  description: Details about the pricing plan for your reserved queue. Required for reserved queues and not applicable to on-demand queues.
+                  type: object
+                  properties:
+                    Commitment:
+                      allOf:
+                      - $ref: '#/components/schemas/Commitment'
+                      - xml:
+                          name: commitment
+                        description: The length of the term of your reserved queue pricing plan commitment.
+                    RenewalType:
+                      allOf:
+                      - $ref: '#/components/schemas/RenewalType'
+                      - xml:
+                          name: renewalType
+                        description: Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term. When your term is auto renewed, you extend your commitment by 12 months from the auto renew date. You can cancel this commitment.
+                    ReservedSlots:
+                      allOf:
+                      - $ref: '#/components/schemas/__integer'
+                      - xml:
+                          name: reservedSlots
+                        description: Specifies the number of reserved transcode slots (RTS) for this queue. The number of RTS determines how many jobs the queue can process in parallel; each RTS can process one job at a time. You can't decrease the number of RTS in your reserved queue. You can increase the number of RTS by extending your existing commitment with a new 12-month commitment for the larger number. The new commitment begins when you purchase the additional capacity. You can't cancel your commitment or revert to your original commitment after you increase the capacity.
+                status:
+                  description: Queues can be ACTIVE or PAUSED. If you pause a queue, jobs in that queue won't begin. Jobs that are running when you pause a queue continue to run until they finish or result in an error.
+                  type: string
+                  enum:
+                  - ACTIVE
+                  - PAUSED
+      summary: Amazon MediaConvert Update Queue
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Queues
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    UpdateQueueResponse:
+      type: object
+      properties:
+        Queue:
+          allOf:
+          - $ref: '#/components/schemas/Queue'
+          - xml:
+              name: queue
+            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
+    ReservationPlan:
+      type: object
+      properties:
+        Commitment:
+          allOf:
+          - $ref: '#/components/schemas/Commitment'
+          - xml:
+              name: commitment
+            description: The length of the term of your reserved queue pricing plan commitment.
+        ExpiresAt:
+          allOf:
+          - $ref: '#/components/schemas/__timestampUnix'
+          - xml:
+              name: expiresAt
+            description: The timestamp in epoch seconds for when the current pricing plan term for this reserved queue expires.
+        PurchasedAt:
+          allOf:
+          - $ref: '#/components/schemas/__timestampUnix'
+          - xml:
+              name: purchasedAt
+            description: The timestamp in epoch seconds for when you set up the current pricing plan for this reserved queue.
+        RenewalType:
+          allOf:
+          - $ref: '#/components/schemas/RenewalType'
+          - xml:
+              name: renewalType
+            description: Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term.
+        ReservedSlots:
+          allOf:
+          - $ref: '#/components/schemas/__integer'
+          - xml:
+              name: reservedSlots
+            description: Specifies the number of reserved transcode slots (RTS) for this queue. The number of RTS determines how many jobs the queue can process in parallel; each RTS can process one job at a time. When you increase this number, you extend your existing commitment with a new 12-month commitment for a larger number of RTS. The new commitment begins when you purchase the additional capacity. You can't decrease the number of RTS in your reserved queue.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/ReservationPlanStatus'
+          - xml:
+              name: status
+            description: Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.
+      description: Details about the pricing plan for your reserved queue. Required for reserved queues and not applicable to on-demand queues.
+    BadRequestException: {}
+    NotFoundException: {}
+    ForbiddenException: {}
+    ConflictException: {}
+    ReservationPlanStatus:
+      type: string
+      enum:
+      - ACTIVE
+      - EXPIRED
+      description: Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.
+    ListQueuesResponse:
+      type: object
+      properties:
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/__string'
+          - xml:
+              name: nextToken
+            description: Use this string to request the next batch of queues.
+        Queues:
+          allOf:
+          - $ref: '#/components/schemas/__listOfQueue'
+          - xml:
+              name: queues
+            description: List of queues.
+    __string:
+      type: string
+    CreateQueueResponse:
+      type: object
+      properties:
+        Queue:
+          allOf:
+          - $ref: '#/components/schemas/Queue'
+          - xml:
+              name: queue
+            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
+    __integer:
+      type: integer
+    Queue:
+      type: object
+      required:
+      - Name
+      properties:
+        Arn:
+          allOf:
+          - $ref: '#/components/schemas/__string'
+          - xml:
+              name: arn
+            description: An identifier for this resource that is unique within all of AWS.
+        CreatedAt:
+          allOf:
+          - $ref: '#/components/schemas/__timestampUnix'
+          - xml:
+              name: createdAt
+            description: The timestamp in epoch seconds for when you created the queue.
+        Description:
+          allOf:
+          - $ref: '#/components/schemas/__string'
+          - xml:
+              name: description
+            description: An optional description that you create for each queue.
+        LastUpdated:
+          allOf:
+          - $ref: '#/components/schemas/__timestampUnix'
+          - xml:
+              name: lastUpdated
+            description: The timestamp in epoch seconds for when you most recently updated the queue.
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/__string'
+          - xml:
+              name: name
+            description: A name that you create for each queue. Each name must be unique within your account.
+        PricingPlan:
+          allOf:
+          - $ref: '#/components/schemas/PricingPlan'
+          - xml:
+              name: pricingPlan
+            description: Specifies whether the pricing plan for the queue is on-demand or reserved. For on-demand, you pay per minute, billed in increments of .01 minute. For reserved, you pay for the transcoding capacity of the entire queue, regardless of how much or how little you use it. Reserved pricing requires a 12-month commitment.
+        ProgressingJobsCount:
+          allOf:
+          - $ref: '#/components/schemas/__integer'
+          - xml:
+              name: progressingJobsCount
+            description: The estimated number of jobs with a PROGRESSING status.
+        ReservationPlan:
+          allOf:
+          - $ref: '#/components/schemas/ReservationPlan'
+          - xml:
+              name: reservationPlan
+            description: Details about the pricing plan for your reserved queue. Required for reserved queues and not applicable to on-demand queues.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/QueueStatus'
+          - xml:
+              name: status
+            description: Queues can be ACTIVE or PAUSED. If you pause a queue, the service won't begin processing jobs in that queue. Jobs that are running when you pause the queue continue to run until they finish or result in an error.
+        SubmittedJobsCount:
+          allOf:
+          - $ref: '#/components/schemas/__integer'
+          - xml:
+              name: submittedJobsCount
+            description: The estimated number of jobs with a SUBMITTED status.
+        Type:
+          allOf:
+          - $ref: '#/components/schemas/Type'
+          - xml:
+              name: type
+            description: Specifies whether this on-demand queue is system or custom. System queues are built in. You can't modify or delete system queues. You can create and modify custom queues.
+      description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
+    DeleteQueueResponse:
+      type: object
+      properties: {}
+    __listOfQueue:
+      type: array
+      items:
+        $ref: '#/components/schemas/Queue'
+    __timestampUnix:
+      type: string
+      format: date-time
+    RenewalType:
+      type: string
+      enum:
+      - AUTO_RENEW
+      - EXPIRE
+      description: Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term.
+    PricingPlan:
+      type: string
+      enum:
+      - ON_DEMAND
+      - RESERVED
+      description: Specifies whether the pricing plan for the queue is on-demand or reserved. For on-demand, you pay per minute, billed in increments of .01 minute. For reserved, you pay for the transcoding capacity of the entire queue, regardless of how much or how little you use it. Reserved pricing requires a 12-month commitment.
+    Type:
+      type: string
+      enum:
+      - SYSTEM
+      - CUSTOM
+    QueueStatus:
+      type: string
+      enum:
+      - ACTIVE
+      - PAUSED
+      description: Queues can be ACTIVE or PAUSED. If you pause a queue, jobs in that queue won't begin. Jobs that are running when you pause a queue continue to run until they finish or result in an error.
+    Commitment:
+      type: string
+      enum:
+      - ONE_YEAR
+      description: The length of the term of your reserved queue pricing plan commitment.
+    InternalServerErrorException: {}
+    TooManyRequestsException: {}
+    GetQueueResponse:
+      type: object
+      properties:
+        Queue:
+          allOf:
+          - $ref: '#/components/schemas/Queue'
+          - xml:
+              name: queue
+            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/mediaconvert/

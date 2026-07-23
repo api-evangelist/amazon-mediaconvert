@@ -1,0 +1,533 @@
+openapi: 3.0.0
+info:
+  version: 2017-08-29
+  x-release: v4
+  title: AWS Elemental MediaConvert Certificates Policy API
+  description: AWS Elemental MediaConvert
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: mediaconvert
+  x-aws-signingName: mediaconvert
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/mediaconvert-2017-08-29.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://mediaconvert.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The MediaConvert multi-region endpoint
+- url: https://mediaconvert.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The MediaConvert multi-region endpoint
+- url: http://mediaconvert.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The MediaConvert endpoint for China (Beijing) and China (Ningxia)
+- url: https://mediaconvert.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The MediaConvert endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: Policy
+paths:
+  /2017-08-29/policy:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    delete:
+      operationId: DeletePolicy
+      description: Permanently delete a policy that you created.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeletePolicyResponse'
+              examples:
+                DeletePolicy200Example:
+                  summary: Default DeletePolicy 200 response
+                  x-microcks-default: true
+                  value: {}
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                DeletePolicy480Example:
+                  summary: Default DeletePolicy 480 response
+                  x-microcks-default: true
+                  value: {}
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                DeletePolicy481Example:
+                  summary: Default DeletePolicy 481 response
+                  x-microcks-default: true
+                  value: {}
+        '482':
+          description: ForbiddenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForbiddenException'
+              examples:
+                DeletePolicy482Example:
+                  summary: Default DeletePolicy 482 response
+                  x-microcks-default: true
+                  value: {}
+        '483':
+          description: NotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+              examples:
+                DeletePolicy483Example:
+                  summary: Default DeletePolicy 483 response
+                  x-microcks-default: true
+                  value: {}
+        '484':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                DeletePolicy484Example:
+                  summary: Default DeletePolicy 484 response
+                  x-microcks-default: true
+                  value: {}
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                DeletePolicy485Example:
+                  summary: Default DeletePolicy 485 response
+                  x-microcks-default: true
+                  value: {}
+      parameters: []
+      summary: Amazon MediaConvert Delete Policy
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Policy
+    get:
+      operationId: GetPolicy
+      description: Retrieve the JSON for your policy.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPolicyResponse'
+              examples:
+                GetPolicy200Example:
+                  summary: Default GetPolicy 200 response
+                  x-microcks-default: true
+                  value:
+                    Policy: example-value
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                GetPolicy480Example:
+                  summary: Default GetPolicy 480 response
+                  x-microcks-default: true
+                  value: {}
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                GetPolicy481Example:
+                  summary: Default GetPolicy 481 response
+                  x-microcks-default: true
+                  value: {}
+        '482':
+          description: ForbiddenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForbiddenException'
+              examples:
+                GetPolicy482Example:
+                  summary: Default GetPolicy 482 response
+                  x-microcks-default: true
+                  value: {}
+        '483':
+          description: NotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+              examples:
+                GetPolicy483Example:
+                  summary: Default GetPolicy 483 response
+                  x-microcks-default: true
+                  value: {}
+        '484':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                GetPolicy484Example:
+                  summary: Default GetPolicy 484 response
+                  x-microcks-default: true
+                  value: {}
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                GetPolicy485Example:
+                  summary: Default GetPolicy 485 response
+                  x-microcks-default: true
+                  value: {}
+      parameters: []
+      summary: Amazon MediaConvert Get Policy
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Policy
+    put:
+      operationId: PutPolicy
+      description: Create or change your policy. For more information about policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutPolicyResponse'
+              examples:
+                PutPolicy200Example:
+                  summary: Default PutPolicy 200 response
+                  x-microcks-default: true
+                  value:
+                    Policy: example-value
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                PutPolicy480Example:
+                  summary: Default PutPolicy 480 response
+                  x-microcks-default: true
+                  value: {}
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                PutPolicy481Example:
+                  summary: Default PutPolicy 481 response
+                  x-microcks-default: true
+                  value: {}
+        '482':
+          description: ForbiddenException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForbiddenException'
+              examples:
+                PutPolicy482Example:
+                  summary: Default PutPolicy 482 response
+                  x-microcks-default: true
+                  value: {}
+        '483':
+          description: NotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundException'
+              examples:
+                PutPolicy483Example:
+                  summary: Default PutPolicy 483 response
+                  x-microcks-default: true
+                  value: {}
+        '484':
+          description: TooManyRequestsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyRequestsException'
+              examples:
+                PutPolicy484Example:
+                  summary: Default PutPolicy 484 response
+                  x-microcks-default: true
+                  value: {}
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                PutPolicy485Example:
+                  summary: Default PutPolicy 485 response
+                  x-microcks-default: true
+                  value: {}
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - policy
+              properties:
+                policy:
+                  description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+                  type: object
+                  properties:
+                    HttpInputs:
+                      allOf:
+                      - $ref: '#/components/schemas/InputPolicy'
+                      - xml:
+                          name: httpInputs
+                        description: Allow or disallow jobs that specify HTTP inputs.
+                    HttpsInputs:
+                      allOf:
+                      - $ref: '#/components/schemas/InputPolicy'
+                      - xml:
+                          name: httpsInputs
+                        description: Allow or disallow jobs that specify HTTPS inputs.
+                    S3Inputs:
+                      allOf:
+                      - $ref: '#/components/schemas/InputPolicy'
+                      - xml:
+                          name: s3Inputs
+                        description: Allow or disallow jobs that specify Amazon S3 inputs.
+      summary: Amazon MediaConvert Put Policy
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Policy
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    Policy:
+      type: object
+      properties:
+        HttpInputs:
+          allOf:
+          - $ref: '#/components/schemas/InputPolicy'
+          - xml:
+              name: httpInputs
+            description: Allow or disallow jobs that specify HTTP inputs.
+        HttpsInputs:
+          allOf:
+          - $ref: '#/components/schemas/InputPolicy'
+          - xml:
+              name: httpsInputs
+            description: Allow or disallow jobs that specify HTTPS inputs.
+        S3Inputs:
+          allOf:
+          - $ref: '#/components/schemas/InputPolicy'
+          - xml:
+              name: s3Inputs
+            description: Allow or disallow jobs that specify Amazon S3 inputs.
+      description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+    InternalServerErrorException: {}
+    BadRequestException: {}
+    PutPolicyResponse:
+      type: object
+      properties:
+        Policy:
+          allOf:
+          - $ref: '#/components/schemas/Policy'
+          - xml:
+              name: policy
+            description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+    TooManyRequestsException: {}
+    NotFoundException: {}
+    DeletePolicyResponse:
+      type: object
+      properties: {}
+    InputPolicy:
+      type: string
+      enum:
+      - ALLOWED
+      - DISALLOWED
+      description: An input policy allows or disallows a job you submit to run based on the conditions that you specify.
+    ForbiddenException: {}
+    ConflictException: {}
+    GetPolicyResponse:
+      type: object
+      properties:
+        Policy:
+          allOf:
+          - $ref: '#/components/schemas/Policy'
+          - xml:
+              name: policy
+            description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/mediaconvert/
