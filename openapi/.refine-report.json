@@ -1,0 +1,28 @@
+{
+  "provider": "amazon-mediaconvert",
+  "sources": [
+    "amazon-mediaconvert-certificates-api-openapi.yml",
+    "amazon-mediaconvert-endpoints-api-openapi.yml",
+    "amazon-mediaconvert-jobs-api-openapi.yml",
+    "amazon-mediaconvert-jobtemplates-api-openapi.yml",
+    "amazon-mediaconvert-policy-api-openapi.yml",
+    "amazon-mediaconvert-presets-api-openapi.yml",
+    "amazon-mediaconvert-queues-api-openapi.yml",
+    "amazon-mediaconvert-tags-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-mediaconvert-certificates-api-openapi.yml",
+    "amazon-mediaconvert-endpoints-api-openapi.yml",
+    "amazon-mediaconvert-jobs-api-openapi.yml",
+    "amazon-mediaconvert-jobtemplates-api-openapi.yml",
+    "amazon-mediaconvert-policy-api-openapi.yml",
+    "amazon-mediaconvert-presets-api-openapi.yml",
+    "amazon-mediaconvert-queues-api-openapi.yml",
+    "amazon-mediaconvert-tags-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
