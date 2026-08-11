@@ -46,8 +46,6 @@ apis:
     url: https://aws.amazon.com/mediaconvert/pricing/
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-mediaconvert.yaml
 - aid: amazon-mediaconvert:amazon-mediaconvert-endpoints-api
   name: Amazon MediaConvert Endpoints API
   description: The Endpoints API from Amazon MediaConvert — 1 operation(s) for endpoints.
@@ -66,8 +64,6 @@ apis:
     url: https://aws.amazon.com/mediaconvert/pricing/
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-mediaconvert.yaml
 - aid: amazon-mediaconvert:amazon-mediaconvert-jobs-api
   name: Amazon MediaConvert Jobs API
   description: The Jobs API from Amazon MediaConvert — 2 operation(s) for jobs.
@@ -86,8 +82,6 @@ apis:
     url: https://aws.amazon.com/mediaconvert/pricing/
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-mediaconvert.yaml
 - aid: amazon-mediaconvert:amazon-mediaconvert-jobtemplates-api
   name: Amazon MediaConvert JobTemplates API
   description: The JobTemplates API from Amazon MediaConvert — 2 operation(s) for jobtemplates.
@@ -106,8 +100,6 @@ apis:
     url: https://aws.amazon.com/mediaconvert/pricing/
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-mediaconvert.yaml
 - aid: amazon-mediaconvert:amazon-mediaconvert-policy-api
   name: Amazon MediaConvert Policy API
   description: The Policy API from Amazon MediaConvert — 1 operation(s) for policy.
@@ -126,8 +118,6 @@ apis:
     url: https://aws.amazon.com/mediaconvert/pricing/
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-mediaconvert.yaml
 - aid: amazon-mediaconvert:amazon-mediaconvert-presets-api
   name: Amazon MediaConvert Presets API
   description: The Presets API from Amazon MediaConvert — 2 operation(s) for presets.
@@ -146,8 +136,6 @@ apis:
     url: https://aws.amazon.com/mediaconvert/pricing/
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-mediaconvert.yaml
 - aid: amazon-mediaconvert:amazon-mediaconvert-queues-api
   name: Amazon MediaConvert Queues API
   description: The Queues API from Amazon MediaConvert — 2 operation(s) for queues.
@@ -166,8 +154,6 @@ apis:
     url: https://aws.amazon.com/mediaconvert/pricing/
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-mediaconvert.yaml
 - aid: amazon-mediaconvert:amazon-mediaconvert-tags-api
   name: Amazon MediaConvert Tags API
   description: The Tags API from Amazon MediaConvert — 2 operation(s) for tags.
@@ -186,8 +172,6 @@ apis:
     url: https://aws.amazon.com/mediaconvert/pricing/
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-mediaconvert.yaml
 common:
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-mediaconvert/overview
