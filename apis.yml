@@ -4,6 +4,18 @@ description: AWS Elemental MediaConvert is a file-based video transcoding servic
   (VOD) content for broadcast and multiscreen delivery at scale. It supports broadcast-grade features including graphic overlays,
   content protection, multi-language audio, closed captioning, and a comprehensive range of video formats.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
