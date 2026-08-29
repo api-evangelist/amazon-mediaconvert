@@ -1,0 +1,49 @@
+slug: amazon-mediaconvert
+provider: Amazon MediaConvert
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Media, Entertainment & Telecom Content
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Jobs
+  spec_file: amazon-mediaconvert-jobs-api-openapi.yml
+  capability_id: BC-3710.40
+  capability_id_l1: BC-3710
+  capability_name: Transcoding & Format Conversion
+  confidence: 0.9
+  evidence: '"Amazon MediaConvert Create Job", "Cancel Job"; vendor: "file-based video transcoding service
+    that allows you to easily create video-on-demand (VOD) content for broadcast and multiscreen delivery"'
+  reason: Jobs are the execution unit of video transcoding into distribution renditions, with schemas
+    for codec, timecode and content-protection settings — this is transcoding and format conversion within
+    media asset management.
+- tag: JobTemplates
+  spec_file: amazon-mediaconvert-jobtemplates-api-openapi.yml
+  capability_id: BC-3710.40
+  capability_id_l1: BC-3710
+  capability_name: Transcoding & Format Conversion
+  confidence: 0.85
+  evidence: '"Create Job Template", schema "JobTemplateSettings" with codec settings such as "H265FramerateConversionAlgorithm",
+    "Mpeg2CodecLevel", "AvcIntraUhdSettings"'
+  reason: Templates encode reusable transcoding configurations (codecs, framerate conversion, output settings)
+    for the file-based video transcoding service, directly supporting production of distribution renditions.
+    Slightly below top confidence because the tag manages template artefacts rather than executing conversions
+    itself.
+- tag: Presets
+  spec_file: amazon-mediaconvert-presets-api-openapi.yml
+  capability_id: BC-3710.40
+  capability_id_l1: BC-3710
+  capability_name: Transcoding & Format Conversion
+  confidence: 0.8
+  evidence: '''Create Preset'' / ''Update Preset'' with schemas H265Telecine, Mpeg2CodecLevel, ProresFramerateConversionAlgorithm,
+    BurninSubtitleShadowColor'
+  reason: Presets are reusable encoding/output configurations for a file-based video transcoding service;
+    the schema set is pure codec/rendition settings, which is Transcoding & Format Conversion (production
+    of distribution renditions).
