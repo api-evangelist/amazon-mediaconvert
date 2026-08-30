@@ -103,7 +103,7 @@ apis:
   humanURL: https://aws.amazon.com/mediaconvert/
   baseURL: http://mediaconvert.{region}.amazonaws.com
   tags:
-  - Job Templates
+  - JobTemplates
   tags_raw:
   - JobTemplates
   properties:
