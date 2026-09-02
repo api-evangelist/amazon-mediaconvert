@@ -1,6 +1,6 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
   title: AWS Elemental MediaConvert Certificates API
   description: AWS Elemental MediaConvert
@@ -327,6 +327,19 @@ paths:
       tags:
       - Certificates
 components:
+  schemas:
+    NotFoundException: {}
+    BadRequestException: {}
+    TooManyRequestsException: {}
+    ConflictException: {}
+    ForbiddenException: {}
+    AssociateCertificateResponse:
+      type: object
+      properties: {}
+    DisassociateCertificateResponse:
+      type: object
+      properties: {}
+    InternalServerErrorException: {}
   parameters:
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
@@ -334,8 +347,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -346,8 +359,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -364,25 +377,12 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
       required: false
-  schemas:
-    InternalServerErrorException: {}
-    AssociateCertificateResponse:
-      type: object
-      properties: {}
-    DisassociateCertificateResponse:
-      type: object
-      properties: {}
-    BadRequestException: {}
-    TooManyRequestsException: {}
-    NotFoundException: {}
-    ForbiddenException: {}
-    ConflictException: {}
   securitySchemes:
     hmac:
       type: apiKey

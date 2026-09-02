@@ -1,6 +1,6 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
   title: AWS Elemental MediaConvert Certificates Tags API
   description: AWS Elemental MediaConvert
@@ -441,6 +441,24 @@ paths:
       - Tags
 components:
   parameters:
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
@@ -453,8 +471,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -465,27 +483,16 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    BadRequestException: {}
-    NotFoundException: {}
+    ListTagsForResourceResponse:
+      type: object
+      properties:
+        ResourceTags:
+          allOf:
+          - $ref: '#/components/schemas/ResourceTags'
+          - xml:
+              name: resourceTags
+            description: The Amazon Resource Name (ARN) and tags for an AWS Elemental MediaConvert resource.
     ResourceTags:
       type: object
       properties:
@@ -502,31 +509,24 @@ components:
               name: tags
             description: The tags for the resource.
       description: The Amazon Resource Name (ARN) and tags for an AWS Elemental MediaConvert resource.
-    TagResourceResponse:
-      type: object
-      properties: {}
+    BadRequestException: {}
     ForbiddenException: {}
+    NotFoundException: {}
+    TooManyRequestsException: {}
     ConflictException: {}
-    UntagResourceResponse:
-      type: object
-      properties: {}
     __string:
       type: string
     InternalServerErrorException: {}
-    TooManyRequestsException: {}
     __mapOf__string:
       type: object
       additionalProperties:
         $ref: '#/components/schemas/__string'
-    ListTagsForResourceResponse:
+    UntagResourceResponse:
       type: object
-      properties:
-        ResourceTags:
-          allOf:
-          - $ref: '#/components/schemas/ResourceTags'
-          - xml:
-              name: resourceTags
-            description: The Amazon Resource Name (ARN) and tags for an AWS Elemental MediaConvert resource.
+      properties: {}
+    TagResourceResponse:
+      type: object
+      properties: {}
   securitySchemes:
     hmac:
       type: apiKey
