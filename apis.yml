@@ -99,26 +99,6 @@ apis:
     url: https://aws.amazon.com/mediaconvert/pricing/
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
-- aid: amazon-mediaconvert:amazon-mediaconvert-jobtemplates-api
-  name: Amazon MediaConvert JobTemplates API
-  description: The JobTemplates API from Amazon MediaConvert — 2 operation(s) for jobtemplates.
-  humanURL: https://aws.amazon.com/mediaconvert/
-  baseURL: http://mediaconvert.{region}.amazonaws.com
-  tags:
-  - Job Templates
-  tags_raw:
-  - JobTemplates
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-mediaconvert-jobtemplates-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/mediaconvert/
-  - type: GettingStarted
-    url: https://aws.amazon.com/mediaconvert/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/mediaconvert/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/mediaconvert/faqs/
 - aid: amazon-mediaconvert:amazon-mediaconvert-policy-api
   name: Amazon MediaConvert Policy API
   description: The Policy API from Amazon MediaConvert — 1 operation(s) for policy.
@@ -183,6 +163,24 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-mediaconvert-tags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/mediaconvert/
+  - type: GettingStarted
+    url: https://aws.amazon.com/mediaconvert/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/mediaconvert/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/mediaconvert/faqs/
+- aid: amazon-mediaconvert:amazon-mediaconvert-job-templates-api
+  name: Amazon MediaConvert Job Templates API
+  description: The Job Templates API from Amazon MediaConvert — 2 operation(s) for job templates.
+  humanURL: https://aws.amazon.com/mediaconvert/
+  baseURL: http://mediaconvert.{region}.amazonaws.com
+  tags:
+  - Job Templates
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-mediaconvert-job-templates-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/mediaconvert/
   - type: GettingStarted
