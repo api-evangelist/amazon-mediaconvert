@@ -25,7 +25,8 @@ edges:
     for codec, timecode and content-protection settings — this is transcoding and format conversion within
     media asset management.
 - tag: JobTemplates
-  spec_file: amazon-mediaconvert-jobtemplates-api-openapi.yml
+  spec_file: amazon-mediaconvert-job-templates-api-openapi.yml
+  reanchored_from: amazon-mediaconvert-jobtemplates-api-openapi.yml
   capability_id: BC-3710.40
   capability_id_l1: BC-3710
   capability_name: Transcoding & Format Conversion
