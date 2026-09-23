@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2017-08-29
   x-release: v4
-  title: AWS Elemental MediaConvert Certificates Queues API
+  title: AWS Elemental MediaConvert Queues API
   description: AWS Elemental MediaConvert
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/mediaconvert-2017-08-29.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -735,18 +736,6 @@ paths:
       - Queues
 components:
   schemas:
-    DeleteQueueResponse:
-      type: object
-      properties: {}
-    GetQueueResponse:
-      type: object
-      properties:
-        Queue:
-          allOf:
-          - $ref: '#/components/schemas/Queue'
-          - xml:
-              name: queue
-            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
     CreateQueueResponse:
       type: object
       properties:
@@ -756,14 +745,35 @@ components:
           - xml:
               name: queue
             description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
+    BadRequestException: {}
     QueueStatus:
       type: string
       enum:
       - ACTIVE
       - PAUSED
       description: Queues can be ACTIVE or PAUSED. If you pause a queue, jobs in that queue won't begin. Jobs that are running when you pause a queue continue to run until they finish or result in an error.
-    ForbiddenException: {}
-    BadRequestException: {}
+    GetQueueResponse:
+      type: object
+      properties:
+        Queue:
+          allOf:
+          - $ref: '#/components/schemas/Queue'
+          - xml:
+              name: queue
+            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
+    ConflictException: {}
+    RenewalType:
+      type: string
+      enum:
+      - AUTO_RENEW
+      - EXPIRE
+      description: Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term.
+    Type:
+      type: string
+      enum:
+      - SYSTEM
+      - CUSTOM
+    NotFoundException: {}
     ReservationPlan:
       type: object
       properties:
@@ -804,30 +814,30 @@ components:
               name: status
             description: Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.
       description: Details about the pricing plan for your reserved queue. Required for reserved queues and not applicable to on-demand queues.
-    __integer:
-      type: integer
-    Type:
+    InternalServerErrorException: {}
+    __timestampUnix:
       type: string
-      enum:
-      - SYSTEM
-      - CUSTOM
+      format: date-time
+    __listOfQueue:
+      type: array
+      items:
+        $ref: '#/components/schemas/Queue'
     Commitment:
       type: string
       enum:
       - ONE_YEAR
       description: The length of the term of your reserved queue pricing plan commitment.
-    __timestampUnix:
-      type: string
-      format: date-time
-    RenewalType:
+    PricingPlan:
       type: string
       enum:
-      - AUTO_RENEW
-      - EXPIRE
-      description: Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term.
-    NotFoundException: {}
-    TooManyRequestsException: {}
-    ConflictException: {}
+      - ON_DEMAND
+      - RESERVED
+      description: Specifies whether the pricing plan for the queue is on-demand or reserved. For on-demand, you pay per minute, billed in increments of .01 minute. For reserved, you pay for the transcoding capacity of the entire queue, regardless of how much or how little you use it. Reserved pricing requires a 12-month commitment.
+    __string:
+      type: string
+    DeleteQueueResponse:
+      type: object
+      properties: {}
     Queue:
       type: object
       required:
@@ -900,25 +910,6 @@ components:
               name: type
             description: Specifies whether this on-demand queue is system or custom. System queues are built in. You can't modify or delete system queues. You can create and modify custom queues.
       description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
-    __listOfQueue:
-      type: array
-      items:
-        $ref: '#/components/schemas/Queue'
-    __string:
-      type: string
-    InternalServerErrorException: {}
-    PricingPlan:
-      type: string
-      enum:
-      - ON_DEMAND
-      - RESERVED
-      description: Specifies whether the pricing plan for the queue is on-demand or reserved. For on-demand, you pay per minute, billed in increments of .01 minute. For reserved, you pay for the transcoding capacity of the entire queue, regardless of how much or how little you use it. Reserved pricing requires a 12-month commitment.
-    ReservationPlanStatus:
-      type: string
-      enum:
-      - ACTIVE
-      - EXPIRED
-      description: Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.
     UpdateQueueResponse:
       type: object
       properties:
@@ -928,6 +919,16 @@ components:
           - xml:
               name: queue
             description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
+    TooManyRequestsException: {}
+    ForbiddenException: {}
+    ReservationPlanStatus:
+      type: string
+      enum:
+      - ACTIVE
+      - EXPIRED
+      description: Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.
+    __integer:
+      type: integer
     ListQueuesResponse:
       type: object
       properties:
@@ -944,20 +945,26 @@ components:
               name: queues
             description: List of queues.
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -976,12 +983,6 @@ components:
       required: false
     X-Amz-Credential:
       name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string

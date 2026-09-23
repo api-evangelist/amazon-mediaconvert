@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2017-08-29
   x-release: v4
   title: AWS Elemental MediaConvert Certificates API
   description: AWS Elemental MediaConvert
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/mediaconvert-2017-08-29.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -328,33 +329,39 @@ paths:
       - Certificates
 components:
   schemas:
-    NotFoundException: {}
     BadRequestException: {}
-    TooManyRequestsException: {}
     ConflictException: {}
+    TooManyRequestsException: {}
+    NotFoundException: {}
     ForbiddenException: {}
     AssociateCertificateResponse:
       type: object
       properties: {}
+    InternalServerErrorException: {}
     DisassociateCertificateResponse:
       type: object
       properties: {}
-    InternalServerErrorException: {}
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -371,14 +378,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string

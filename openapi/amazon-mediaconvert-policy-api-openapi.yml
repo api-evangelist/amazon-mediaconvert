@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2017-08-29
   x-release: v4
-  title: AWS Elemental MediaConvert Certificates Policy API
+  title: AWS Elemental MediaConvert Policy API
   description: AWS Elemental MediaConvert
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -24,6 +24,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/mediaconvert-2017-08-29.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -422,7 +423,6 @@ paths:
       - Policy
 components:
   schemas:
-    NotFoundException: {}
     PutPolicyResponse:
       type: object
       properties:
@@ -432,29 +432,13 @@ components:
           - xml:
               name: policy
             description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
-    GetPolicyResponse:
-      type: object
-      properties:
-        Policy:
-          allOf:
-          - $ref: '#/components/schemas/Policy'
-          - xml:
-              name: policy
-            description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
     BadRequestException: {}
-    TooManyRequestsException: {}
-    ConflictException: {}
-    ForbiddenException: {}
     InputPolicy:
       type: string
       enum:
       - ALLOWED
       - DISALLOWED
       description: An input policy allows or disallows a job you submit to run based on the conditions that you specify.
-    DeletePolicyResponse:
-      type: object
-      properties: {}
-    InternalServerErrorException: {}
     Policy:
       type: object
       properties:
@@ -477,21 +461,44 @@ components:
               name: s3Inputs
             description: Allow or disallow jobs that specify Amazon S3 inputs.
       description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+    GetPolicyResponse:
+      type: object
+      properties:
+        Policy:
+          allOf:
+          - $ref: '#/components/schemas/Policy'
+          - xml:
+              name: policy
+            description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+    DeletePolicyResponse:
+      type: object
+      properties: {}
+    ConflictException: {}
+    TooManyRequestsException: {}
+    NotFoundException: {}
+    ForbiddenException: {}
+    InternalServerErrorException: {}
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -508,14 +515,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
