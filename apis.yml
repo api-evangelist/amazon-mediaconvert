@@ -191,7 +191,7 @@ apis:
     url: https://aws.amazon.com/mediaconvert/faqs/
 common:
 - type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/mediaconvert/
 - type: CapabilityMap
   url: capabilities/amazon-mediaconvert-capability-edges.yml
   name: Amazon MediaConvert Business Capability Map
@@ -288,5 +288,5 @@ integrations:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product

@@ -442,8 +442,17 @@ paths:
       - Tags
 components:
   schemas:
-    BadRequestException: {}
-    ConflictException: {}
+    InternalServerErrorException: {}
+    ForbiddenException: {}
+    ListTagsForResourceResponse:
+      type: object
+      properties:
+        ResourceTags:
+          allOf:
+          - $ref: '#/components/schemas/ResourceTags'
+          - xml:
+              name: resourceTags
+            description: The Amazon Resource Name (ARN) and tags for an AWS Elemental MediaConvert resource.
     ResourceTags:
       type: object
       properties:
@@ -460,34 +469,25 @@ components:
               name: tags
             description: The tags for the resource.
       description: The Amazon Resource Name (ARN) and tags for an AWS Elemental MediaConvert resource.
+    __string:
+      type: string
+    TagResourceResponse:
+      type: object
+      properties: {}
     UntagResourceResponse:
       type: object
       properties: {}
+    NotFoundException: {}
+    BadRequestException: {}
     __mapOf__string:
       type: object
       additionalProperties:
         $ref: '#/components/schemas/__string'
-    NotFoundException: {}
-    InternalServerErrorException: {}
-    __string:
-      type: string
-    ListTagsForResourceResponse:
-      type: object
-      properties:
-        ResourceTags:
-          allOf:
-          - $ref: '#/components/schemas/ResourceTags'
-          - xml:
-              name: resourceTags
-            description: The Amazon Resource Name (ARN) and tags for an AWS Elemental MediaConvert resource.
-    TagResourceResponse:
-      type: object
-      properties: {}
     TooManyRequestsException: {}
-    ForbiddenException: {}
+    ConflictException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -498,8 +498,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -510,14 +516,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string

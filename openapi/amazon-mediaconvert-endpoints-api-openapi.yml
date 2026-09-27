@@ -247,17 +247,8 @@ paths:
       - Endpoints
 components:
   schemas:
+    InternalServerErrorException: {}
     BadRequestException: {}
-    __listOfEndpoint:
-      type: array
-      items:
-        $ref: '#/components/schemas/Endpoint'
-    ConflictException: {}
-    __string:
-      type: string
-    TooManyRequestsException: {}
-    NotFoundException: {}
-    ForbiddenException: {}
     DescribeEndpointsResponse:
       type: object
       properties:
@@ -273,7 +264,12 @@ components:
           - xml:
               name: nextToken
             description: Use this string to request the next batch of endpoints.
-    InternalServerErrorException: {}
+    __string:
+      type: string
+    __listOfEndpoint:
+      type: array
+      items:
+        $ref: '#/components/schemas/Endpoint'
     Endpoint:
       type: object
       properties:
@@ -284,15 +280,25 @@ components:
               name: url
             description: URL of endpoint
       description: Describes an account-specific API endpoint.
+    ForbiddenException: {}
+    TooManyRequestsException: {}
+    NotFoundException: {}
+    ConflictException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -303,8 +309,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -315,14 +321,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
