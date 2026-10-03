@@ -736,86 +736,22 @@ paths:
       - Queues
 components:
   schemas:
-    GetQueueResponse:
-      type: object
-      properties:
-        Queue:
-          allOf:
-          - $ref: '#/components/schemas/Queue'
-          - xml:
-              name: queue
-            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
-    __timestampUnix:
-      type: string
-      format: date-time
-    InternalServerErrorException: {}
-    __integer:
-      type: integer
-    ForbiddenException: {}
-    UpdateQueueResponse:
-      type: object
-      properties:
-        Queue:
-          allOf:
-          - $ref: '#/components/schemas/Queue'
-          - xml:
-              name: queue
-            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
-    ReservationPlan:
-      type: object
-      properties:
-        Commitment:
-          allOf:
-          - $ref: '#/components/schemas/Commitment'
-          - xml:
-              name: commitment
-            description: The length of the term of your reserved queue pricing plan commitment.
-        ExpiresAt:
-          allOf:
-          - $ref: '#/components/schemas/__timestampUnix'
-          - xml:
-              name: expiresAt
-            description: The timestamp in epoch seconds for when the current pricing plan term for this reserved queue expires.
-        PurchasedAt:
-          allOf:
-          - $ref: '#/components/schemas/__timestampUnix'
-          - xml:
-              name: purchasedAt
-            description: The timestamp in epoch seconds for when you set up the current pricing plan for this reserved queue.
-        RenewalType:
-          allOf:
-          - $ref: '#/components/schemas/RenewalType'
-          - xml:
-              name: renewalType
-            description: Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term.
-        ReservedSlots:
-          allOf:
-          - $ref: '#/components/schemas/__integer'
-          - xml:
-              name: reservedSlots
-            description: Specifies the number of reserved transcode slots (RTS) for this queue. The number of RTS determines how many jobs the queue can process in parallel; each RTS can process one job at a time. When you increase this number, you extend your existing commitment with a new 12-month commitment for a larger number of RTS. The new commitment begins when you purchase the additional capacity. You can't decrease the number of RTS in your reserved queue.
-        Status:
-          allOf:
-          - $ref: '#/components/schemas/ReservationPlanStatus'
-          - xml:
-              name: status
-            description: Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.
-      description: Details about the pricing plan for your reserved queue. Required for reserved queues and not applicable to on-demand queues.
-    CreateQueueResponse:
-      type: object
-      properties:
-        Queue:
-          allOf:
-          - $ref: '#/components/schemas/Queue'
-          - xml:
-              name: queue
-            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
     RenewalType:
       type: string
       enum:
       - AUTO_RENEW
       - EXPIRE
       description: Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term.
+    __string:
+      type: string
+    QueueStatus:
+      type: string
+      enum:
+      - ACTIVE
+      - PAUSED
+      description: Queues can be ACTIVE or PAUSED. If you pause a queue, jobs in that queue won't begin. Jobs that are running when you pause a queue continue to run until they finish or result in an error.
+    TooManyRequestsException: {}
+    BadRequestException: {}
     Queue:
       type: object
       required:
@@ -888,17 +824,25 @@ components:
               name: type
             description: Specifies whether this on-demand queue is system or custom. System queues are built in. You can't modify or delete system queues. You can create and modify custom queues.
       description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
-    Commitment:
+    ConflictException: {}
+    __integer:
+      type: integer
+    __listOfQueue:
+      type: array
+      items:
+        $ref: '#/components/schemas/Queue'
+    DeleteQueueResponse:
+      type: object
+      properties: {}
+    ReservationPlanStatus:
       type: string
       enum:
-      - ONE_YEAR
-      description: The length of the term of your reserved queue pricing plan commitment.
-    PricingPlan:
+      - ACTIVE
+      - EXPIRED
+      description: Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.
+    __timestampUnix:
       type: string
-      enum:
-      - ON_DEMAND
-      - RESERVED
-      description: Specifies whether the pricing plan for the queue is on-demand or reserved. For on-demand, you pay per minute, billed in increments of .01 minute. For reserved, you pay for the transcoding capacity of the entire queue, regardless of how much or how little you use it. Reserved pricing requires a 12-month commitment.
+      format: date-time
     ListQueuesResponse:
       type: object
       properties:
@@ -914,51 +858,95 @@ components:
           - xml:
               name: queues
             description: List of queues.
-    __string:
-      type: string
-    __listOfQueue:
-      type: array
-      items:
-        $ref: '#/components/schemas/Queue'
-    NotFoundException: {}
-    BadRequestException: {}
-    QueueStatus:
+    Commitment:
       type: string
       enum:
-      - ACTIVE
-      - PAUSED
-      description: Queues can be ACTIVE or PAUSED. If you pause a queue, jobs in that queue won't begin. Jobs that are running when you pause a queue continue to run until they finish or result in an error.
+      - ONE_YEAR
+      description: The length of the term of your reserved queue pricing plan commitment.
+    UpdateQueueResponse:
+      type: object
+      properties:
+        Queue:
+          allOf:
+          - $ref: '#/components/schemas/Queue'
+          - xml:
+              name: queue
+            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
+    ReservationPlan:
+      type: object
+      properties:
+        Commitment:
+          allOf:
+          - $ref: '#/components/schemas/Commitment'
+          - xml:
+              name: commitment
+            description: The length of the term of your reserved queue pricing plan commitment.
+        ExpiresAt:
+          allOf:
+          - $ref: '#/components/schemas/__timestampUnix'
+          - xml:
+              name: expiresAt
+            description: The timestamp in epoch seconds for when the current pricing plan term for this reserved queue expires.
+        PurchasedAt:
+          allOf:
+          - $ref: '#/components/schemas/__timestampUnix'
+          - xml:
+              name: purchasedAt
+            description: The timestamp in epoch seconds for when you set up the current pricing plan for this reserved queue.
+        RenewalType:
+          allOf:
+          - $ref: '#/components/schemas/RenewalType'
+          - xml:
+              name: renewalType
+            description: Specifies whether the term of your reserved queue pricing plan is automatically extended (AUTO_RENEW) or expires (EXPIRE) at the end of the term.
+        ReservedSlots:
+          allOf:
+          - $ref: '#/components/schemas/__integer'
+          - xml:
+              name: reservedSlots
+            description: Specifies the number of reserved transcode slots (RTS) for this queue. The number of RTS determines how many jobs the queue can process in parallel; each RTS can process one job at a time. When you increase this number, you extend your existing commitment with a new 12-month commitment for a larger number of RTS. The new commitment begins when you purchase the additional capacity. You can't decrease the number of RTS in your reserved queue.
+        Status:
+          allOf:
+          - $ref: '#/components/schemas/ReservationPlanStatus'
+          - xml:
+              name: status
+            description: Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.
+      description: Details about the pricing plan for your reserved queue. Required for reserved queues and not applicable to on-demand queues.
+    CreateQueueResponse:
+      type: object
+      properties:
+        Queue:
+          allOf:
+          - $ref: '#/components/schemas/Queue'
+          - xml:
+              name: queue
+            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
+    GetQueueResponse:
+      type: object
+      properties:
+        Queue:
+          allOf:
+          - $ref: '#/components/schemas/Queue'
+          - xml:
+              name: queue
+            description: You can use queues to manage the resources that are available to your AWS account for running multiple transcoding jobs at the same time. If you don't specify a queue, the service sends all jobs through the default queue. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html.
+    ForbiddenException: {}
+    NotFoundException: {}
     Type:
       type: string
       enum:
       - SYSTEM
       - CUSTOM
-    TooManyRequestsException: {}
-    DeleteQueueResponse:
-      type: object
-      properties: {}
-    ConflictException: {}
-    ReservationPlanStatus:
+    InternalServerErrorException: {}
+    PricingPlan:
       type: string
       enum:
-      - ACTIVE
-      - EXPIRED
-      description: Specifies whether the pricing plan for your reserved queue is ACTIVE or EXPIRED.
+      - ON_DEMAND
+      - RESERVED
+      description: Specifies whether the pricing plan for the queue is on-demand or reserved. For on-demand, you pay per minute, billed in increments of .01 minute. For reserved, you pay for the transcoding capacity of the entire queue, regardless of how much or how little you use it. Reserved pricing requires a 12-month commitment.
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -975,14 +963,26 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
       required: false
     X-Amz-Credential:
       name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

@@ -423,37 +423,6 @@ paths:
       - Policy
 components:
   schemas:
-    GetPolicyResponse:
-      type: object
-      properties:
-        Policy:
-          allOf:
-          - $ref: '#/components/schemas/Policy'
-          - xml:
-              name: policy
-            description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
-    InternalServerErrorException: {}
-    BadRequestException: {}
-    PutPolicyResponse:
-      type: object
-      properties:
-        Policy:
-          allOf:
-          - $ref: '#/components/schemas/Policy'
-          - xml:
-              name: policy
-            description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
-    InputPolicy:
-      type: string
-      enum:
-      - ALLOWED
-      - DISALLOWED
-      description: An input policy allows or disallows a job you submit to run based on the conditions that you specify.
-    TooManyRequestsException: {}
-    DeletePolicyResponse:
-      type: object
-      properties: {}
-    ForbiddenException: {}
     Policy:
       type: object
       properties:
@@ -476,8 +445,39 @@ components:
               name: s3Inputs
             description: Allow or disallow jobs that specify Amazon S3 inputs.
       description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+    PutPolicyResponse:
+      type: object
+      properties:
+        Policy:
+          allOf:
+          - $ref: '#/components/schemas/Policy'
+          - xml:
+              name: policy
+            description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+    InputPolicy:
+      type: string
+      enum:
+      - ALLOWED
+      - DISALLOWED
+      description: An input policy allows or disallows a job you submit to run based on the conditions that you specify.
+    ForbiddenException: {}
+    TooManyRequestsException: {}
+    DeletePolicyResponse:
+      type: object
+      properties: {}
     NotFoundException: {}
+    BadRequestException: {}
     ConflictException: {}
+    InternalServerErrorException: {}
+    GetPolicyResponse:
+      type: object
+      properties:
+        Policy:
+          allOf:
+          - $ref: '#/components/schemas/Policy'
+          - xml:
+              name: policy
+            description: A policy configures behavior that you allow or disallow for your account. For information about MediaConvert policies, see the user guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
   parameters:
     X-Amz-Credential:
       name: X-Amz-Credential
@@ -485,8 +485,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -497,8 +497,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -509,14 +509,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
