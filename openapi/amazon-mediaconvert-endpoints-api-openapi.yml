@@ -246,21 +246,59 @@ paths:
       tags:
       - Endpoints
 components:
+  schemas:
+    TooManyRequestsException: {}
+    ForbiddenException: {}
+    BadRequestException: {}
+    __string:
+      type: string
+    Endpoint:
+      type: object
+      properties:
+        Url:
+          allOf:
+          - $ref: '#/components/schemas/__string'
+          - xml:
+              name: url
+            description: URL of endpoint
+      description: Describes an account-specific API endpoint.
+    InternalServerErrorException: {}
+    ConflictException: {}
+    NotFoundException: {}
+    __listOfEndpoint:
+      type: array
+      items:
+        $ref: '#/components/schemas/Endpoint'
+    DescribeEndpointsResponse:
+      type: object
+      properties:
+        Endpoints:
+          allOf:
+          - $ref: '#/components/schemas/__listOfEndpoint'
+          - xml:
+              name: endpoints
+            description: List of endpoints
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/__string'
+          - xml:
+              name: nextToken
+            description: Use this string to request the next batch of endpoints.
   parameters:
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
       required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -277,56 +315,18 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
-  schemas:
-    Endpoint:
-      type: object
-      properties:
-        Url:
-          allOf:
-          - $ref: '#/components/schemas/__string'
-          - xml:
-              name: url
-            description: URL of endpoint
-      description: Describes an account-specific API endpoint.
-    ForbiddenException: {}
-    TooManyRequestsException: {}
-    NotFoundException: {}
-    BadRequestException: {}
-    ConflictException: {}
-    DescribeEndpointsResponse:
-      type: object
-      properties:
-        Endpoints:
-          allOf:
-          - $ref: '#/components/schemas/__listOfEndpoint'
-          - xml:
-              name: endpoints
-            description: List of endpoints
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/__string'
-          - xml:
-              name: nextToken
-            description: Use this string to request the next batch of endpoints.
-    InternalServerErrorException: {}
-    __string:
-      type: string
-    __listOfEndpoint:
-      type: array
-      items:
-        $ref: '#/components/schemas/Endpoint'
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey
