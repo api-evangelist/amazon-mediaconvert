@@ -190,6 +190,12 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/mediaconvert/faqs/
 common:
+- type: Plans
+  url: plans/amazon-mediaconvert-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/amazon-mediaconvert-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-mediaconvert-finops.yml
 - type: Website
   url: https://aws.amazon.com/mediaconvert/
 - type: CapabilityMap
