@@ -247,28 +247,8 @@ paths:
       - Endpoints
 components:
   schemas:
-    TooManyRequestsException: {}
     ForbiddenException: {}
-    BadRequestException: {}
-    __string:
-      type: string
-    Endpoint:
-      type: object
-      properties:
-        Url:
-          allOf:
-          - $ref: '#/components/schemas/__string'
-          - xml:
-              name: url
-            description: URL of endpoint
-      description: Describes an account-specific API endpoint.
-    InternalServerErrorException: {}
-    ConflictException: {}
-    NotFoundException: {}
-    __listOfEndpoint:
-      type: array
-      items:
-        $ref: '#/components/schemas/Endpoint'
+    TooManyRequestsException: {}
     DescribeEndpointsResponse:
       type: object
       properties:
@@ -284,19 +264,27 @@ components:
           - xml:
               name: nextToken
             description: Use this string to request the next batch of endpoints.
+    __string:
+      type: string
+    ConflictException: {}
+    NotFoundException: {}
+    InternalServerErrorException: {}
+    __listOfEndpoint:
+      type: array
+      items:
+        $ref: '#/components/schemas/Endpoint'
+    Endpoint:
+      type: object
+      properties:
+        Url:
+          allOf:
+          - $ref: '#/components/schemas/__string'
+          - xml:
+              name: url
+            description: URL of endpoint
+      description: Describes an account-specific API endpoint.
+    BadRequestException: {}
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
@@ -323,6 +311,18 @@ components:
       required: false
     X-Amz-Credential:
       name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

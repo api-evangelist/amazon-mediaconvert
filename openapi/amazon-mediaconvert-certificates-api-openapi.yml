@@ -329,31 +329,19 @@ paths:
       - Certificates
 components:
   schemas:
-    TooManyRequestsException: {}
-    AssociateCertificateResponse:
-      type: object
-      properties: {}
     ForbiddenException: {}
+    TooManyRequestsException: {}
     DisassociateCertificateResponse:
       type: object
       properties: {}
-    BadRequestException: {}
-    InternalServerErrorException: {}
     ConflictException: {}
+    AssociateCertificateResponse:
+      type: object
+      properties: {}
     NotFoundException: {}
+    InternalServerErrorException: {}
+    BadRequestException: {}
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
@@ -380,6 +368,18 @@ components:
       required: false
     X-Amz-Credential:
       name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
