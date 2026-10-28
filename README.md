@@ -1,4 +1,4 @@
-# Amazon MediaConvert (amazon-mediaconvert)
+# Amazon MediaConvert
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,130 +66,258 @@
 
 AWS Elemental MediaConvert is a file-based video transcoding service that allows you to easily create video-on-demand (VOD) content for broadcast and multiscreen delivery at scale. It supports broadcast-grade features including graphic overlays, content protection, multi-language audio, closed captioning, and a comprehensive range of video formats.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/apis.yml)
+**Areas:** AWS · Broadcasting · Media Processing · Media
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon MediaConvert on APIs.io
 
-## Tags:
+Everything profiled for Amazon MediaConvert is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-mediaconvert/](https://apis.io/providers/amazon-mediaconvert/)** — or go straight to one of the APIs or properties below.
 
- - AWS, Broadcasting, Media Processing, Media
+### APIs (9)
 
-## Timestamps
+- [Amazon MediaConvert Certificates API](https://apis.io/apis/amazon-mediaconvert/amazon-mediaconvert-certificates-api/) — The Certificates API from Amazon MediaConvert — 2 operation(s) for certificates.
+- [Amazon MediaConvert Endpoints API](https://apis.io/apis/amazon-mediaconvert/amazon-mediaconvert-endpoints-api/) — The Endpoints API from Amazon MediaConvert — 1 operation(s) for endpoints.
+- [Amazon MediaConvert Jobs API](https://apis.io/apis/amazon-mediaconvert/amazon-mediaconvert-jobs-api/) — The Jobs API from Amazon MediaConvert — 2 operation(s) for jobs.
+- [Amazon MediaConvert Policy API](https://apis.io/apis/amazon-mediaconvert/amazon-mediaconvert-policy-api/) — The Policy API from Amazon MediaConvert — 1 operation(s) for policy.
+- [Amazon MediaConvert Presets API](https://apis.io/apis/amazon-mediaconvert/amazon-mediaconvert-presets-api/) — The Presets API from Amazon MediaConvert — 2 operation(s) for presets.
+- [Amazon MediaConvert Queues API](https://apis.io/apis/amazon-mediaconvert/amazon-mediaconvert-queues-api/) — The Queues API from Amazon MediaConvert — 2 operation(s) for queues.
+- [Amazon MediaConvert Tags API](https://apis.io/apis/amazon-mediaconvert/amazon-mediaconvert-tags-api/) — The Tags API from Amazon MediaConvert — 2 operation(s) for tags.
+- [Amazon MediaConvert Job Templates API](https://apis.io/apis/amazon-mediaconvert/amazon-mediaconvert-job-templates-api/) — The Job Templates API from Amazon MediaConvert — 2 operation(s) for job templates.
+- [Amazon MediaConvert Mediaconvert Operations API](https://apis.io/apis/amazon-mediaconvert/amazon-mediaconvert-operations-api/) — The Mediaconvert Operations API from Amazon MediaConvert — 6 operation(s) for mediaconvert operations.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon MediaConvert API
-AWS Elemental MediaConvert is a file-based video transcoding service that allows you to easily create video-on-demand (VOD) content for broadcast and multiscreen delivery at scale. It supports broadcast-grade features including graphic overlays, content protection, multi-language audio, closed captioning, and a comprehensive range of video formats.
+#### Agentic access (1)
 
-**Human URL:** [https://aws.amazon.com/mediaconvert/](https://aws.amazon.com/mediaconvert/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags:
+- [Amazon Mediaconvert Agentic Access](https://apis.io/agentic-access/amazon-mediaconvert/amazon-mediaconvert-agentic-access/)
 
- - Broadcasting, Media Processing, Media
+#### JSON Schema (633)
 
-#### Properties
+The data models the API reads and writes.
 
+- [AacAudioDescriptionBroadcasterMix](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-aac-audio-description-broadcaster-mix/)
+- [AacCodecProfile](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-aac-codec-profile/)
+- [AacCodingMode](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-aac-coding-mode/)
+- [AacRateControlMode](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-aac-rate-control-mode/)
+- [AacRawFormat](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-aac-raw-format/)
+- [AacSettings](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-aac-settings/)
+- [AacSpecification](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-aac-specification/)
+- [AacVbrQuality](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-aac-vbr-quality/)
+- [Ac3BitstreamMode](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-ac3-bitstream-mode/)
+- [Ac3CodingMode](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-ac3-coding-mode/)
+- [Ac3DynamicRangeCompressionLine](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-ac3-dynamic-range-compression-line/)
+- [Ac3DynamicRangeCompressionProfile](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-ac3-dynamic-range-compression-profile/)
+- [Ac3DynamicRangeCompressionRf](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-ac3-dynamic-range-compression-rf/)
+- [Ac3LfeFilter](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-ac3-lfe-filter/)
+- [Ac3MetadataControl](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-ac3-metadata-control/)
+- [Ac3Settings](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-ac3-settings/)
+- [AccelerationMode](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-acceleration-mode/)
+- [AccelerationSettings](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-acceleration-settings/)
+- [AccelerationStatus](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-acceleration-status/)
+- [AfdSignaling](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-afd-signaling/)
+- [AiffSettings](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-aiff-settings/)
+- [AllowedRenditionSize](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-allowed-rendition-size/)
+- [AlphaBehavior](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-alpha-behavior/)
+- [AncillaryConvert608To708](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-ancillary-convert608-to708/)
+- [AncillarySourceSettings](https://apis.io/schemas/amazon-mediaconvert/mediaconvert-api-ancillary-source-settings/)
+- …and 608 more published on APIs.io
+
+#### JSON Structure (633)
+
+Data models expressed in JSON Structure.
+
+- [Mediaconvert Api Aac Audio Description Broadcaster Mix Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-aac-audio-description-broadcaster-mix-structure/)
+- [Mediaconvert Api Aac Codec Profile Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-aac-codec-profile-structure/)
+- [Mediaconvert Api Aac Coding Mode Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-aac-coding-mode-structure/)
+- [Mediaconvert Api Aac Rate Control Mode Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-aac-rate-control-mode-structure/)
+- [Mediaconvert Api Aac Raw Format Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-aac-raw-format-structure/)
+- [Mediaconvert Api Aac Settings Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-aac-settings-structure/)
+- [Mediaconvert Api Aac Specification Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-aac-specification-structure/)
+- [Mediaconvert Api Aac Vbr Quality Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-aac-vbr-quality-structure/)
+- [Mediaconvert Api Ac3 Bitstream Mode Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-ac3-bitstream-mode-structure/)
+- [Mediaconvert Api Ac3 Coding Mode Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-ac3-coding-mode-structure/)
+- [Mediaconvert Api Ac3 Dynamic Range Compression Line Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-ac3-dynamic-range-compression-line-structure/)
+- [Mediaconvert Api Ac3 Dynamic Range Compression Profile Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-ac3-dynamic-range-compression-profile-structure/)
+- [Mediaconvert Api Ac3 Dynamic Range Compression Rf Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-ac3-dynamic-range-compression-rf-structure/)
+- [Mediaconvert Api Ac3 Lfe Filter Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-ac3-lfe-filter-structure/)
+- [Mediaconvert Api Ac3 Metadata Control Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-ac3-metadata-control-structure/)
+- [Mediaconvert Api Ac3 Settings Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-ac3-settings-structure/)
+- [Mediaconvert Api Acceleration Mode Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-acceleration-mode-structure/)
+- [Mediaconvert Api Acceleration Settings Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-acceleration-settings-structure/)
+- [Mediaconvert Api Acceleration Status Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-acceleration-status-structure/)
+- [Mediaconvert Api Afd Signaling Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-afd-signaling-structure/)
+- [Mediaconvert Api Aiff Settings Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-aiff-settings-structure/)
+- [Mediaconvert Api Allowed Rendition Size Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-allowed-rendition-size-structure/)
+- [Mediaconvert Api Alpha Behavior Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-alpha-behavior-structure/)
+- [Mediaconvert Api Ancillary Convert608 To708 Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-ancillary-convert608-to708-structure/)
+- [Mediaconvert Api Ancillary Source Settings Structure](https://apis.io/json-structure/amazon-mediaconvert/mediaconvert-api-ancillary-source-settings-structure/)
+- …and 608 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Mediaconvert Mediaconvert Api Context](https://apis.io/jsonld/amazon-mediaconvert/amazon-mediaconvert-mediaconvert-api-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Mediaconvert Vocabulary](https://apis.io/vocabularies/amazon-mediaconvert/amazon-mediaconvert-vocabulary/)
+
+#### Examples (633)
+
+Example requests and responses.
+
+- [Mediaconvert Api Aac Audio Description Broadcaster Mix Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-aac-audio-description-broadcaster-mix-example/)
+- [Mediaconvert Api Aac Codec Profile Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-aac-codec-profile-example/)
+- [Mediaconvert Api Aac Coding Mode Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-aac-coding-mode-example/)
+- [Mediaconvert Api Aac Rate Control Mode Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-aac-rate-control-mode-example/)
+- [Mediaconvert Api Aac Raw Format Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-aac-raw-format-example/)
+- [Mediaconvert Api Aac Settings Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-aac-settings-example/)
+- [Mediaconvert Api Aac Specification Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-aac-specification-example/)
+- [Mediaconvert Api Aac Vbr Quality Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-aac-vbr-quality-example/)
+- [Mediaconvert Api Ac3 Bitstream Mode Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-ac3-bitstream-mode-example/)
+- [Mediaconvert Api Ac3 Coding Mode Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-ac3-coding-mode-example/)
+- [Mediaconvert Api Ac3 Dynamic Range Compression Line Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-ac3-dynamic-range-compression-line-example/)
+- [Mediaconvert Api Ac3 Dynamic Range Compression Profile Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-ac3-dynamic-range-compression-profile-example/)
+- [Mediaconvert Api Ac3 Dynamic Range Compression Rf Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-ac3-dynamic-range-compression-rf-example/)
+- [Mediaconvert Api Ac3 Lfe Filter Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-ac3-lfe-filter-example/)
+- [Mediaconvert Api Ac3 Metadata Control Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-ac3-metadata-control-example/)
+- [Mediaconvert Api Ac3 Settings Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-ac3-settings-example/)
+- [Mediaconvert Api Acceleration Mode Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-acceleration-mode-example/)
+- [Mediaconvert Api Acceleration Settings Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-acceleration-settings-example/)
+- [Mediaconvert Api Acceleration Status Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-acceleration-status-example/)
+- [Mediaconvert Api Afd Signaling Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-afd-signaling-example/)
+- [Mediaconvert Api Aiff Settings Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-aiff-settings-example/)
+- [Mediaconvert Api Allowed Rendition Size Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-allowed-rendition-size-example/)
+- [Mediaconvert Api Alpha Behavior Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-alpha-behavior-example/)
+- [Mediaconvert Api Ancillary Convert608 To708 Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-ancillary-convert608-to708-example/)
+- [Mediaconvert Api Ancillary Source Settings Example](https://apis.io/examples/amazon-mediaconvert/mediaconvert-api-ancillary-source-settings-example/)
+- …and 608 more published on APIs.io
+
+#### Collections (16)
+
+Postman and Open Collection request collections.
+
+- [AWS Elemental MediaConvert Certificates API](https://apis.io/collections/amazon-mediaconvert/open-amazon-mediaconvert-certificates-api/)
+- [AWS Elemental MediaConvert Certificates Endpoints API](https://apis.io/collections/amazon-mediaconvert/open-amazon-mediaconvert-endpoints-api/)
+- [AWS Elemental MediaConvert Certificates Jobs API](https://apis.io/collections/amazon-mediaconvert/open-amazon-mediaconvert-jobs-api/)
+- [AWS Elemental MediaConvert Certificates JobTemplates API](https://apis.io/collections/amazon-mediaconvert/open-amazon-mediaconvert-jobtemplates-api/)
+- [AWS Elemental MediaConvert Certificates Policy API](https://apis.io/collections/amazon-mediaconvert/open-amazon-mediaconvert-policy-api/)
+- [AWS Elemental MediaConvert Certificates Presets API](https://apis.io/collections/amazon-mediaconvert/open-amazon-mediaconvert-presets-api/)
+- [AWS Elemental MediaConvert Certificates Queues API](https://apis.io/collections/amazon-mediaconvert/open-amazon-mediaconvert-queues-api/)
+- [AWS Elemental MediaConvert Certificates Tags API](https://apis.io/collections/amazon-mediaconvert/open-amazon-mediaconvert-tags-api/)
+- [AWS Elemental MediaConvert Certificates API](https://apis.io/collections/amazon-mediaconvert/postman-amazon-mediaconvert-certificates-api/)
+- [AWS Elemental MediaConvert Certificates Endpoints API](https://apis.io/collections/amazon-mediaconvert/postman-amazon-mediaconvert-endpoints-api/)
+- [AWS Elemental MediaConvert Certificates Jobs API](https://apis.io/collections/amazon-mediaconvert/postman-amazon-mediaconvert-jobs-api/)
+- [AWS Elemental MediaConvert Certificates JobTemplates API](https://apis.io/collections/amazon-mediaconvert/postman-amazon-mediaconvert-jobtemplates-api/)
+- [AWS Elemental MediaConvert Certificates Policy API](https://apis.io/collections/amazon-mediaconvert/postman-amazon-mediaconvert-policy-api/)
+- [AWS Elemental MediaConvert Certificates Presets API](https://apis.io/collections/amazon-mediaconvert/postman-amazon-mediaconvert-presets-api/)
+- [AWS Elemental MediaConvert Certificates Queues API](https://apis.io/collections/amazon-mediaconvert/postman-amazon-mediaconvert-queues-api/)
+- [AWS Elemental MediaConvert Certificates Tags API](https://apis.io/collections/amazon-mediaconvert/postman-amazon-mediaconvert-tags-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon MediaConvert — jsonschema rules](https://apis.io/rules/amazon-mediaconvert/amazon-mediaconvert-jsonschema-spectral-rules/)
+- [Amazon MediaConvert API Rules](https://apis.io/rules/amazon-mediaconvert/amazon-mediaconvert-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Mediaconvert Authentication](https://apis.io/security/amazon-mediaconvert/amazon-mediaconvert-authentication/)
+- [Amazon Mediaconvert Domain Security](https://apis.io/security/amazon-mediaconvert/amazon-mediaconvert-domain-security/)
+- [Amazon Mediaconvert Trust Center](https://apis.io/security/amazon-mediaconvert/amazon-mediaconvert-trust-center/)
+- [Amazon Mediaconvert Vulnerability Disclosure](https://apis.io/security/amazon-mediaconvert/amazon-mediaconvert-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Mediaconvert Plans Pricing](https://apis.io/plans/amazon-mediaconvert/amazon-mediaconvert-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Mediaconvert Rate Limits](https://apis.io/rate-limits/amazon-mediaconvert/amazon-mediaconvert-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Mediaconvert Finops](https://apis.io/finops/amazon-mediaconvert/amazon-mediaconvert-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/mediaconvert/)
 - [Documentation](https://docs.aws.amazon.com/mediaconvert/)
-- [OpenAPI](openapi/amazon-mediaconvert-openapi-original.yml)
-- [GettingStarted](https://aws.amazon.com/mediaconvert/getting-started/)
-- [Pricing](https://aws.amazon.com/mediaconvert/pricing/)
-- [FAQ](https://aws.amazon.com/mediaconvert/faqs/)
-
-## Common Properties
-
-- [Portal](https://aws.amazon.com/mediaconvert/)
-- [Documentation](https://docs.aws.amazon.com/mediaconvert/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/media/)
-- [GitHubOrganization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/mediaconvert/)
-- [SignUp](https://portal.aws.amazon.com/billing/signup)
-- [StatusPage](https://health.aws.amazon.com/health/status)
-- [Contact](https://aws.amazon.com/contact-us/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Broadcast-Grade Video Processing | Graphic overlays, content protection, multi-language audio, closed captioning, and professional broadcast formats. |
-| Comprehensive Format Support | Supports AVC, HEVC, AV1, Apple ProRes, MPEG-2, CMAF, HLS, DASH ISO, Smooth Streaming, 4K, 8K, and HDR including Dolby Vision. |
-| Automated Infrastructure Management | Automates workload provisioning, scaling, monitoring, and resource optimization without manual server management. |
-| Built-in Reliability | Jobs run on redundant infrastructure across multiple Availability Zones with automatic health monitoring and failover. |
-| Job Templates and Presets | Create reusable job templates and output presets to standardize and accelerate video transcoding workflows. |
-| Queue Management | Organize and prioritize transcoding jobs using on-demand and reserved queues. |
+**Kin Score 55.6** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 62.9 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 58.3 |
+| Access clarity | 60.5 |
 
-| Name | Description |
-|------|-------------|
-| VOD Content Production | Transcode video files for video-on-demand delivery at broadcast quality. |
-| Large Library Transcoding | Process large content libraries for multiscreen delivery at any scale. |
-| Broadcast Distribution | Create broadcast-format outputs for television and streaming platform distribution. |
-| Peak Workload Processing | Handle variable transcoding workloads with elastic auto-scaling. |
+**Agent readiness 38.2** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | verified |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| Amazon S3 | Use S3 for input and output storage of video files. |
-| AWS Elemental MediaPackage | Package transcoded outputs for adaptive bitrate streaming delivery. |
-| Amazon CloudWatch | Monitor job metrics and set alerts for transcoding workflows. |
-| Amazon EventBridge | Trigger downstream workflows based on MediaConvert job state changes. |
-| AWS IAM | Control access to MediaConvert resources and S3 buckets using IAM roles. |
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-mediaconvert/](https://apis.io/providers/amazon-mediaconvert/).
 
-Machine-readable API specifications organized by format.
+## How this profile is made
 
-### OpenAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [Amazon MediaConvert OpenAPI](openapi/amazon-mediaconvert-openapi-original.yml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon MediaConvert: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-- 633 schema files in [json-schema/](json-schema/)
-
-### JSON Structure
-
-- 633 structure files in [json-structure/](json-structure/)
-
-### JSON-LD
-
-- [Amazon MediaConvert API Context](json-ld/amazon-mediaconvert-mediaconvert-api-context.jsonld)
-
-### Examples
-
-- 633 example files in [examples/](examples/)
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Shared Per-API Definitions
-
-- [Amazon MediaConvert](capabilities/shared/mediaconvert.yaml) — 28 operations for media processing
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Amazon MediaConvert Workflow](capabilities/amazon-mediaconvert-media-workflow.yaml) | Amazon MediaConvert | 8 | Broadcast Engineer |
-
-## Vocabulary
-
-- [Amazon MediaConvert Vocabulary](vocabulary/amazon-mediaconvert-vocabulary.yaml) — Unified taxonomy mapping resources, actions, workflows, and personas across operational (OpenAPI) and capability (Naftiko) dimensions
-
-## Rules
-
-- [Amazon MediaConvert Spectral Rules](rules/amazon-mediaconvert-spectral-rules.yml) — 20 rules across 8 categories enforcing Amazon MediaConvert API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-mediaconvert/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
