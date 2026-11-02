@@ -80,7 +80,7 @@ rate_limit_statements:
 - The minimum duration for billing is 10 seconds, so an output with a duration of less than 10 seconds
   will be billed for 10 seconds.
 x-canonical:
-  generated: '2026-11-01'
+  generated: '2026-11-02'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid
