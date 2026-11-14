@@ -5,10 +5,19 @@ artifacts:
   agentic-access/amazon-mediaconvert-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-mediaconvert-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-mediaconvert-authentication.yml:
     method: derived
     evidence: declared in the artifact
   capabilities/amazon-mediaconvert-capability-edges.yml:
+    method: unknown
+    evidence: no authorship recorded
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
     method: unknown
     evidence: no authorship recorded
   collections/amazon-mediaconvert-certificates-api.opencollection.json:
@@ -59,6 +68,24 @@ artifacts:
   collections/amazon-mediaconvert-tags-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-mediaconvert-tags-api
+  compliance/amazon-mediaconvert-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  conformance/amazon-mediaconvert-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-mediaconvert-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-mediaconvert-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  eligibility/amazon-mediaconvert-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
+  errors/amazon-mediaconvert-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/mediaconvert-api-aac-audio-description-broadcaster-mix-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -1964,13 +1991,163 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-mediaconvert-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
   integrations/amazon-mediaconvert-integration-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  json-ld/amazon-mediaconvert-context.jsonld:
+    method: unknown
+    evidence: no authorship recorded
   json-ld/amazon-mediaconvert-mediaconvert-api-context.jsonld:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-associate-certificate-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-associate-certificate-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-cancel-job-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-create-job-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-create-job-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-create-job-template-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-create-preset-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-create-queue-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-create-resource-share-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-delete-job-template-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-delete-policy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-delete-policy-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-delete-preset-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-delete-queue-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-describe-endpoints-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-describe-endpoints-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-disassociate-certificate-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-disassociate-certificate-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-get-job-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-get-job-template-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-get-jobs-query-results-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-get-policy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-get-policy-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-get-preset-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-get-queue-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-job-templates-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-job-templates-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-jobs-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-jobs-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-presets-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-presets-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-queues-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-queues-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-tags-for-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-tags-for-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-versions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-list-versions-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-put-policy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-put-policy-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-search-jobs-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-start-jobs-query-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-tag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-tag-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-untag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-untag-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-update-job-template-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-update-preset-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-mediaconvert-update-queue-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/mediaconvert-api-aac-audio-description-broadcaster-mix-schema.json:
@@ -5774,7 +5951,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -5843,16 +6020,27 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-mediaconvert-openapi-original.yml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-mediaconvert-lifecycle.yml:
+    method: derived
+    evidence: declared in the artifact
+  llms/amazon-mediaconvert-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-mediaconvert-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-mediaconvert-mcp.yml:
+    method: derived
+    evidence: declared in the artifact
   openapi/amazon-mediaconvert-certificates-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-mediaconvert-endpoints-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-mediaconvert-job-templates-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -5863,8 +6051,8 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-mediaconvert-policy-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-mediaconvert-presets-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -5874,6 +6062,12 @@ artifacts:
   openapi/amazon-mediaconvert-tags-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  packages/amazon-mediaconvert-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-mediaconvert-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-mediaconvert-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -5907,6 +6101,9 @@ artifacts:
   rules/amazon-mediaconvert-jsonschema-spectral-rules.yml:
     method: generated
     evidence: declared in the artifact
+  rules/amazon-mediaconvert-rules.yml:
+    method: generated
+    evidence: declared in the artifact
   rules/amazon-mediaconvert-spectral-rules.yml:
     method: generated
     evidence: declared in the artifact
@@ -5919,12 +6116,37 @@ artifacts:
   security/amazon-mediaconvert-vulnerability-disclosure.yml:
     method: searched
     evidence: declared in the artifact
+  skills/_index.yml:
+    method: generated
+    evidence: declared in the artifact
+  skills/amazon-mediaconvert-transcode-video.md:
+    method: unknown
+    evidence: no authorship recorded
   sla/amazon-mediaconvert-sla.yml:
     method: generated
     evidence: declared in the artifact
   smithy/mediaconvert-2017-08-29.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/mediaconvert/service/2017-08-29/mediaconvert-2017-08-29.json
+      (sha256 304c69076b9f, fetched 2026-11-11T21:12:31+00:00)
+  terms/amazon-mediaconvert-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-mediaconvert-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-mediaconvert-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-mediaconvert-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-mediaconvert-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-mediaconvert-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-mediaconvert-well-known.yml:
     method: unknown
     evidence: no authorship recorded

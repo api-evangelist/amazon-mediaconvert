@@ -2,6 +2,7 @@
 generated: '2026-10-28'
 method: searched
 source: https://aws.amazon.com/mediaconvert/pricing/
+name: Amazon MediaConvert API Plans
 sources:
 - https://aws.amazon.com/mediaconvert/pricing/
 provenance:
@@ -80,7 +81,7 @@ rate_limit_statements:
 - The minimum duration for billing is 10 seconds, so an output with a duration of less than 10 seconds
   will be billed for 10 seconds.
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid

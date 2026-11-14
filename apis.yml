@@ -1,10 +1,13 @@
 aid: amazon-mediaconvert
+
 name: Amazon MediaConvert
-description: AWS Elemental MediaConvert is a file-based video transcoding service that allows you to easily
-  create video-on-demand (VOD) content for broadcast and multiscreen delivery at scale. It supports broadcast-grade
-  features including graphic overlays, content protection, multi-language audio, closed captioning, and
-  a comprehensive range of video formats.
+
+description: AWS Elemental MediaConvert is a file-based video transcoding service that allows you to easily create video-on-demand (VOD) content
+  for broadcast and multiscreen delivery at scale. It supports broadcast-grade features including graphic overlays, content protection, multi-language
+  audio, closed captioning, and a comprehensive range of video formats.
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -17,6 +20,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: paid
   onboarding: unknown
@@ -29,9 +33,10 @@ accessModel:
   - plans
   - authentication
   - security
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-mediaconvert.png
+
 tags:
 - Amazon Web Services
 - Broadcasting
@@ -42,170 +47,70 @@ tags_raw:
 - Broadcasting
 - Media Processing
 - Media
+
 url: https://raw.githubusercontent.com/api-evangelist/amazon-mediaconvert/refs/heads/main/apis.yml
+
 created: '2026-03-16'
+
 modified: '2026-09-16'
+
 specificationVersion: '0.23'
-apis:
-- aid: amazon-mediaconvert:amazon-mediaconvert-certificates-api
-  name: Amazon MediaConvert Certificates API
-  description: The Certificates API from Amazon MediaConvert — 2 operation(s) for certificates.
-  humanURL: https://aws.amazon.com/mediaconvert/
-  baseURL: http://mediaconvert.{region}.amazonaws.com
-  tags:
-  - Certificates
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-mediaconvert-certificates-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/mediaconvert/
-  - type: GettingStarted
-    url: https://aws.amazon.com/mediaconvert/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/mediaconvert/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/mediaconvert/faqs/
-- aid: amazon-mediaconvert:amazon-mediaconvert-endpoints-api
-  name: Amazon MediaConvert Endpoints API
-  description: The Endpoints API from Amazon MediaConvert — 1 operation(s) for endpoints.
-  humanURL: https://aws.amazon.com/mediaconvert/
-  baseURL: http://mediaconvert.{region}.amazonaws.com
-  tags: []
-  tags_raw:
-  - Endpoints
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-mediaconvert-endpoints-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/mediaconvert/
-  - type: GettingStarted
-    url: https://aws.amazon.com/mediaconvert/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/mediaconvert/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/mediaconvert/faqs/
-- aid: amazon-mediaconvert:amazon-mediaconvert-jobs-api
-  name: Amazon MediaConvert Jobs API
-  description: The Jobs API from Amazon MediaConvert — 2 operation(s) for jobs.
-  humanURL: https://aws.amazon.com/mediaconvert/
-  baseURL: http://mediaconvert.{region}.amazonaws.com
-  tags:
-  - Job
-  tags_raw:
-  - Jobs
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-mediaconvert-jobs-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/mediaconvert/
-  - type: GettingStarted
-    url: https://aws.amazon.com/mediaconvert/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/mediaconvert/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/mediaconvert/faqs/
-- aid: amazon-mediaconvert:amazon-mediaconvert-policy-api
-  name: Amazon MediaConvert Policy API
-  description: The Policy API from Amazon MediaConvert — 1 operation(s) for policy.
-  humanURL: https://aws.amazon.com/mediaconvert/
-  baseURL: http://mediaconvert.{region}.amazonaws.com
-  tags:
-  - Policy
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-mediaconvert-policy-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/mediaconvert/
-  - type: GettingStarted
-    url: https://aws.amazon.com/mediaconvert/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/mediaconvert/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/mediaconvert/faqs/
-- aid: amazon-mediaconvert:amazon-mediaconvert-presets-api
-  name: Amazon MediaConvert Presets API
-  description: The Presets API from Amazon MediaConvert — 2 operation(s) for presets.
-  humanURL: https://aws.amazon.com/mediaconvert/
-  baseURL: http://mediaconvert.{region}.amazonaws.com
-  tags:
-  - Presets
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-mediaconvert-presets-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/mediaconvert/
-  - type: GettingStarted
-    url: https://aws.amazon.com/mediaconvert/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/mediaconvert/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/mediaconvert/faqs/
-- aid: amazon-mediaconvert:amazon-mediaconvert-queues-api
-  name: Amazon MediaConvert Queues API
-  description: The Queues API from Amazon MediaConvert — 2 operation(s) for queues.
-  humanURL: https://aws.amazon.com/mediaconvert/
-  baseURL: http://mediaconvert.{region}.amazonaws.com
-  tags:
-  - Queues
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-mediaconvert-queues-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/mediaconvert/
-  - type: GettingStarted
-    url: https://aws.amazon.com/mediaconvert/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/mediaconvert/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/mediaconvert/faqs/
-- aid: amazon-mediaconvert:amazon-mediaconvert-tags-api
-  name: Amazon MediaConvert Tags API
-  description: The Tags API from Amazon MediaConvert — 2 operation(s) for tags.
-  humanURL: https://aws.amazon.com/mediaconvert/
-  baseURL: http://mediaconvert.{region}.amazonaws.com
-  tags:
-  - Tags
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-mediaconvert-tags-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/mediaconvert/
-  - type: GettingStarted
-    url: https://aws.amazon.com/mediaconvert/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/mediaconvert/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/mediaconvert/faqs/
-- aid: amazon-mediaconvert:amazon-mediaconvert-job-templates-api
-  name: Amazon MediaConvert Job Templates API
-  description: The Job Templates API from Amazon MediaConvert — 2 operation(s) for job templates.
-  humanURL: https://aws.amazon.com/mediaconvert/
-  baseURL: http://mediaconvert.{region}.amazonaws.com
-  tags:
-  - Job Templates
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-mediaconvert-job-templates-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/mediaconvert/
-  - type: GettingStarted
-    url: https://aws.amazon.com/mediaconvert/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/mediaconvert/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/mediaconvert/faqs/
-- aid: amazon-mediaconvert:amazon-mediaconvert-operations-api
-  name: Amazon MediaConvert Mediaconvert Operations API
-  description: >-
-    The Mediaconvert Operations API from Amazon MediaConvert — 6 operation(s) for mediaconvert operations.
-  humanURL: https://aws.amazon.com/mediaconvert/
-  baseURL: http://mediaconvert.{region}.amazonaws.com
-  tags:
-  - Mediaconvert Operations
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-mediaconvert-operations-api-openapi.yml
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
 common:
+- type: Spectral
+  url: rules/amazon-mediaconvert-spectral-rules.yml
+- type: Spectral
+  url: rules/amazon-mediaconvert-rules.yml
+- type: Spectral
+  url: rules/amazon-mediaconvert-jsonschema-spectral-rules.yml
+- type: JSONLD
+  url: json-ld/amazon-mediaconvert-mediaconvert-api-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-mediaconvert-context.jsonld
+- type: Vocabulary
+  url: vocabulary/amazon-mediaconvert-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/amazon-mediaconvert-data-model.yml
+- type: Idempotency
+  url: conventions/amazon-mediaconvert-conventions.yml
+- type: Conventions
+  url: conventions/amazon-mediaconvert-conventions.yml
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: Lifecycle
+  url: lifecycle/amazon-mediaconvert-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/amazon-mediaconvert-problem-types.yml
+- type: Conformance
+  url: conformance/amazon-mediaconvert-conformance.yml
+- type: LLMsTxt
+  url: llms/amazon-mediaconvert-llms.txt
+- type: SecurityTxt
+  url: well-known/amazon-mediaconvert-security.txt
+- type: WellKnown
+  url: well-known/amazon-mediaconvert-well-known.yml
+- type: Hosts
+  url: hosts/amazon-mediaconvert-hosts.yml
+- type: Vendors
+  url: vendors/amazon-mediaconvert-vendors.yml
+- type: SDKs
+  url: packages/amazon-mediaconvert-packages.yml
+- type: Packages
+  url: packages/amazon-mediaconvert-packages.yml
+- type: SignUp
+  url: https://signin.aws.amazon.com/signup?request_type=builderId
+- type: Security
+  url: https://aws.amazon.com/security/?nc2=h_dsc_aa_sec
+- type: Newsroom
+  url: https://aws.amazon.com/media/?nc2=h_sol_ind_med
+- type: GettingStarted
+  url: https://developer.amazon.com/frustration-free-setup
 - type: Plans
   url: plans/amazon-mediaconvert-plans-pricing.yml
 - type: RateLimits
@@ -258,20 +163,15 @@ common:
 - type: Features
   data:
   - name: Broadcast-Grade Video Processing
-    description: Graphic overlays, content protection, multi-language audio, closed captioning, and professional
-      broadcast formats.
+    description: Graphic overlays, content protection, multi-language audio, closed captioning, and professional broadcast formats.
   - name: Comprehensive Format Support
-    description: Supports AVC, HEVC, AV1, Apple ProRes, MPEG-2, CMAF, HLS, DASH ISO, Smooth Streaming,
-      4K, 8K, and HDR including Dolby Vision.
+    description: Supports AVC, HEVC, AV1, Apple ProRes, MPEG-2, CMAF, HLS, DASH ISO, Smooth Streaming, 4K, 8K, and HDR including Dolby Vision.
   - name: Automated Infrastructure Management
-    description: Automates workload provisioning, scaling, monitoring, and resource optimization without
-      manual server management.
+    description: Automates workload provisioning, scaling, monitoring, and resource optimization without manual server management.
   - name: Built-in Reliability
-    description: Jobs run on redundant infrastructure across multiple Availability Zones with automatic
-      health monitoring and failover.
+    description: Jobs run on redundant infrastructure across multiple Availability Zones with automatic health monitoring and failover.
   - name: Job Templates and Presets
-    description: Create reusable job templates and output presets to standardize and accelerate video
-      transcoding workflows.
+    description: Create reusable job templates and output presets to standardize and accelerate video transcoding workflows.
   - name: Queue Management
     description: Organize and prioritize transcoding jobs using on-demand and reserved queues.
 - type: UseCases
@@ -298,6 +198,270 @@ common:
     description: Control access to MediaConvert resources and S3 buckets using IAM roles.
 - type: Integrations
   url: https://aws.amazon.com/partners/
+- type: UsageTerms
+  url: terms/amazon-mediaconvert-terms-of-service.yml
+- type: Attestations
+  url: compliance/amazon-mediaconvert-compliance.yml
+- type: Eligibility
+  url: eligibility/amazon-mediaconvert-eligibility.yml
+- type: AIPreferences
+  url: ai-preferences/amazon-mediaconvert-ai-preferences.yml
+
+apis:
+- aid: amazon-mediaconvert:amazon-mediaconvert-certificates-api
+  name: Amazon MediaConvert Certificates API
+  description: The Certificates API from Amazon MediaConvert — 2 operation(s) for certificates.
+  humanURL: https://aws.amazon.com/mediaconvert/
+  baseURL: http://mediaconvert.{region}.amazonaws.com
+  tags:
+  - Certificates
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-mediaconvert-certificates-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/mediaconvert/
+  - type: GettingStarted
+    url: https://aws.amazon.com/mediaconvert/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/mediaconvert/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/mediaconvert/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-disassociate-certificate-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-associate-certificate-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-associate-certificate-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-disassociate-certificate-response-schema.json
+- aid: amazon-mediaconvert:amazon-mediaconvert-endpoints-api
+  name: Amazon MediaConvert Endpoints API
+  description: The Endpoints API from Amazon MediaConvert — 1 operation(s) for endpoints.
+  humanURL: https://aws.amazon.com/mediaconvert/
+  baseURL: http://mediaconvert.{region}.amazonaws.com
+  tags: []
+  tags_raw:
+  - Endpoints
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-mediaconvert-endpoints-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/mediaconvert/
+  - type: GettingStarted
+    url: https://aws.amazon.com/mediaconvert/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/mediaconvert/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/mediaconvert/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-describe-endpoints-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-describe-endpoints-response-schema.json
+- aid: amazon-mediaconvert:amazon-mediaconvert-jobs-api
+  name: Amazon MediaConvert Jobs API
+  description: The Jobs API from Amazon MediaConvert — 2 operation(s) for jobs.
+  humanURL: https://aws.amazon.com/mediaconvert/
+  baseURL: http://mediaconvert.{region}.amazonaws.com
+  tags:
+  - Job
+  tags_raw:
+  - Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-mediaconvert-jobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/mediaconvert/
+  - type: GettingStarted
+    url: https://aws.amazon.com/mediaconvert/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/mediaconvert/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/mediaconvert/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-create-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-jobs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-cancel-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-get-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-create-job-response-schema.json
+- aid: amazon-mediaconvert:amazon-mediaconvert-policy-api
+  name: Amazon MediaConvert Policy API
+  description: The Policy API from Amazon MediaConvert — 1 operation(s) for policy.
+  humanURL: https://aws.amazon.com/mediaconvert/
+  baseURL: http://mediaconvert.{region}.amazonaws.com
+  tags:
+  - Policy
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-mediaconvert-policy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/mediaconvert/
+  - type: GettingStarted
+    url: https://aws.amazon.com/mediaconvert/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/mediaconvert/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/mediaconvert/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-put-policy-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-get-policy-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-put-policy-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-delete-policy-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-delete-policy-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-get-policy-request-schema.json
+- aid: amazon-mediaconvert:amazon-mediaconvert-presets-api
+  name: Amazon MediaConvert Presets API
+  description: The Presets API from Amazon MediaConvert — 2 operation(s) for presets.
+  humanURL: https://aws.amazon.com/mediaconvert/
+  baseURL: http://mediaconvert.{region}.amazonaws.com
+  tags:
+  - Presets
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-mediaconvert-presets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/mediaconvert/
+  - type: GettingStarted
+    url: https://aws.amazon.com/mediaconvert/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/mediaconvert/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/mediaconvert/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-presets-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-create-preset-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-update-preset-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-presets-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-delete-preset-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-get-preset-request-schema.json
+- aid: amazon-mediaconvert:amazon-mediaconvert-queues-api
+  name: Amazon MediaConvert Queues API
+  description: The Queues API from Amazon MediaConvert — 2 operation(s) for queues.
+  humanURL: https://aws.amazon.com/mediaconvert/
+  baseURL: http://mediaconvert.{region}.amazonaws.com
+  tags:
+  - Queues
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-mediaconvert-queues-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/mediaconvert/
+  - type: GettingStarted
+    url: https://aws.amazon.com/mediaconvert/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/mediaconvert/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/mediaconvert/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-create-queue-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-update-queue-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-queues-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-queues-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-get-queue-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-delete-queue-request-schema.json
+- aid: amazon-mediaconvert:amazon-mediaconvert-tags-api
+  name: Amazon MediaConvert Tags API
+  description: The Tags API from Amazon MediaConvert — 2 operation(s) for tags.
+  humanURL: https://aws.amazon.com/mediaconvert/
+  baseURL: http://mediaconvert.{region}.amazonaws.com
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-mediaconvert-tags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/mediaconvert/
+  - type: GettingStarted
+    url: https://aws.amazon.com/mediaconvert/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/mediaconvert/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/mediaconvert/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-tag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-untag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-tags-for-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-tags-for-resource-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-tag-resource-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-untag-resource-response-schema.json
+- aid: amazon-mediaconvert:amazon-mediaconvert-job-templates-api
+  name: Amazon MediaConvert Job Templates API
+  description: The Job Templates API from Amazon MediaConvert — 2 operation(s) for job templates.
+  humanURL: https://aws.amazon.com/mediaconvert/
+  baseURL: http://mediaconvert.{region}.amazonaws.com
+  tags:
+  - Job Templates
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-mediaconvert-job-templates-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/mediaconvert/
+  - type: GettingStarted
+    url: https://aws.amazon.com/mediaconvert/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/mediaconvert/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/mediaconvert/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-create-job-template-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-update-job-template-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-job-templates-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-job-templates-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-delete-job-template-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-get-job-template-request-schema.json
+- aid: amazon-mediaconvert:amazon-mediaconvert-operations-api
+  name: Amazon MediaConvert Mediaconvert Operations API
+  description: >-
+    The Mediaconvert Operations API from Amazon MediaConvert — 6 operation(s) for mediaconvert operations.
+  humanURL: https://aws.amazon.com/mediaconvert/
+  baseURL: http://mediaconvert.{region}.amazonaws.com
+  tags:
+  - Mediaconvert Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-mediaconvert-operations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-search-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-start-jobs-query-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-get-jobs-query-results-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-versions-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-list-versions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-mediaconvert-create-resource-share-request-schema.json
 integrations:
 - name: Partner Programs
 - name: Resources
@@ -307,8 +471,12 @@ integrations:
 - name: AWS Partner Central
 - name: Partner Paths
 - name: co-sell with AWS
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+
 x-parent: amazon-web-services
+
 x-relationship: product
+x-enrichment:
+  date: '2026-11-11'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v6
